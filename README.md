@@ -142,6 +142,8 @@ Find these in the [Neo4j Aura console](https://console.neo4j.io) → your instan
    python scripts/10d_build_subtask_events.py       --session session_003
    python scripts/09d_build_assembly_state_package.py --session session_003
    python scripts/10e_build_assembly_graph.py       --session session_003
+   python scripts/11_export_neo4j_csv.py            --session session_003
+   python scripts/14_import_neo4j.py                --session session_003
    python scripts/11b_build_assembly_review.py      --session session_003
    ```
 
@@ -171,7 +173,7 @@ Each session's output is fully isolated under `XR_Pipeline/data/processed/<sessi
 | 08 | `08_generate_event_summaries.py` | `events.csv` | Generate natural language summaries with spatial context |
 | 09 | `09_build_egg_graph.py` | `egg_graph.json` | Assemble full EGG graph (rooms, objects, events, edges) |
 | 10 | `10_prune_egg_graph.py` | `pruned_subgraph.json` | Query-driven subgraph retrieval |
-| 11 | `11_export_neo4j_csv.py` | `neo4j/*.csv` | Export CSVs ready for Neo4j import |
+| 11 | `11_export_neo4j_csv.py` | `neo4j/*.csv` | Export EGG and current assembly graph CSVs ready for Neo4j import |
 | 11 | `11_build_operation_review.py` | `operation_review.json` | Human-readable summary of detected operations |
 | 12 | `12_demo_queries.py` | `demo_query_results.json` | Run demo natural language queries against the EGG |
 | 13 | `13_visualize_3d_debug.py` | `debug_pointclouds/` | 3D point cloud screenshots for debugging |
@@ -473,7 +475,7 @@ The reasoner (`assembly_reasoner.py`) answers structured queries over the assemb
 
 ## Neo4j Import
 
-Script `14_import_neo4j.py` pushes data directly to Neo4j Aura via the Bolt driver — no manual CSV upload needed.
+Script `14_import_neo4j.py` pushes data directly to Neo4j Aura via the Bolt driver — no manual CSV upload needed. Run `10e_build_assembly_graph.py` before `11_export_neo4j_csv.py` when you want the current assembly graph included in Neo4j.
 
 ```bash
 cd XR_Pipeline
@@ -483,7 +485,7 @@ python scripts/14_import_neo4j.py --session session_003
 It will:
 1. Connect using credentials from `.env`
 2. Clear all existing data for that session's room
-3. Import rooms, objects, events, and all relationships
+3. Import rooms, objects, events, assembly nodes, and all relationships
 4. Print a summary of nodes and edges created
 
 ### Graph schema in Neo4j
@@ -492,9 +494,10 @@ It will:
 (:Room)-[:CONTAINS]->(:Object)
 (:Event)-[:INVOLVES {role}]->(:Object)
 (:Event)-[:BEFORE]->(:Event)
+(:AssemblyNode)-[:SUPPORTS|ACHIEVES|INVOLVES|...]->(:AssemblyNode)
 ```
 
-Node labels: `Room`, `Object`, `Event`
+Node labels: `Room`, `Object`, `Event`, `AssemblyNode`
 
 ---
 

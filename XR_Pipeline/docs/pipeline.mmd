@@ -47,37 +47,89 @@ flowchart TD
 
     EGG[(egg_graph.json)]
 
-    %% ── STAGE 5B : SCENE STATE PACKAGE (NEW) ───────────
+    %% ── STAGE 5B : SCENE STATE PACKAGE ─────────────────
     S09B["**09b** build_scene_state_package
     Normalise all outputs into reasoning contract"]
 
-    SSP[("**scene_state_package.json**
+    SSP[("scene_state_package.json
     entities · relations · hypotheses
     observations · provenance · constraints")]
 
-    %% ── STAGE 6 : GRAPH OPS ────────────────────────────
+    %% ── STAGE 6A : OPERATION EVENTS ────────────────────
+    S10B["**10b** build_operation_events
+    PICK_UP · PUT_DOWN · HOLD · CONTACT
+    PLACE_ONTO · INSERT · ATTACH candidates"]
+
+    OPE[(operation_events.csv)]
+    SUPST[(support_state_transitions.csv)]
+
+    %% ── STAGE 6B : STATE FACTS ──────────────────────────
+    S09C["**09c** build_state_facts
+    holding · released · co_held · on_surface
+    time-scoped symbolic predicates"]
+
+    SF[("state_facts.json / .csv")]
+
+    %% ── STAGE 6C : WORKFLOW TIMELINE ───────────────────
+    S10C["**10c** build_workflow_timeline
+    Cluster operations into
+    manipulation · hold · placement · idle phases"]
+
+    WFT[("workflow_timeline.json / .csv")]
+
+    %% ── STAGE 6D : SUBTASK EVENTS ──────────────────────
+    S10D["**10d** build_subtask_events
+    pick_up_part · insert_part · attach_part
+    inferred from facts + operations + domain"]
+
+    SUB[(subtask_events.csv)]
+    SUBSEQ[(subtask_sequence.json)]
+
+    %% ── STAGE 6E : ASSEMBLY GRAPH ───────────────────────
+    S10E["**10e** build_assembly_graph
+    Typed graph: objects · relation_facts
+    subtasks · subgoals · phases · constraints"]
+
+    AG[(assembly_graph.json)]
+
+    %% ── STAGE 6F : ASSEMBLY STATE PACKAGE ──────────────
+    S09D["**09d** build_assembly_state_package
+    Integrate all assembly layer outputs
+    into unified reasoning package"]
+
+    ASP[("assembly_state_package.json")]
+
+    %% ── STAGE 7A : OPERATION REVIEW ────────────────────
+    S11["**11** build_operation_review
+    Per-operation evidence · frame overlays
+    timeline visualisation"]
+
+    %% ── STAGE 7B : ASSEMBLY REVIEW ─────────────────────
+    S11B["**11b** build_assembly_review
+    Active step · achieved goals · blocked
+    likely next · full evidence traces"]
+
+    AR[("assembly_review.json / .md")]
+
+    %% ── GRAPH OPS ──────────────────────────────────────
     S10["**10** prune_egg_graph
     NL query → pruned subgraph + answer"]
     S12["**12** demo_queries
     Demo Q&A over EGG graph"]
 
-    %% ── STAGE 7 : NEO4J EXPORT ─────────────────────────
-    S11["**11** export_neo4j_csv
+    %% ── NEO4J EXPORT ────────────────────────────────────
+    S11E["**11e** export_neo4j_csv
     EGG → nodes.csv + relationships.csv"]
     S14["**14** import_neo4j
     Push CSVs into Neo4j Aura"]
 
     NEO4J[(Neo4j Aura)]
 
-    %% ── STAGE 8 : DEBUG ────────────────────────────────
+    %% ── DEBUG ──────────────────────────────────────────
     S13["**13** visualize_3d_debug
     Point clouds · 3D bounding boxes"]
 
-    %% ── REASONING LAYER ────────────────────────────────
-    RL(["`**Reasoning Layer**
-    LLM · Rule engine · Query agent`"])
-
-    %% ── CONNECTIONS ────────────────────────────────────
+    %% ── BASE PIPELINE CONNECTIONS ───────────────────────
     CAP --> S00
     CAP --> S01
     S01 --> S02
@@ -96,33 +148,80 @@ flowchart TD
     S08 --> EV
     S08 --> ER
     EW --> S09
-    EW --> S09B
     EV --> S09
-    EV --> S09B
     ER --> S09
-    ER --> S09B
     OT --> S09
-    OT --> S09B
-    OO --> S09B
     S09 --> EGG
-    S09B --> SSP
     EGG --> S10
     EGG --> S12
-    EGG --> S11
-    S11 --> S14
+    EGG --> S11E
+    S11E --> S14
     S14 --> NEO4J
-    SSP --> RL
+
+    %% ── SCENE STATE PACKAGE ─────────────────────────────
+    OO --> S09B
+    OT --> S09B
+    EW --> S09B
+    EV --> S09B
+    ER --> S09B
+    S09B --> SSP
+
+    %% ── ASSEMBLY REASONING LAYER ────────────────────────
+    OT  --> S10B
+    EW  --> S10B
+    S10B --> OPE
+    S10B --> SUPST
+
+    OT    --> S09C
+    EW    --> S09C
+    OPE   --> S09C
+    SUPST --> S09C
+    S09C  --> SF
+
+    OPE  --> S10C
+    S10C --> WFT
+
+    OT    --> S10D
+    SF    --> S10D
+    OPE   --> S10D
+    SUPST --> S10D
+    S10D  --> SUB
+    S10D  --> SUBSEQ
+
+    OT   --> S10E
+    SF   --> S10E
+    SUB  --> S10E
+    EGG  --> S10E
+    WFT  --> S10E
+    S10E --> AG
+
+    SF   --> S09D
+    SUB  --> S09D
+    AG   --> S09D
+    WFT  --> S09D
+    S09D --> ASP
+
+    OPE --> S11
+    OT  --> S11
+    EW  --> S11
+    SSP --> S11
+    WFT --> S11
+
+    ASP  --> S11B
+    AG   --> S11B
+    S11B --> AR
 
     %% ── STYLES ─────────────────────────────────────────
     classDef stage      fill:#1e3a5f,stroke:#4a90d9,color:#ffffff,rx:6
     classDef data       fill:#0d2b0d,stroke:#4caf50,color:#b9f6ca
     classDef io         fill:#3b1f00,stroke:#ff9800,color:#ffe0b2,rx:20
-    classDef new        fill:#4a1060,stroke:#ce93d8,color:#f3e5f5,rx:6
+    classDef assembly   fill:#4a1060,stroke:#ce93d8,color:#f3e5f5,rx:6
+    classDef asmdata    fill:#1a0a2e,stroke:#9c27b0,color:#e1bee7
     classDef reasoning  fill:#1a237e,stroke:#7986cb,color:#e8eaf6,rx:20
 
-    class S00,S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11,S12,S13,S14 stage
+    class S00,S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11E,S12,S13,S14 stage
     class FM,OO,OT,EW,EV,ER,EGG data
     class CAP io
-    class S09B,SSP new
-    class RL reasoning
+    class S09B,S09C,S09D,S10B,S10C,S10D,S10E,S11,S11B assembly
+    class SSP,OPE,SUPST,SF,WFT,SUB,SUBSEQ,AG,ASP,AR asmdata
     class NEO4J data

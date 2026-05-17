@@ -1,7 +1,8 @@
-"""Neo4j CSV export from EGG graph."""
+"""Neo4j CSV export helpers for EGG and assembly graphs."""
 from __future__ import annotations
+import json
 from pathlib import Path
-from typing import Dict
+from typing import Any, Dict
 import pandas as pd
 
 
@@ -91,3 +92,129 @@ def export_neo4j_csvs(graph: Dict, output_dir: Path):
         "edges_event_object": len(evt_obj),
         "edges_before": len(before),
     }
+
+
+def export_assembly_neo4j_csvs(graph: Dict[str, Any], output_dir: Path):
+    """Write Neo4j import CSVs from an assembly graph dict.
+
+    The assembly graph has heterogeneous node/edge payloads, so we keep stable
+    Neo4j identifiers in first-class columns and serialize the remaining
+    properties into JSON. The direct importer expands those JSON properties back
+    onto nodes and relationships.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    session_id = str(graph.get("session_id", "unknown"))
+    raw_nodes = list(graph.get("nodes", []))
+    raw_edges = list(graph.get("edges", []))
+
+    node_by_id = {str(n["node_id"]): n for n in raw_nodes if n.get("node_id")}
+    missing_endpoint_ids = []
+    for edge in raw_edges:
+        for endpoint_key in ("source", "target"):
+            endpoint = str(edge.get(endpoint_key, ""))
+            if endpoint and endpoint not in node_by_id and endpoint not in missing_endpoint_ids:
+                missing_endpoint_ids.append(endpoint)
+
+    nodes = []
+    for node in raw_nodes:
+        node_id = str(node["node_id"])
+        node_type = str(node.get("node_type", "unknown"))
+        nodes.append({
+            "assembly_id:ID(AssemblyNode)": _assembly_id(session_id, node_id),
+            "node_id": node_id,
+            "session_id": session_id,
+            "node_type": node_type,
+            "properties_json": _properties_json(node, {"node_id", "node_type"}),
+            ":LABEL": f"AssemblyNode;{_assembly_label(node_type)}",
+        })
+
+    for node_id in missing_endpoint_ids:
+        nodes.append({
+            "assembly_id:ID(AssemblyNode)": _assembly_id(session_id, node_id),
+            "node_id": node_id,
+            "session_id": session_id,
+            "node_type": "external_ref",
+            "properties_json": _properties_json({
+                "node_id": node_id,
+                "node_type": "external_ref",
+                "source": "assembly_edge_endpoint",
+            }, {"node_id", "node_type"}),
+            ":LABEL": "AssemblyNode;AssemblyExternalRef",
+        })
+
+    node_columns = [
+        "assembly_id:ID(AssemblyNode)", "node_id", "session_id",
+        "node_type", "properties_json", ":LABEL",
+    ]
+    pd.DataFrame(nodes, columns=node_columns).to_csv(
+        output_dir / "nodes_assembly.csv",
+        index=False,
+    )
+
+    edges = []
+    for edge in raw_edges:
+        edge_id = str(edge["edge_id"])
+        edge_type = str(edge.get("edge_type", "related_to"))
+        source = str(edge.get("source", ""))
+        target = str(edge.get("target", ""))
+        edges.append({
+            "edge_id:ID(AssemblyEdge)": edge_id,
+            "session_id": session_id,
+            ":START_ID(AssemblyNode)": _assembly_id(session_id, source),
+            ":END_ID(AssemblyNode)": _assembly_id(session_id, target),
+            "edge_type": edge_type,
+            "properties_json": _properties_json(
+                edge,
+                {"edge_id", "edge_type", "source", "target"},
+            ),
+            ":TYPE": _relationship_type(edge_type),
+        })
+
+    edge_columns = [
+        "edge_id:ID(AssemblyEdge)", "session_id", ":START_ID(AssemblyNode)",
+        ":END_ID(AssemblyNode)", "edge_type", "properties_json", ":TYPE",
+    ]
+    pd.DataFrame(edges, columns=edge_columns).to_csv(
+        output_dir / "edges_assembly.csv",
+        index=False,
+    )
+
+    return {
+        "nodes_assembly": len(nodes),
+        "edges_assembly": len(edges),
+    }
+
+
+def _assembly_id(session_id: str, node_id: str) -> str:
+    return f"{session_id}:{node_id}"
+
+
+def _assembly_label(node_type: str) -> str:
+    parts = [p for p in str(node_type).replace("-", "_").split("_") if p]
+    return "Assembly" + "".join(p[:1].upper() + p[1:] for p in parts)
+
+
+def _relationship_type(edge_type: str) -> str:
+    cleaned = "".join(c if c.isalnum() else "_" for c in str(edge_type)).upper()
+    cleaned = cleaned.strip("_") or "RELATED_TO"
+    if cleaned[0].isdigit():
+        cleaned = f"REL_{cleaned}"
+    return cleaned
+
+
+def _properties_json(item: Dict[str, Any], excluded: set[str]) -> str:
+    props = {
+        str(k): _json_safe(v)
+        for k, v in item.items()
+        if k not in excluded and v is not None
+    }
+    return json.dumps(props, sort_keys=True, separators=(",", ":"))
+
+
+def _json_safe(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {str(k): _json_safe(v) for k, v in value.items() if v is not None}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(v) for v in value if v is not None]
+    return value

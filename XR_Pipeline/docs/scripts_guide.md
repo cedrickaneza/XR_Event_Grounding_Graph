@@ -322,13 +322,16 @@ A quick way to verify that the whole pipeline produced a useful and sensible res
 ### `11_export_neo4j_csv.py`
 
 **What it does**
-Converts the EGG graph into CSV files formatted for Neo4j (a graph database), and writes a Cypher script containing the database import commands.
+Converts the EGG graph and, when available, the current assembly graph into CSV files formatted for Neo4j (a graph database), and writes a Cypher script containing the database import commands.
 
 **Why it matters**
 Neo4j lets you visually browse and query the graph in a web interface, and run complex graph queries that would be awkward to do in Python alone.
 
 **Reads from**
 `data/processed/<session>/graphs/egg_graph.json`
+
+If present, it also reads:
+`data/processed/<session>/graphs/assembly_graph.json`
 
 **Outputs**
 
@@ -340,6 +343,8 @@ Neo4j lets you visually browse and query the graph in a web interface, and run c
 | `edges_room_object.csv` | `data/processed/<session>/neo4j/` |
 | `edges_event_object.csv` | `data/processed/<session>/neo4j/` |
 | `edges_before.csv` | `data/processed/<session>/neo4j/` |
+| `nodes_assembly.csv` | `data/processed/<session>/neo4j/` |
+| `edges_assembly.csv` | `data/processed/<session>/neo4j/` |
 | `import_egg.cypher` (database import commands) | `XR_Pipeline/neo4j/import_egg.cypher` |
 
 ---
@@ -347,7 +352,7 @@ Neo4j lets you visually browse and query the graph in a web interface, and run c
 ### `14_import_neo4j.py`
 
 **What it does**
-Connects directly to your Neo4j Aura (cloud) database and pushes all the CSV files in. It safely clears any existing data for the session before importing, so re-running it is always safe and will not create duplicates.
+Connects directly to your Neo4j Aura (cloud) database and pushes all the CSV files in. It imports the EGG layer and, when `nodes_assembly.csv` plus `edges_assembly.csv` are present, the current assembly graph layer as `AssemblyNode` nodes with typed relationships. It safely clears existing data for the session before importing, so re-running it is always safe and will not create duplicates.
 
 Requires `NEO4J_URI` and `NEO4J_PASSWORD` to be set in your `.env` file.
 
@@ -405,8 +410,9 @@ Quest_Capture/quest_capture/     ← put new captures here
         │
   10  prune_egg_graph             answer a query   → pruned_subgraph + answer
   12  demo_queries                run demo Q&A     → demo_query_results.json
+  10e build_assembly_graph        task graph       → assembly_graph.json
         │
-  11  export_neo4j_csv            prep for DB      → neo4j CSVs
+  11  export_neo4j_csv            prep for DB      → EGG + assembly Neo4j CSVs
   14  import_neo4j                push to database → Neo4j Aura
         │
   13  visualize_3d_debug          3D debug images  → point cloud PNGs

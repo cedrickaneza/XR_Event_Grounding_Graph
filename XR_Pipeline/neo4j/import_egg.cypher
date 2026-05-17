@@ -1,4 +1,4 @@
-// XR_YOLO_Pipeline — Neo4j import commands
+// XR_Pipeline — Neo4j import commands
 // Run these in order against your Neo4j Aura instance
 
 CREATE CONSTRAINT room_id IF NOT EXISTS
@@ -51,3 +51,23 @@ LOAD CSV WITH HEADERS FROM $before_url AS row
 MATCH (e1:Event {event_id: row.`:START_ID(Event)`})
 MATCH (e2:Event {event_id: row.`:END_ID(Event)`})
 MERGE (e1)-[:BEFORE]->(e2);
+
+// Optional assembly graph layer. The direct Python importer expands
+// properties_json onto nodes/relationships; this Cypher keeps it available.
+CREATE CONSTRAINT assembly_node_id IF NOT EXISTS
+FOR (n:AssemblyNode) REQUIRE n.assembly_id IS UNIQUE;
+
+LOAD CSV WITH HEADERS FROM $assembly_nodes_url AS row
+MERGE (n:AssemblyNode {assembly_id: row.`assembly_id:ID(AssemblyNode)`})
+SET n.node_id = row.node_id,
+    n.session_id = row.session_id,
+    n.node_type = row.node_type,
+    n.properties_json = row.properties_json;
+
+LOAD CSV WITH HEADERS FROM $assembly_edges_url AS row
+MATCH (a:AssemblyNode {assembly_id: row.`:START_ID(AssemblyNode)`})
+MATCH (b:AssemblyNode {assembly_id: row.`:END_ID(AssemblyNode)`})
+MERGE (a)-[rel:ASSEMBLY_EDGE {edge_id: row.`edge_id:ID(AssemblyEdge)`}]->(b)
+SET rel.session_id = row.session_id,
+    rel.edge_type = row.edge_type,
+    rel.properties_json = row.properties_json;
