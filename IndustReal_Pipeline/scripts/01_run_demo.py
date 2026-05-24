@@ -22,6 +22,7 @@ from __future__ import annotations
 import csv
 import json
 import sys
+import tarfile
 from pathlib import Path
 
 # Allow running from repo root or from IndustReal_Pipeline/
@@ -36,9 +37,10 @@ from src.egg_builder import build_assembly_graph, diff_graphs
 # Paths
 # ---------------------------------------------------------------------------
 
-DATA_DIR    = ROOT / "data" / "ASD_results" / "ASD_IndustRealplusSynthetic_test"
-PROC_INFO   = ROOT / "configs" / "procedure_info.json"
-RESULTS_DIR = ROOT / "results"
+DATA_DIR      = ROOT / "data" / "ASD_results" / "ASD_IndustRealplusSynthetic_test"
+PROC_INFO     = ROOT / "configs" / "procedure_info.json"
+RESULTS_DIR   = ROOT / "results"
+SLICE_TARBALL = ROOT / "data" / "relevant_slice_test_p1.tar.gz"
 
 RECORDINGS = [
     ("03_assy_0_1", "Clean assembly — participant succeeds"),
@@ -149,6 +151,45 @@ def _save_summary(all_results: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# PSR label loader (reads authoritative per-step timestamps from tarball)
+# ---------------------------------------------------------------------------
+
+def _load_psr_steps_from_tarball(clip_name: str) -> list[dict] | None:
+    """Extract PSR_labels_with_errors.csv (or PSR_labels.csv) from the slice
+    tarball and return rows as dicts with keys frame_idx, id, description.
+    Returns None when the tarball is absent or the clip is not inside it.
+    """
+    if not SLICE_TARBALL.exists():
+        return None
+    candidates = [
+        f"relevant_slice/{clip_name}/PSR_labels_with_errors.csv",
+        f"relevant_slice/{clip_name}/PSR_labels.csv",
+    ]
+    try:
+        with tarfile.open(SLICE_TARBALL, "r:gz") as tf:
+            for member_name in candidates:
+                try:
+                    member = tf.extractfile(member_name)
+                except KeyError:
+                    continue
+                if member is None:
+                    continue
+                rows = []
+                for row in csv.reader(member.read().decode().splitlines()):
+                    if len(row) < 3:
+                        continue
+                    rows.append({
+                        "frame_idx": int(Path(row[0]).stem),
+                        "id": int(row[1]),
+                        "description": row[2],
+                    })
+                return rows or None
+    except Exception:
+        pass
+    return None
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -171,11 +212,17 @@ def main():
         _sep(f"{clip_name}  —  {description}")
 
         # ── Load ─────────────────────────────────────────────────────────────
-        rec = load_recording(pred_csv, gt_csv, proc_info)
+        psr_step_rows = _load_psr_steps_from_tarball(clip_name)
+        rec = load_recording(pred_csv, gt_csv, proc_info, psr_step_rows=psr_step_rows)
 
         print(f"\n  Clip     : {rec['clip']}")
         print(f"  Frames   : {rec['n_frames']}  ({rec['n_frames'] / 10:.1f} s at 10 fps)")
         print(f"  Has pred : {rec['has_pred']}")
+        print(f"  GT source: {rec['psr_gt_source']}")
+
+        if rec["psr_gt_source"] == "asd_state_transitions":
+            print("  WARNING: PSR labels not found; GT step timestamps derived from ASD")
+            print("           state transitions — simultaneous steps may be an artifact.")
 
         if not rec["has_pred"]:
             print("\n  *** ASD model produced ZERO predictions for this clip. ***")
@@ -183,7 +230,12 @@ def main():
             print("  which the model was not trained to handle in a sequential context.")
 
         # ── GT steps ─────────────────────────────────────────────────────────
-        _fmt_steps(rec["psr_gt"], "GT steps (derived from state transitions)")
+        gt_label = (
+            "GT steps (from PSR_labels_with_errors.csv)"
+            if rec["psr_gt_source"] == "psr_labels"
+            else "GT steps (derived from ASD state transitions — may have simultaneous timestamps)"
+        )
+        _fmt_steps(rec["psr_gt"], gt_label)
 
         # ── PSR prediction ────────────────────────────────────────────────────
         psr_pred = run_psr(rec["asd_pred"], proc_info, **PSR_KWARGS)

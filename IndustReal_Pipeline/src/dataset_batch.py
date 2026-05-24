@@ -854,7 +854,7 @@ def run_oracle_dataset_batch(
                 asd_frames = state_sequence_to_asd_frames(state_rows, state_catalog=state_catalog)
                 psr_pred = direct_transition_steps_from_state_sequence(state_rows, proc_info=proc_info)
                 psr_pred_b3 = run_psr(asd_frames, proc_info, **PSR_KWARGS)
-                graph = build_assembly_graph(clip, n_frames, psr_pred, proc_info)
+                graph = build_assembly_graph(clip, n_frames, gt_steps, proc_info)
                 metrics = compile_full_clip_metrics(
                     run_mode=mode,
                     archive_name=archive_name,

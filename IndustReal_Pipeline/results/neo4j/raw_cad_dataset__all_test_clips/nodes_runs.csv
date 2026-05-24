@@ -1,2 +1,2 @@
 run_id:ID(IndustRealRun),name,source_results_dir,exported_at,mode_count:int,clip_result_count:int,:LABEL
-raw_cad_dataset__all_test_clips,raw_cad_dataset__all_test_clips,/tmp/industreal_pilot/results/raw_cad_dataset/raw_cad_dataset__all_test_clips,2026-05-06T13:59:59+00:00,2,38,IndustRealRun;PipelineRun
+raw_cad_dataset__all_test_clips,raw_cad_dataset__all_test_clips,.tmp/industreal_pilot/results/raw_cad_dataset__all_test_clips,2026-05-21T13:07:48+00:00,2,38,IndustRealRun;PipelineRun

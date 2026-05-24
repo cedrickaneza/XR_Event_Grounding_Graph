@@ -4,8 +4,8 @@
   "events": [
     {
       "event_id": 0,
-      "frame": 1187,
-      "time_s": 118.7,
+      "frame": 1144,
+      "time_s": 114.4,
       "event_type": "INSTALL",
       "component": "front chassis",
       "action_desc": "Install front chassis",
@@ -13,8 +13,8 @@
     },
     {
       "event_id": 1,
-      "frame": 1187,
-      "time_s": 118.7,
+      "frame": 1144,
+      "time_s": 114.4,
       "event_type": "INSTALL",
       "component": "front chassis pin",
       "action_desc": "Install front chassis pin",

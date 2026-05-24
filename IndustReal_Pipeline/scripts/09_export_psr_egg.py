@@ -117,7 +117,7 @@ def main() -> None:
         psr_gt_full = _normalize_gt_steps(psr_gt_full)
         psr_gt, score_start = filter_steps_to_scored_slice(psr_gt_full, state_rows=state_rows)
         n_frames = (max(int(row["frame_idx"]) for row in state_rows) + 1) if state_rows else 0
-        graph = build_assembly_graph(clip, n_frames, psr_pred, proc_info)
+        graph = build_assembly_graph(clip, n_frames, psr_gt, proc_info)
 
         manifest_src = manifests_dir / f"{clip}_raw_manifest.csv"
         manifest_dst = clip_dir / "raw_manifest.csv"

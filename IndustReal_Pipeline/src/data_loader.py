@@ -68,6 +68,8 @@ def load_recording(
     pred_csv: Path,
     gt_csv: Path,
     proc_info: list,
+    *,
+    psr_step_rows: list[dict] | None = None,
 ) -> dict:
     """Load one recording and return everything needed to run PSR + evaluate.
 
@@ -76,9 +78,17 @@ def load_recording(
       n_frames      — total frame count (from GT max framenr + 1)
       asd_pred      — per-frame prediction lists  (n_frames × variable)
       asd_gt        — per-frame GT lists           (n_frames × variable)
-      psr_gt        — list of PSR step dicts derived from GT state transitions
+      psr_gt        — list of PSR step dicts
       has_pred      — bool: False when pred CSV is empty (model failure case)
       gt_rows       — raw GT rows (for diagnostics)
+      psr_gt_source — "psr_labels" or "asd_state_transitions"
+
+    psr_step_rows: optional rows with keys 'frame_idx', 'id', 'description'
+        (as returned by raw_loader.load_step_labels_csv). When supplied,
+        psr_gt is built from these directly, preserving the original per-step
+        timestamps. When None, steps are derived from ASD state transitions —
+        which collapses all components changed in one transition to a single
+        frame number.
     """
     gt_rows   = _read_asd_csv(gt_csv)
     pred_rows = _read_asd_csv(pred_csv)
@@ -92,39 +102,55 @@ def load_recording(
     asd_pred = _rows_to_frame_list(pred_rows, n_frames)
     asd_gt   = _rows_to_frame_list(gt_rows,   n_frames)
 
-    # Derive PSR ground-truth steps from consecutive GT state transitions.
-    # Walk frames in order; whenever the annotated state changes, infer steps.
-    psr_gt: list[dict] = []
-    prev_state: Optional[list] = None
-    prev_state_str: Optional[str] = None
+    if psr_step_rows is not None:
+        psr_gt = [
+            {
+                "frame": int(row["frame_idx"]),
+                "id": int(row["id"]),
+                "description": str(row["description"]),
+                "conf": 1.0,
+            }
+            for row in psr_step_rows
+        ]
+        psr_gt_source = "psr_labels"
+    else:
+        # Derive PSR ground-truth steps from consecutive GT state transitions.
+        # Walk frames in order; whenever the annotated state changes, infer steps.
+        # Limitation: a multi-component transition emits all steps at the same frame.
+        psr_gt = []
+        prev_state: Optional[list] = None
+        prev_state_str: Optional[str] = None
 
-    for fn, frame_preds in enumerate(asd_gt):
-        if not frame_preds:
-            continue
-        state_class = frame_preds[0][0]
-        state_str   = CATEGORIES[int(state_class)]
+        for fn, frame_preds in enumerate(asd_gt):
+            if not frame_preds:
+                continue
+            state_class = frame_preds[0][0]
+            state_str   = CATEGORIES[int(state_class)]
 
-        if state_str in ("background", "error_state"):
-            continue
-        if state_str == prev_state_str:
-            continue
+            if state_str in ("background", "error_state"):
+                continue
+            if state_str == prev_state_str:
+                continue
 
-        curr_state = state_string_to_list(state_str)
-        if prev_state is not None:
-            actions, _ = convert_states_to_steps(
-                prev_state, curr_state, fn, proc_info, conf=1.0
-            )
-            psr_gt.extend(actions)
+            curr_state = state_string_to_list(state_str)
+            if prev_state is not None:
+                actions, _ = convert_states_to_steps(
+                    prev_state, curr_state, fn, proc_info, conf=1.0
+                )
+                psr_gt.extend(actions)
 
-        prev_state     = curr_state
-        prev_state_str = state_str
+            prev_state     = curr_state
+            prev_state_str = state_str
+
+        psr_gt_source = "asd_state_transitions"
 
     return {
-        "clip":      clip_name,
-        "n_frames":  n_frames,
-        "asd_pred":  asd_pred,
-        "asd_gt":    asd_gt,
-        "psr_gt":    psr_gt,
-        "has_pred":  len(pred_rows) > 0,
-        "gt_rows":   gt_rows,
+        "clip":           clip_name,
+        "n_frames":       n_frames,
+        "asd_pred":       asd_pred,
+        "asd_gt":         asd_gt,
+        "psr_gt":         psr_gt,
+        "has_pred":       len(pred_rows) > 0,
+        "gt_rows":        gt_rows,
+        "psr_gt_source":  psr_gt_source,
     }
