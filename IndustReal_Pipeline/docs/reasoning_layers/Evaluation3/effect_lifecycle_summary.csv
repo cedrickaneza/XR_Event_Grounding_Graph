@@ -1,0 +1,4 @@
+effect_lifecycle_status,count
+active,20
+inactive_rejected,4
+invalidated,8

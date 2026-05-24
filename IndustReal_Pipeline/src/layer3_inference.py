@@ -26,6 +26,25 @@ CONSTRAINT_FIELDS = [
     "status",
 ]
 
+RULE_COVERAGE_FIELDS = [
+    "step_id",
+    "step_index",
+    "action_name",
+    "object_args",
+    "predicate_count",
+    "matched_rule_count",
+    "produced_constraint_count",
+    "has_expected_effect",
+    "has_requirement",
+    "has_incompatibility",
+    "has_meaningful_evidence",
+    "has_rule_coverage",
+    "warning_code",
+    "warning_message",
+    "evidence_predicates",
+    "suggested_fix",
+]
+
 
 @dataclass(frozen=True)
 class Layer3Inputs:
@@ -51,6 +70,7 @@ def run_layer3_inference(inputs: Layer3Inputs) -> dict[str, Any]:
             predicates_by_step.setdefault(step_id, []).append(predicate)
 
     constraints: list[dict[str, Any]] = []
+    diagnostics: list[dict[str, Any]] = []
     inference_rules = [rule for rule in rules if str(rule.get("type")) != "compatibility"]
     compatibility_rules = [rule for rule in rules if str(rule.get("type")) == "compatibility"]
     for step in steps:
@@ -58,8 +78,9 @@ def run_layer3_inference(inputs: Layer3Inputs) -> dict[str, Any]:
         if not step_id:
             continue
         step_predicates = predicates_by_step.get(step_id, [])
+        step_constraints: list[dict[str, Any]] = []
         for rule in inference_rules:
-            constraints.extend(
+            step_constraints.extend(
                 _apply_inference_rule(
                     step_id,
                     step_predicates,
@@ -69,7 +90,7 @@ def run_layer3_inference(inputs: Layer3Inputs) -> dict[str, Any]:
                 )
             )
         for rule in compatibility_rules:
-            constraints.extend(
+            step_constraints.extend(
                 _apply_compatibility_rule(
                     step_id,
                     step_predicates,
@@ -77,14 +98,20 @@ def run_layer3_inference(inputs: Layer3Inputs) -> dict[str, Any]:
                     default_aggregation=str(defaults.get("aggregation", "min")),
                 )
             )
+        constraints.extend(step_constraints)
+        diagnostics.append(_rule_coverage_diagnostic(step, step_predicates, step_constraints))
 
     _write_constraints_csv(Path(inputs.output_path), constraints)
+    diagnostics_path = Path(inputs.output_path).with_name("rule_coverage_diagnostics.csv")
+    _write_rule_coverage_csv(diagnostics_path, diagnostics)
     return {
         "step_records": len(steps),
         "predicates": len(predicates),
         "rules": len(rules),
         "constraints": len(constraints),
         "output_path": str(inputs.output_path),
+        "rule_coverage_diagnostics_path": str(diagnostics_path),
+        "rule_coverage_warnings": sum(1 for row in diagnostics if row.get("warning_code")),
         "constraints_by_kind": _count_by(constraints, "kind"),
         "constraints_by_rule_type": _count_by(constraints, "rule_type"),
         "constraints_by_rule": _count_by(constraints, "rule_id"),
@@ -203,6 +230,79 @@ def _instantiate_constraints(
             }
         )
     return constraints
+
+
+def _rule_coverage_diagnostic(
+    step: dict[str, Any],
+    predicates: list[dict[str, Any]],
+    constraints: list[dict[str, Any]],
+) -> dict[str, Any]:
+    step_id = str(step.get("id") or step.get("step_id") or "")
+    action_predicates = [item for item in predicates if item.get("name") == "hasAction"]
+    object_predicates = [item for item in predicates if item.get("name") in {"usesObject", "usesTool"}]
+    action_name = _first_action_name(action_predicates)
+    object_args = _object_args(object_predicates)
+    has_meaningful_evidence = bool(action_predicates and object_predicates)
+    matched_rules = sorted({str(item.get("rule_id")) for item in constraints if item.get("rule_id")})
+    has_expected_effect = any(item.get("name") == "produces" for item in constraints)
+    has_requirement = any(str(item.get("name") or "") in {"requires", "requiresTool", "requiresSafety"} for item in constraints)
+    has_incompatibility = any(
+        item.get("name") == "incompatibleAction" or item.get("status") == "incompatibility"
+        for item in constraints
+    )
+    warning_code = ""
+    warning_message = ""
+    suggested_fix = ""
+    if has_meaningful_evidence and not constraints:
+        warning_code = "no_applicable_rule"
+        warning_message = "Step has predicate evidence but no Layer 3 rule produced constraints."
+        suggested_fix = "Add an explicit rule for this action or treat it as unsupported in the domain model."
+    return {
+        "step_id": step_id,
+        "step_index": step.get("index"),
+        "action_name": action_name,
+        "object_args": json.dumps(object_args, ensure_ascii=False),
+        "predicate_count": len(predicates),
+        "matched_rule_count": len(matched_rules),
+        "produced_constraint_count": len(constraints),
+        "has_expected_effect": str(has_expected_effect).lower(),
+        "has_requirement": str(has_requirement).lower(),
+        "has_incompatibility": str(has_incompatibility).lower(),
+        "has_meaningful_evidence": str(has_meaningful_evidence).lower(),
+        "has_rule_coverage": str(bool(constraints)).lower(),
+        "warning_code": warning_code,
+        "warning_message": warning_message,
+        "evidence_predicates": json.dumps(_compact_evidence_predicates(action_predicates + object_predicates), ensure_ascii=False),
+        "suggested_fix": suggested_fix,
+    }
+
+
+def _first_action_name(predicates: list[dict[str, Any]]) -> str:
+    for predicate in predicates:
+        args = _predicate_args(predicate)
+        if len(args) >= 2:
+            return str(args[1])
+    return ""
+
+
+def _object_args(predicates: list[dict[str, Any]]) -> list[str]:
+    output: list[str] = []
+    for predicate in predicates:
+        args = _predicate_args(predicate)
+        if len(args) >= 2:
+            output.append(str(args[1]))
+    return output
+
+
+def _compact_evidence_predicates(predicates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        {
+            "id": item.get("id"),
+            "name": item.get("name"),
+            "args": _predicate_args(item),
+        }
+        for item in predicates
+    ]
 
 
 def _find_matches(antecedents: list[dict[str, Any]], predicates: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -421,6 +521,14 @@ def _write_constraints_csv(path: Path, constraints: list[dict[str, Any]]) -> Non
         writer = csv.DictWriter(f, fieldnames=CONSTRAINT_FIELDS)
         writer.writeheader()
         writer.writerows(constraints)
+
+
+def _write_rule_coverage_csv(path: Path, diagnostics: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=RULE_COVERAGE_FIELDS)
+        writer.writeheader()
+        writer.writerows(diagnostics)
 
 
 def _parse_float(value: Any) -> float | None:

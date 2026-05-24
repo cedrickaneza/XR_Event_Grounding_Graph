@@ -1,0 +1,11 @@
+{
+  "accepted_uncovered_steps": 0,
+  "rows": 26,
+  "rule_coverage_warnings": 1,
+  "summary_by_name": {
+    "produces": 10,
+    "requires": 12,
+    "requiresSafety": 3,
+    "requiresTool": 1
+  }
+}

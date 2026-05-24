@@ -24,10 +24,13 @@ class ProceduralReasoningGraphInputs:
     predicates_path: Path | None = None
     constraints_path: Path | None = None
     exclude_rejected: bool = False
+    graph_name: str = GRAPH_NAME
+    short_labels: bool = False
 
 
 def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> dict[str, Any]:
     validations = _read_records(Path(inputs.validations_path))
+    step_records_by_id = _read_step_records_by_id(inputs.step_records_path)
     included_records = [
         record
         for record in validations
@@ -43,26 +46,55 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
     source_nodes: dict[str, str] = {}
     entity_types: dict[str, set[str]] = {}
     condition_names = _collect_condition_names(included_records)
+    effect_lifecycle = _collect_effect_lifecycle(included_records)
 
     for record in included_records:
         step_id = str(record.get("step_id") or record.get("id") or "")
         if not step_id:
             continue
+        step_record = step_records_by_id.get(step_id, {})
+        diagnostics = record.get("diagnostics", {}) if isinstance(record.get("diagnostics"), dict) else {}
+        rule_coverage = diagnostics.get("rule_coverage", {}) if isinstance(diagnostics.get("rule_coverage"), dict) else {}
+        warnings = list(record.get("warnings", []) or diagnostics.get("warnings", []) or [])
+        invalidated_effects = list(record.get("invalidated_effects", []) or [])
         step_node_id = _node_id("Step", step_id)
         step_nodes[step_id] = step_node_id
         step_status[step_id] = str(record.get("status") or "")
+        action = step_record.get("action") if isinstance(step_record.get("action"), dict) else {}
+        object_props = _step_object_properties(step_record)
         builder.add_node(
             step_node_id,
             "Step",
             _clean_properties(
                 {
                     "step_id": step_id,
+                    "clip_result_id": step_record.get("clip_result_id") or record.get("clip_result_id"),
+                    "run_id": step_record.get("run_id") or record.get("run_id"),
+                    "mode": step_record.get("mode") or record.get("mode"),
+                    "archive_name": step_record.get("archive_name") or record.get("archive_name"),
+                    "clip": step_record.get("clip") or record.get("clip"),
                     "source_event_id": record.get("source_event_id"),
                     "index": record.get("index"),
                     "status": record.get("status"),
-                    "confidence": record.get("confidence"),
-                    "conf": record.get("conf"),
+                    "action_name": action.get("name"),
+                    "action_event_type": action.get("event_type"),
+                    "action_description": action.get("description"),
+                    **object_props,
+                    "display_name": _step_display_name(record),
+                    "display_label": _step_display_label(record, short=inputs.short_labels),
+                    "short_id": _short_event_id(record.get("source_event_id") or step_id),
+                    "confidence": record.get("confidence") if record.get("confidence") is not None else record.get("conf"),
                     "schema_version": record.get("schema_version"),
+                    "warning_count": len(warnings),
+                    "warnings": warnings,
+                    "has_rule_coverage": record.get("has_rule_coverage", rule_coverage.get("has_rule_coverage")),
+                    "matched_rule_count": record.get("matched_rule_count", rule_coverage.get("matched_rule_count")),
+                    "produced_constraint_count": record.get("produced_constraint_count", rule_coverage.get("produced_constraint_count")),
+                    "has_expected_effect": record.get("has_expected_effect", rule_coverage.get("has_expected_effect")),
+                    "unsupported_action": record.get("unsupported_action", bool(warnings)),
+                    "unsupported_action_name": record.get("unsupported_action_name", rule_coverage.get("action_name") if warnings else None),
+                    "invalidates_effect_count": len(invalidated_effects),
+                    "invalidated_effects": invalidated_effects,
                 }
             ),
         )
@@ -88,6 +120,7 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
 
             for entity in _predicate_entity_args(predicate, condition_names):
                 entity_node_id = _node_id("Entity", entity)
+                builder.add_node(entity_node_id, "Entity", _entity_properties(entity))
                 builder.add_edge(predicate_node_id, entity_node_id, "HAS_ENTITY", {})
                 if predicate.get("name") in {"usesObject", "usesTool"}:
                     builder.add_edge(
@@ -105,7 +138,11 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
             builder.add_node(
                 constraint_node_id,
                 "Constraint",
-                _constraint_properties(constraint, _constraint_support_status(record, constraint)),
+                _constraint_properties(
+                    constraint,
+                    _constraint_support_status(record, constraint),
+                    effect_lifecycle.get(str(constraint.get("constraint_id") or "")),
+                ),
             )
             builder.add_edge(step_node_id, constraint_node_id, "HAS_CONSTRAINT", {})
 
@@ -119,16 +156,35 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
             if rule_id:
                 rule_node_id = _node_id("Rule", rule_id)
                 rule_nodes[rule_id] = rule_node_id
-                builder.add_node(rule_node_id, "Rule", {"rule_id": rule_id})
+                builder.add_node(
+                    rule_node_id,
+                    "Rule",
+                    {
+                        "rule_id": rule_id,
+                        "display_name": rule_id,
+                        "display_label": rule_id,
+                        "short_id": rule_id,
+                    },
+                )
                 builder.add_edge(constraint_node_id, rule_node_id, "DERIVED_FROM", {})
 
             for entity in _constraint_entity_args(constraint, condition_names):
                 entity_node_id = _node_id("Entity", entity)
+                builder.add_node(entity_node_id, "Entity", _entity_properties(entity))
                 builder.add_edge(constraint_node_id, entity_node_id, "HAS_ENTITY", {})
 
             for evidence_id in _evidence_predicate_ids(constraint):
                 target = predicate_nodes.get(evidence_id) or _node_id("Predicate", evidence_id)
                 builder.add_edge(constraint_node_id, target, "SUPPORTED_BY", {"support_type": "evidence_predicate"})
+
+        for invalidation in invalidated_effects:
+            produced_constraint_id = _blank_to_none(invalidation.get("produced_by_constraint_id"))
+            invalidating_constraint_id = _blank_to_none(invalidation.get("invalidated_by_constraint_id"))
+            if not produced_constraint_id or not invalidating_constraint_id:
+                continue
+            produced_node = constraint_nodes.get(produced_constraint_id) or _node_id("Constraint", produced_constraint_id)
+            invalidating_node = constraint_nodes.get(invalidating_constraint_id) or _node_id("Constraint", invalidating_constraint_id)
+            builder.add_edge(produced_node, invalidating_node, "INVALIDATED_BY", {})
 
         for dependency in _dependency_items(record):
             support = dependency.get("supporting_effect") if isinstance(dependency, dict) else None
@@ -150,7 +206,7 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
                         "required_condition": required_condition,
                         "supporting_effect": supporting_effect,
                         "confidence": record.get("confidence") if record.get("confidence") is not None else record.get("conf"),
-                        "provisional": step_status.get(earlier_step_id) == "uncertain",
+                        "provisional": bool(supporting_effect.get("provisional")) or step_status.get(earlier_step_id) == "uncertain",
                     }
                 ),
             )
@@ -169,12 +225,12 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
 
     for entity, types in entity_types.items():
         entity_node_id = _node_id("Entity", entity)
-        builder.add_node(entity_node_id, "Entity", {"entity_id": entity, "entity_type": sorted(types)})
+        builder.add_node(entity_node_id, "Entity", _entity_properties(entity, sorted(types)))
 
     for node in list(builder.nodes.values()):
         if node["type"] == "Entity" and not node["properties"]:
             entity_id = node["id"].split("::", 1)[1]
-            node["properties"] = {"entity_id": entity_id}
+            node["properties"] = _entity_properties(entity_id)
 
     ordered_steps = sorted(
         [
@@ -194,7 +250,7 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
 
     graph = {
         "schema_version": SCHEMA_VERSION,
-        "graph_name": GRAPH_NAME,
+        "graph_name": inputs.graph_name or GRAPH_NAME,
         "nodes": sorted(builder.nodes.values(), key=lambda item: (item["type"], item["id"])),
         "edges": sorted(builder.edges.values(), key=lambda item: (item["type"], item["source"], item["target"], _stable_json(item["properties"]))),
     }
@@ -212,12 +268,14 @@ def build_procedural_reasoning_graph(inputs: ProceduralReasoningGraphInputs) -> 
     return {
         **counts,
         "schema_version": SCHEMA_VERSION,
-        "graph_name": GRAPH_NAME,
+        "graph_name": graph["graph_name"],
         "validations_path": str(inputs.validations_path),
+        "step_records_path": str(inputs.step_records_path) if inputs.step_records_path else None,
         "output_path": str(graph_path),
         "nodes_csv_path": str(nodes_csv_path),
         "edges_csv_path": str(edges_csv_path),
         "excluded_rejected": bool(inputs.exclude_rejected),
+        "short_labels": bool(inputs.short_labels),
     }
 
 
@@ -276,6 +334,30 @@ def _dependency_items(record: dict[str, Any]) -> list[dict[str, Any]]:
     ]
 
 
+def _step_object_properties(step_record: dict[str, Any]) -> dict[str, Any]:
+    objects = step_record.get("objects")
+    if not isinstance(objects, list):
+        return {}
+    object_ids: list[str] = []
+    object_labels: list[str] = []
+    object_types: list[str] = []
+    for item in objects:
+        if not isinstance(item, dict):
+            continue
+        if item.get("id") not in (None, ""):
+            object_ids.append(str(item.get("id")))
+        if item.get("label") not in (None, ""):
+            object_labels.append(str(item.get("label")))
+        if item.get("type") not in (None, ""):
+            object_types.append(str(item.get("type")))
+    return {
+        "object_ids": object_ids,
+        "object_labels": object_labels,
+        "object_types": object_types,
+        "object_summary": ", ".join(object_labels or object_types or object_ids),
+    }
+
+
 def _dedupe_items(items: Iterable[dict[str, Any]], key_field: str) -> list[dict[str, Any]]:
     output: dict[str, dict[str, Any]] = {}
     for item in items:
@@ -297,13 +379,18 @@ def _dedupe_items(items: Iterable[dict[str, Any]], key_field: str) -> list[dict[
 
 
 def _predicate_properties(predicate: dict[str, Any]) -> dict[str, Any]:
+    name = str(predicate.get("name") or "")
+    args = _args(predicate)
     return _clean_properties(
         {
             "predicate_id": predicate.get("predicate_id"),
             "name": predicate.get("name"),
             "predicate_key": predicate.get("predicate_key"),
             "category": predicate.get("category"),
-            "args": _args(predicate),
+            "args": args,
+            "display_name": name,
+            "display_label": _call_label(name, _compact_args(args)),
+            "short_id": _short_predicate_id(predicate),
             "confidence": predicate.get("confidence") if predicate.get("confidence") is not None else predicate.get("conf"),
             "conf": predicate.get("conf") if predicate.get("conf") is not None else predicate.get("confidence"),
             "source": predicate.get("source"),
@@ -312,32 +399,164 @@ def _predicate_properties(predicate: dict[str, Any]) -> dict[str, Any]:
     )
 
 
-def _constraint_properties(constraint: dict[str, Any], support_status: str | None) -> dict[str, Any]:
+def _constraint_properties(
+    constraint: dict[str, Any],
+    support_status: str | None,
+    lifecycle: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    name = str(constraint.get("name") or "")
+    args = _args(constraint)
+    display_name = _constraint_display_name(name, args)
+    lifecycle = lifecycle or {}
     return _clean_properties(
         {
             "constraint_id": constraint.get("constraint_id"),
             "name": constraint.get("name"),
             "kind": constraint.get("kind"),
-            "args": _args(constraint),
+            "args": args,
+            "display_name": display_name,
+            "display_label": _constraint_display_label(display_name, args, support_status),
+            "short_id": _short_constraint_id(constraint),
             "confidence": constraint.get("confidence") if constraint.get("confidence") is not None else constraint.get("conf"),
             "conf": constraint.get("conf") if constraint.get("conf") is not None else constraint.get("confidence"),
             "rule_id": constraint.get("rule_id"),
             "support": constraint.get("support"),
             "status": constraint.get("status"),
             "support_status": support_status,
+            "effect_lifecycle_status": lifecycle.get("effect_lifecycle_status"),
+            "invalidated_by_constraint_id": lifecycle.get("invalidated_by_constraint_id"),
         }
     )
 
 
 def _source_properties(source: dict[str, Any], source_node_id: str) -> dict[str, Any]:
+    source_id = source_node_id.split("::", 1)[1]
+    display_name = _source_display_name(source, source_id)
     return _clean_properties(
         {
-            "source_id": source_node_id.split("::", 1)[1],
+            "source_id": source_id,
             "source_type": source.get("type"),
             "file": source.get("file"),
             "fields": source.get("fields"),
+            "display_name": display_name,
+            "display_label": display_name,
+            "short_id": source_id,
         }
     )
+
+
+def _entity_properties(entity_id: str, entity_type: list[str] | None = None) -> dict[str, Any]:
+    return _clean_properties(
+        {
+            "entity_id": entity_id,
+            "entity_type": entity_type or [],
+            "display_name": entity_id,
+            "display_label": entity_id,
+            "short_id": entity_id,
+        }
+    )
+
+
+def _step_display_name(record: dict[str, Any]) -> str:
+    index = record.get("index")
+    return f"Step {index}" if index is not None else "Step"
+
+
+def _step_display_label(record: dict[str, Any], *, short: bool = False) -> str:
+    if short:
+        index = record.get("index")
+        prefix = f"S{index}" if index is not None else "S"
+        status_code = _step_status_code(record.get("status"))
+        return f"{prefix} [{status_code}]" if status_code else prefix
+    name = _step_display_name(record)
+    status = _blank_to_none(record.get("status"))
+    return f"{name} [{status}]" if status else name
+
+
+def _step_status_code(status: Any) -> str | None:
+    mapping = {
+        "accepted": "A",
+        "uncertain": "U",
+        "rejected": "R",
+    }
+    return mapping.get(str(status or "").lower())
+
+
+def _constraint_display_name(name: str, args: list[Any]) -> str:
+    if name == "requiresTool":
+        return "requires tool"
+    if name == "requiresSafety":
+        condition = str(args[1]) if len(args) > 1 else ""
+        return f"requires safety {condition}".strip()
+    if name in {"requires", "produces"}:
+        condition = str(args[1]) if len(args) > 1 else ""
+        return f"{name} {condition}".strip()
+    if name == "incompatibleAction":
+        return "incompatible action"
+    return _humanize_identifier(name)
+
+
+def _constraint_display_label(display_name: str, args: list[Any], support_status: str | None) -> str:
+    compact_args = _compact_args(args[2:] if len(args) > 2 else args[1:])
+    label = _call_label(display_name, compact_args)
+    return f"{label} [{support_status}]" if support_status else label
+
+
+def _source_display_name(source: dict[str, Any], source_id: str) -> str:
+    file_name = Path(str(source.get("file") or "")).name
+    source_type = _blank_to_none(source.get("type"))
+    if file_name and source_type:
+        return f"{source_type}:{file_name}"
+    if file_name:
+        return file_name
+    return source_type or source_id
+
+
+def _call_label(name: str, args: list[Any]) -> str:
+    if not args:
+        return name
+    return f"{name}({', '.join(str(arg) for arg in args)})"
+
+
+def _compact_args(args: list[Any], max_args: int = 4) -> list[Any]:
+    compact = [_compact_arg(arg) for arg in args[:max_args]]
+    if len(args) > max_args:
+        compact.append("...")
+    return compact
+
+
+def _compact_arg(value: Any) -> Any:
+    if not isinstance(value, str):
+        return value
+    if value.startswith("step::"):
+        return _short_event_id(value)
+    return value
+
+
+def _short_event_id(value: Any) -> str:
+    text = str(value or "")
+    if not text:
+        return ""
+    return text.split("::")[-1]
+
+
+def _short_predicate_id(predicate: dict[str, Any]) -> str | None:
+    return _blank_to_none(predicate.get("predicate_id")) or _blank_to_none(predicate.get("id"))
+
+
+def _short_constraint_id(constraint: dict[str, Any]) -> str | None:
+    return _blank_to_none(constraint.get("constraint_id")) or _blank_to_none(constraint.get("id"))
+
+
+def _humanize_identifier(value: str) -> str:
+    text = str(value or "").replace("_", " ")
+    output = []
+    for index, char in enumerate(text):
+        previous = text[index - 1] if index else ""
+        if index and char.isupper() and (previous.islower() or previous.isdigit()):
+            output.append(" ")
+        output.append(char.lower())
+    return "".join(output).strip()
 
 
 def _constraint_support_status(record: dict[str, Any], constraint: dict[str, Any]) -> str | None:
@@ -451,6 +670,56 @@ def _condition_ref(constraint: dict[str, Any]) -> dict[str, Any]:
     return {"name": args[1] if len(args) > 1 else constraint.get("name"), "args": args[2:]}
 
 
+def _collect_effect_lifecycle(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    lifecycle: dict[str, dict[str, Any]] = {}
+    for record in records:
+        record_status = str(record.get("status") or "")
+        for constraint in _constraints_for_record(record):
+            if constraint.get("name") != "produces":
+                continue
+            constraint_id = _blank_to_none(constraint.get("constraint_id"))
+            if not constraint_id:
+                continue
+            lifecycle.setdefault(
+                constraint_id,
+                {
+                    "constraint_id": constraint_id,
+                    "effect_lifecycle_status": "inactive_rejected"
+                    if record_status == "rejected"
+                    else "active",
+                },
+            )
+
+    for record in records:
+        for item in list(record.get("produced_effect_lifecycle", []) or []):
+            if not isinstance(item, dict):
+                continue
+            constraint_id = _blank_to_none(item.get("constraint_id"))
+            if not constraint_id:
+                continue
+            lifecycle[constraint_id] = {
+                "constraint_id": constraint_id,
+                "effect_lifecycle_status": item.get("effect_lifecycle_status"),
+                "invalidated_by_constraint_id": item.get("invalidated_by_constraint_id"),
+            }
+
+    for record in records:
+        for item in list(record.get("invalidated_effects", []) or []):
+            if not isinstance(item, dict):
+                continue
+            produced_constraint_id = _blank_to_none(item.get("produced_by_constraint_id"))
+            if not produced_constraint_id:
+                continue
+            lifecycle.setdefault(produced_constraint_id, {"constraint_id": produced_constraint_id})
+            lifecycle[produced_constraint_id].update(
+                {
+                    "effect_lifecycle_status": "invalidated",
+                    "invalidated_by_constraint_id": item.get("invalidated_by_constraint_id"),
+                }
+            )
+    return lifecycle
+
+
 def _graph_counts(graph: dict[str, Any], records: list[dict[str, Any]]) -> dict[str, Any]:
     node_counts = _count_by(graph["nodes"], "type")
     edge_counts = _count_by(graph["edges"], "type")
@@ -496,6 +765,16 @@ def _parse_csv_record(row: dict[str, str]) -> dict[str, Any]:
         if key in parsed:
             parsed[key] = _parse_float(parsed[key])
     return parsed
+
+
+def _read_step_records_by_id(path: Path | None) -> dict[str, dict[str, Any]]:
+    if path is None or not Path(path).exists():
+        return {}
+    return {
+        str(record.get("id")): record
+        for record in _read_records(Path(path))
+        if record.get("id")
+    }
 
 
 def _write_json(path: Path, data: Any) -> None:

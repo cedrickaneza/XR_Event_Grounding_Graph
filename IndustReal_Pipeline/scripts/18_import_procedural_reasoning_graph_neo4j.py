@@ -16,6 +16,7 @@ from src.procedural_neo4j_import import (  # noqa: E402
     constraint_cyphers,
     edge_import_cypher,
     grouped_by_type,
+    legacy_constraint_drop_cyphers,
     load_procedural_graph,
     node_import_cypher,
     normalize_graph,
@@ -60,6 +61,11 @@ def main() -> None:
     parser.add_argument("--env-file", type=str, default=".env")
     parser.add_argument("--batch-size", type=int, default=500)
     parser.add_argument("--no-replace-graph", action="store_true")
+    parser.add_argument(
+        "--drop-legacy-prg-id-constraints",
+        action="store_true",
+        help="Drop older prg_id-only uniqueness constraints before creating graph_name+prg_id constraints.",
+    )
     args = parser.parse_args()
 
     graph = load_procedural_graph(args.graph)
@@ -85,6 +91,9 @@ def main() -> None:
     driver = GraphDatabase.driver(uri, auth=(user, password))
     driver.verify_connectivity()
     with driver.session() as session:
+        if args.drop_legacy_prg_id_constraints:
+            for cypher in legacy_constraint_drop_cyphers(list(node_groups)):
+                session.execute_write(lambda tx, query: tx.run(query), cypher)
         for cypher in constraint_cyphers(list(node_groups)):
             session.execute_write(lambda tx, query: tx.run(query), cypher)
         if not args.no_replace_graph:

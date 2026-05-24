@@ -1,0 +1,3102 @@
+{
+  "checks": [
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv",
+      "category": "graph_order",
+      "check_id": "E4.1",
+      "check_name": "Order preservation",
+      "evidence_file": "order_preservation_results.csv",
+      "message": "33 NEXT edge checks; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv,validation_records.jsonl",
+      "category": "graph_dependencies",
+      "check_id": "E4.2",
+      "check_name": "Dependency grounding",
+      "evidence_file": "dependency_grounding_results.csv",
+      "message": "27 DEPENDS_ON edges checked; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",
+      "category": "graph_constraints",
+      "check_id": "E4.3",
+      "check_name": "Requirement visibility",
+      "evidence_file": "requirement_visibility_results.csv",
+      "message": "54 requirements checked; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "validation_records.jsonl,procedural_reasoning_graph_nodes.csv",
+      "category": "graph_constraints",
+      "check_id": "E4.4",
+      "check_name": "Missing requirement visibility",
+      "evidence_file": "missing_requirement_visibility_results.csv",
+      "message": "All 18 missing requirements are visible as graph constraints.",
+      "severity": "warning",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",
+      "category": "graph_evidence",
+      "check_id": "E4.5",
+      "check_name": "Evidence traceability",
+      "evidence_file": "evidence_traceability_results.csv",
+      "message": "34 Step nodes checked; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",
+      "category": "graph_provenance",
+      "check_id": "E4.6",
+      "check_name": "Rule provenance",
+      "evidence_file": "rule_provenance_results.csv",
+      "message": "79 rule-provenance constraints checked; 0 failures.",
+      "severity": "warning",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv,effect_history_diagnostics.csv",
+      "category": "graph_dependencies",
+      "check_id": "E4.7",
+      "check_name": "Rejected-step isolation",
+      "evidence_file": "rejected_step_isolation_graph_results.csv",
+      "message": "31 rejected-step graph checks; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv",
+      "category": "graph_dependencies",
+      "check_id": "E4.8",
+      "check_name": "Provisional dependency visibility",
+      "evidence_file": "provisional_dependency_results.csv",
+      "message": "3 uncertain-support dependencies checked; 0 failures.",
+      "severity": "warning",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",
+      "category": "graph_lifecycle",
+      "check_id": "E4.9",
+      "check_name": "Effect invalidation visibility",
+      "evidence_file": "effect_invalidation_graph_results.csv",
+      "message": "8 invalidated effects checked; 0 failures.",
+      "severity": "critical",
+      "status": "PASS"
+    }
+  ],
+  "clip_result_id": "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1",
+  "details": {
+    "dependency_grounding": [
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_bracket\", \"front_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"short_rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_rear_chassis_pin\", \"rear_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_bracket\", \"front_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_bracket_screw\", \"front_bracket\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_wheel_assy\", \"front_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_rear_chassis_pin\", \"rear_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_bracket\", \"front_chassis\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"front_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"rear_chassis\", \"base\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4"
+      },
+      {
+        "dependent_has_requirement_edge": true,
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+        "has_validation_dependency_support": true,
+        "notes": "DEPENDS_ON grounded in validation support",
+        "rejected_support": false,
+        "required_condition": "{\"args\": [\"base\", \"workspace\"], \"name\": \"installed\"}",
+        "status": "PASS",
+        "support_has_produces_edge": true,
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      }
+    ],
+    "effect_invalidation_visibility": [
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      },
+      {
+        "effect_lifecycle_status": "invalidated",
+        "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidated_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "invalidating_constraint_has_producing_step": true,
+        "linked_invalidating_constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "notes": "invalidated effect linked to invalidating produced effect",
+        "status": "PASS"
+      }
+    ],
+    "evidence_traceability": [
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 1,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 7,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+        "step_index": 0
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+        "step_index": 1
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 4,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "step_index": 2
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 4,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "step_index": 3
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+        "step_index": 4
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 1,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5",
+        "step_index": 5
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "step_index": 6
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 4,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "step_index": 7
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+        "step_index": 8
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+        "step_index": 9
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+        "step_index": 10
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 3,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 11,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "step_index": 11
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+        "step_index": 12
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+        "step_index": 13
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+        "step_index": 14
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+        "step_index": 15
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+        "step_index": 16
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "step_index": 17
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+        "step_index": 18
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 3,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 11,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "step_index": 19
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+        "step_index": 20
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+        "step_index": 21
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 4,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "step_index": 22
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "step_index": 23
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 4,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 12,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "step_index": 24
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+        "step_index": 25
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 3,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 11,
+        "status": "PASS",
+        "status_value": "uncertain",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "step_index": 26
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+        "step_index": 27
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+        "step_index": 28
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 11,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+        "step_index": 29
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+        "step_index": 30
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+        "step_index": 31
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 8,
+        "status": "PASS",
+        "status_value": "accepted",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+        "step_index": 32
+      },
+      {
+        "confidence_value": 1.0,
+        "constraint_evidence_count": 2,
+        "has_constraint_edges": true,
+        "has_predicate_edges": true,
+        "notes": "step evidence traceable",
+        "predicate_evidence_count": 9,
+        "status": "PASS",
+        "status_value": "rejected",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+        "step_index": 33
+      }
+    ],
+    "missing_requirement_visibility": [
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresSafety",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresSafety",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresSafety",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresTool",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresTool",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresSafety",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresSafety",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresTool",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requiresTool",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+        "support_status": "missing",
+        "visible_as_missing": true
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_graph_constraint_node": true,
+        "notes": "missing requirement materialized as graph constraint",
+        "requirement_name": "requires",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+        "support_status": "missing",
+        "visible_as_missing": true
+      }
+    ],
+    "order_preservation": [
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 0,
+        "status": "PASS",
+        "target_index": 1
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 1,
+        "status": "PASS",
+        "target_index": 2
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 10,
+        "status": "PASS",
+        "target_index": 11
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 11,
+        "status": "PASS",
+        "target_index": 12
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 12,
+        "status": "PASS",
+        "target_index": 13
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 13,
+        "status": "PASS",
+        "target_index": 14
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 14,
+        "status": "PASS",
+        "target_index": 15
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 15,
+        "status": "PASS",
+        "target_index": 16
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 16,
+        "status": "PASS",
+        "target_index": 17
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 17,
+        "status": "PASS",
+        "target_index": 18
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 18,
+        "status": "PASS",
+        "target_index": 19
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 19,
+        "status": "PASS",
+        "target_index": 20
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 2,
+        "status": "PASS",
+        "target_index": 3
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 20,
+        "status": "PASS",
+        "target_index": 21
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 21,
+        "status": "PASS",
+        "target_index": 22
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 22,
+        "status": "PASS",
+        "target_index": 23
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 23,
+        "status": "PASS",
+        "target_index": 24
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 24,
+        "status": "PASS",
+        "target_index": 25
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 25,
+        "status": "PASS",
+        "target_index": 26
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 26,
+        "status": "PASS",
+        "target_index": 27
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 27,
+        "status": "PASS",
+        "target_index": 28
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 28,
+        "status": "PASS",
+        "target_index": 29
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 29,
+        "status": "PASS",
+        "target_index": 30
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 3,
+        "status": "PASS",
+        "target_index": 4
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 30,
+        "status": "PASS",
+        "target_index": 31
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 31,
+        "status": "PASS",
+        "target_index": 32
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 32,
+        "status": "PASS",
+        "target_index": 33
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 4,
+        "status": "PASS",
+        "target_index": 5
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 5,
+        "status": "PASS",
+        "target_index": 6
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 6,
+        "status": "PASS",
+        "target_index": 7
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 7,
+        "status": "PASS",
+        "target_index": 8
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 8,
+        "status": "PASS",
+        "target_index": 9
+      },
+      {
+        "duplicate": false,
+        "edge_source": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+        "edge_target": "Step::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+        "expected_edge": true,
+        "notes": "NEXT follows validation index",
+        "source_index": 9,
+        "status": "PASS",
+        "target_index": 10
+      }
+    ],
+    "provisional_dependency_visibility": [
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "notes": "uncertain support marked provisional",
+        "provisional_property": true,
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "notes": "uncertain support marked provisional",
+        "provisional_property": true,
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "notes": "uncertain support marked provisional",
+        "provisional_property": true,
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      }
+    ],
+    "rejected_step_isolation": [
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "uncertain",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4"
+      },
+      {
+        "dependent_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+        "edge_type": "DEPENDS_ON",
+        "notes": "support step is not rejected",
+        "status": "PASS",
+        "support_status": "accepted",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+      },
+      {
+        "dependent_step_id": "",
+        "edge_type": "PRODUCES",
+        "notes": "rejected produced effect lifecycle=inactive_rejected",
+        "status": "PASS",
+        "support_status": "rejected",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13"
+      },
+      {
+        "dependent_step_id": "",
+        "edge_type": "PRODUCES",
+        "notes": "rejected produced effect lifecycle=inactive_rejected",
+        "status": "PASS",
+        "support_status": "rejected",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14"
+      },
+      {
+        "dependent_step_id": "",
+        "edge_type": "PRODUCES",
+        "notes": "rejected produced effect lifecycle=inactive_rejected",
+        "status": "PASS",
+        "support_status": "rejected",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21"
+      },
+      {
+        "dependent_step_id": "",
+        "edge_type": "PRODUCES",
+        "notes": "rejected produced effect lifecycle=inactive_rejected",
+        "status": "PASS",
+        "support_status": "rejected",
+        "support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33"
+      }
+    ],
+    "requirement_visibility": [
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "safety_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "safety_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "safety_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "tool_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "tool_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "safety_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresSafety",
+        "source_field": "safety_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "tool_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requiresTool",
+        "source_field": "tool_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "supported_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32"
+      },
+      {
+        "args_preserved": true,
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_constraint_node": true,
+        "has_step_requirement_edge": true,
+        "name_preserved": true,
+        "notes": "requirement visible in graph",
+        "requirement_name": "requires",
+        "source_field": "missing_requirements",
+        "status": "PASS",
+        "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33"
+      }
+    ],
+    "rule_provenance": [
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "tool_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "tool_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "implicit_domain_required_condition",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "safety_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "implicit_domain_required_condition",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "safety_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "tool_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "compat_error_action_marks_incompatibility",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "tool_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "implicit_domain_required_condition",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "safety_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "implicit_domain_required_condition",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "safety_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "compat_error_action_marks_incompatibility",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "implicit_domain_required_condition",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "safety_domain_requirement",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_remove_component_from_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_remove_requires_component_installed",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "effect_install_component_on_target",
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "constraint_node_id": "Constraint::step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "has_derived_from_edge": true,
+        "has_rule_node": true,
+        "notes": "constraint links to rule provenance",
+        "rule_id": "precondition_install_requires_target_installed",
+        "status": "PASS"
+      }
+    ]
+  },
+  "edge_counts": {
+    "DEPENDS_ON": 27,
+    "DERIVED_FROM": 405,
+    "HAS_CONSTRAINT": 79,
+    "HAS_ENTITY": 561,
+    "HAS_PREDICATE": 326,
+    "INVALIDATED_BY": 8,
+    "NEXT": 33,
+    "PRODUCES": 32,
+    "REQUIRES": 45,
+    "SUPPORTED_BY": 27,
+    "USES": 34
+  },
+  "effect_history_rows": 40,
+  "evaluation": "Evaluation 4: Procedural graph traceability",
+  "graph_name": "procedural_reasoning_graph::raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1",
+  "input_directories": {
+    "graph_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\procedural_reasoning_graph\\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1",
+    "reasoning_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\reasoning_layers\\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1"
+  },
+  "node_counts": {
+    "Constraint": 79,
+    "Entity": 13,
+    "Predicate": 326,
+    "Rule": 8,
+    "Source": 40,
+    "Step": 34
+  },
+  "step_status_distribution": {
+    "accepted": 18,
+    "rejected": 6,
+    "uncertain": 10
+  },
+  "timestamp": "2026-05-20T10:48:41+00:00"
+}

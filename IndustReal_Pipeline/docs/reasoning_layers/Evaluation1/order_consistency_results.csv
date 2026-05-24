@@ -1,0 +1,11 @@
+edge_source,edge_target,edge_type,source_index,target_index,status,message
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,NEXT,0,1,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,NEXT,1,2,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,NEXT,2,3,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,NEXT,3,4,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,NEXT,4,5,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,NEXT,5,6,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,NEXT,6,7,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,NEXT,7,8,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,NEXT,8,9,PASS,NEXT follows adjacent validation index
+Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,Step::step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,NEXT,9,10,PASS,NEXT follows adjacent validation index

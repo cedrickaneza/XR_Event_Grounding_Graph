@@ -23,7 +23,9 @@ def main() -> None:
     parser.add_argument("--step-records", type=Path, default=None)
     parser.add_argument("--predicates", type=Path, default=None)
     parser.add_argument("--constraints", type=Path, default=None)
+    parser.add_argument("--graph-name", type=str, default="procedural_reasoning_graph")
     parser.add_argument("--exclude-rejected", action="store_true")
+    parser.add_argument("--shortLabels", action="store_true", help="Use compact Step display labels such as S0 [A], S1 [U], S2 [R].")
     args = parser.parse_args()
 
     result = build_procedural_reasoning_graph(
@@ -34,6 +36,8 @@ def main() -> None:
             predicates_path=args.predicates,
             constraints_path=args.constraints,
             exclude_rejected=args.exclude_rejected,
+            graph_name=args.graph_name,
+            short_labels=args.shortLabels,
         )
     )
     print(json.dumps(result, indent=2))

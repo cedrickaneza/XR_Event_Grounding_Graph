@@ -76,8 +76,12 @@ def test_ontology_config_emits_generic_class_facts_and_type_defaults(tmp_path: P
         )
     )
     constraints = _read_constraints(constraints_path)
+    diagnostics = _read_constraints(output_dir / "rule_coverage_diagnostics.csv")
 
     assert result["constraints_by_rule"]["effect_install_component_on_target"] >= 10
+    assert result["constraints_by_rule"]["precondition_remove_requires_component_installed"] == 1
+    assert result["constraints_by_rule"]["effect_remove_component_from_target"] == 1
+    assert result["rule_coverage_warnings"] == 0
     assert result["constraints_by_rule"]["implicit_domain_required_condition"] == 3
     assert result["constraints_by_rule"]["safety_domain_requirement"] == 3
     assert result["constraints_by_rule"]["tool_domain_requirement"] == 1
@@ -85,6 +89,24 @@ def test_ontology_config_emits_generic_class_facts_and_type_defaults(tmp_path: P
         row["name"] == "requiresTool" and json.loads(row["args"]) == [row["step_id"], "screwdriver"]
         for row in constraints
     )
+    remove_diag = next(row for row in diagnostics if row["action_name"] == "remove")
+    assert remove_diag["warning_code"] == ""
+    assert remove_diag["has_rule_coverage"] == "true"
+    assert remove_diag["produced_constraint_count"] == "2"
+    assert any(
+        row["rule_id"] == "precondition_remove_requires_component_installed"
+        and row["name"] == "requires"
+        and json.loads(row["args"]) == [row["step_id"], "installed", "front_wheel_assy", "front_chassis"]
+        for row in constraints
+    )
+    assert any(
+        row["rule_id"] == "effect_remove_component_from_target"
+        and row["name"] == "produces"
+        and json.loads(row["args"]) == [row["step_id"], "removed", "front_wheel_assy", "front_chassis"]
+        for row in constraints
+    )
+    install_diag = next(row for row in diagnostics if row["action_name"] == "install" and int(row["produced_constraint_count"]) > 0)
+    assert install_diag["warning_code"] == ""
 
 
 def _read_jsonl(path: Path) -> list[dict[str, object]]:

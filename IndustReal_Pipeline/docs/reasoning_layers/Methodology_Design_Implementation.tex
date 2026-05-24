@@ -1,0 +1,1762 @@
+\chapter{Methodology}
+\label{cha:methodology}
+
+This thesis investigates how step-level procedural descriptions can be transformed into explicit procedural models that support reasoning, validation, and traceability. The input to the methodology is a set of temporally bounded step segments derived from task recordings. Each segment may include operator speech, manual annotations, and optional perception-derived evidence such as detected objects or spatial relations.
+
+The purpose of the methodology is not to infer the complete procedure directly from raw video. Instead, the focus is on representing step-level evidence symbolically and using rule-based reasoning to make implicit procedural knowledge explicit. This includes inferred preconditions, expected effects, safety requirements, tool and material relations, and explanation traces.
+
+The resulting representation supports the construction of a procedural graph in which the given step sequence is preserved, while additional reasoning links describe dependencies, supporting evidence, and inferred constraints.
+
+\section{The Reasoning Pipeline}
+\label{sec:method-reasoning-pipeline}
+
+The methodology is organized as a layered reasoning pipeline in which each layer performs a specific transformation: step-aligned evidence is converted into predicates, predicates are used to infer constraints, and these constraints support validation and procedural graph construction.
+
+The pipeline separates evidence preparation from reasoning. The early layers organize information associated with each step segment, including textual descriptions, annotations, semantic labels, and optional spatial relations. The later layers apply explicit rules to infer procedural conditions and evaluate whether each step is sufficiently supported.
+
+The separation allows uncertain or incomplete evidence to be prepared independently from the deterministic rule evaluation. Given fixed symbolic facts, rules, thresholds, and domain definitions, the reasoning layer is designed to produce reproducible inferred constraints, validation outcomes, and graph structure
+
+The four layers are:
+
+\begin{itemize}
+    \item Layer 1 defines the step-aligned input package.
+    \item Layer 2 converts the input package into symbolic facts.
+    \item Layer 3 applies rule-based inference to derive implicit procedural constraints.
+    \item Layer 4 validates and enriches the steps and constructs the procedural graph.
+\end{itemize}
+
+
+\subsection{Definitions and notation for reasoning elements}
+\label{subsec:method-definition-notation-reasoning}
+
+The methodology uses a fixed set of reasoning elements across layers: objects, step segments, predicates, constraints, action types, and procedural hypotheses. The notation makes the interfaces between layers explicit and separates this thesis from execution-oriented formulations such as \citet{Zhao2025VideoToBT}.
+
+\begin{itemize}
+ \item $\mathcal{O}$: a set of relevant objects present or mentioned in the steps' scenes.
+ \item $\mathcal{S}$: a set of candidate step segments provided as input.
+ \item $\mathcal{P}$: a set of unary and binary predicates representing step-level, semantic, and spatial evidence.
+ \item $\mathcal{C}$: a set of inferred constraints representing assembly-relevant conditions.
+ \item $\mathcal{A}$: a set of abstract action types.
+ \item $\mathcal{H}$: a set of validated or candidate procedural hypotheses.
+\end{itemize}
+
+
+The term candidate does not mean that the reasoning layer generates the step order. It means that each provided step description is treated as a hypothesis whose content, requirements, and effects must be validated.
+
+An entity $o_j \in \mathcal{O}$ may correspond to a material, part, tool, fixture, or workstation element. Object identities may originate from manual annotations, transcripts, prior domain knowledge, or perception models. When several sources provide conflicting labels, they are represented as competing semantic hypotheses.
+
+Predicates represent symbolic evidence. They may describe step-level information, semantic identity, or spatial relations. Examples include $hasAction(s_i,place)$, $usesObject(s_i,o_j)$, $usesTool(s_i,o_k)$, $isA(o_j,Rod)$, and $aligned(o_j,o_k)$. Each predicate includes a confidence value and provenance information linking it to its source.
+
+Constraints represent procedural or assembly-relevant conditions inferred from predicates. These include preconditions, expected effects, safety requirements, tool requirements, compatibility relations, and implicit assembly conditions. Constraints are not directly observed. They are produced by rules and are linked to the predicates that triggered them.
+
+Rules define how predicates are mapped into constraints. Inference rules produce supporting constraints, while compatibility rules identify action-object combinations that are inadmissible. This distinction allows the system to separate positive evidence from hard violations.
+
+For each step $s_i \in \mathcal{S}$ associated with a time interval in the recording, the system operates on a predicate set $\mathcal{P}_{s_i}$ and an inferred constraint set $\mathcal{C}_{s_i}$ associated with source descriptions and optional evidence. Layer 4 uses these sets to validate and enrich the step and the final procedural graph is denoted by
+
+\[
+G = (V,E),
+\]
+
+where $V$ contains validated step nodes and associated evidence nodes, and $E$ contains temporal, dependency, and support relations.
+
+
+
+\section{Methodological overview and module boundaries}
+\label{sec:method-overview}
+
+The methodology separates evidence preparation from reasoning. Layers 1 and 2 organize step-aligned inputs into symbolic predicates, while Layers 3 and 4 infer constraints, validate step hypotheses, enrich them, and construct the procedural graph.
+
+\begin{itemize}
+    \item Layer 1: Step-aligned input package
+    \begin{itemize}
+        \item Defines candidate step segments and temporal boundaries.
+        \item Associates each step with transcripts, annotations, and optional perception evidence.
+        \item Preserves source metadata, confidence values, and temporal references.
+    \end{itemize}
+
+    \item Layer 2: Symbolic fact construction
+    \begin{itemize}
+        \item Converts step descriptions and available evidence into symbolic predicates.
+        \item Represents actions, objects, tools, materials, quantities, and time windows.
+        \item Adds semantic and spatial predicates when such evidence is available.
+        \item Maintains confidence, provenance, and temporal references for generated facts.
+    \end{itemize}
+
+    \item Layer 3: Rule-based procedural inference
+    \begin{itemize}
+        \item Evaluates domain rules over the symbolic fact base.
+        \item Infers preconditions, expected effects, safety requirements, tool requirements, compatibility constraints, and implicit assembly conditions.
+        \item Propagates confidence values through rule evaluation.
+        \item Links inferred constraints to the predicates and rules that produced them.
+    \end{itemize}
+
+    \item Layer 4: Step validation and procedural graph construction
+    \begin{itemize}
+        \item Evaluates each step against predicates and inferred constraints.
+        \item Classifies step support as accepted, uncertain, or rejected.
+        \item Enriches step nodes with inferred procedural information.
+        \item Constructs a procedural graph containing temporal, dependency, and support relations.
+    \end{itemize}
+\end{itemize}
+
+Layers 1 and 2 define the front-end interface. They organize heterogeneous sources into a symbolic representation without depending on a specific perception model. Layers 3 and 4 define the backend contribution of the thesis, where explicit rules are used to infer, validate, and structure procedural knowledge.
+
+The output is a procedural graph that preserves the provided step sequence while adding inferred dependencies, support relations, and provenance links. The graph is therefore not only a transcription of the input descriptions, but a structured representation of explicit and inferred procedural knowledge.
+
+
+\subsection{Input assumptions and domain preparation}
+\label{sec:input-assumptions}
+
+This section defines the assumptions and conventions used before the reasoning layers are applied. The purpose is to ensure that step records, entities, predicates, and rules share a common structure.
+
+The input procedure is represented as an ordered set of step segments $\mathcal{S} = \{s_1,\ldots,s_n\}$. Each step $s_i$ has a time interval, one or more source descriptions, and optional supporting evidence. The order of the step segments is assumed to be given by the input annotations or segmentation process.
+
+The pipeline operates over a domain-configurable set of entity types, such as rods, sleeves, supports, tools, holes, or workstations. These entity types are not fixed by the methodology. They are defined in the domain configuration and can be adapted to different assembly scenarios.
+
+Each relevant entity mentioned or observed during a step is assigned an identifier. The same entity may appear across multiple steps when annotations, transcripts, perception outputs, or prior domain knowledge support the link. For example, a rod mentioned in one step may later appear as the object on which sleeves are placed. These links may come from annotations, transcripts, perception outputs, or prior domain knowledge.
+
+The predicate vocabulary is kept compact so that rule matching remains inspectable and domain adaptation remains manageable. Step-level predicates describe actions and involved entities, for example $hasAction(s_i,place)$ and $usesObject(s_i,o_j)$. Semantic predicates describe entity types, for example $isA(o_j,Rod)$. Spatial predicates describe qualitative relations between entities, for example $aligned(o_j,o_k)$ or $touching(o_j,o_k)$, when geometric evidence is available.
+
+The domain configuration also defines the rule vocabulary used by Layer 3. Rules may encode action compatibility, required preconditions, expected effects, tool requirements, safety requirements, and implicit assembly conditions. The rule vocabulary therefore lets Layer 3 infer missing requirements, effects, compatibility conditions, and safety or tool constraints from the available symbolic evidence.
+
+All intermediate representations include provenance information. This records whether a predicate or constraint originated from operator speech, manual annotation, perception output, prior domain knowledge, or rule-based inference. This provenance is necessary for explanation traces and for distinguishing explicitly stated information from inferred information.
+
+
+\subsubsection{Rule set authoring and constraint semantics}
+\label{sec:rule-authoring}
+
+Given the definitions introduced in \cref{subsec:method-definition-notation-reasoning}, this section describes how rules are specified and how their outputs are interpreted within the reasoning process.
+Inference rules are defined as conjunctions of qualitative predicates and semantic conditions, independent of low-level geometry. Their role is to map perceptual evidence into higher-level assembly conditions expressed as constraints. These constraints are qualitative in nature and are interpreted operationally within the reasoning context rather than as fixed numeric thresholds.
+
+When multiple inference rules apply to the same step, their resulting constraints are retained as parallel hypotheses, each with confidence derived from its supporting predicates. This avoids forcing a single interpretation when the step evidence supports more than one procedural condition
+
+Compatibility rules are defined separately and operate over semantic predicates to determine whether a given action is admissible for a pair of object types. Unlike inference rules, they do not contribute supporting constraints, but instead produce incompatibility relations that are enforced during procedural validation.
+
+In this work, the term \textit{hypothesis} refers to candidate interpretations at different levels of abstraction, including semantic labels, spatial relations and inferred constraints. These hypotheses are not treated as ground truth, but as uncertainty-bearing representations that may coexist and be evaluated or refined across layers.
+
+
+\section{Layer 1 methodology: step-aligned input package}
+\label{sec:layer1-method}
+
+Layer 1 defines the input interface between task recordings and the reasoning pipeline. The input is an ordered set of candidate step segments $\mathcal{S} = \{s_1,\ldots,s_n\}$, where each $s_i$ corresponds to a temporally bounded part of the recorded procedure.
+
+Each step segment may include operator speech, manual annotations, and optional perception-derived evidence. Operator speech provides the description given during task execution, while manual annotations may correct, refine, or add details after the recording has been reviewed. Optional perception evidence may include detected entities, semantic labels, poses, or geometric representations.
+
+The output of Layer 1 is a structured record for each step. A record includes the step identifier, sequence index, time interval, source descriptions, and any available entity or perception references. This representation preserves the link between the symbolic reasoning process and the original recording.
+
+Layer 1 does not validate the correctness or completeness of the step description. It only organizes the available evidence into a consistent input structure. Validation, enrichment, and inference are performed in later layers.
+
+
+\section{Layer 2 methodology: symbolic fact construction}
+\label{sec:layer2-method}
+
+Layer 2 transforms each step-aligned input record into a symbolic fact base. For each step $s_i$, the output is a local predicate set $\mathcal{P}_{s_i}$ containing step-level, semantic, and, when available, spatial predicates.
+
+Step-level predicates describe the procedural information associated with the step. These include the action, time window, involved objects, tools, materials, and quantities. For example, a step in which the operator places copper sleeves on a rod may produce predicates such as $hasAction(s_i,place)$, $usesObject(s_i,o_1)$, $usesObject(s_i,o_2)$, $hasQuantity(o_1,8)$, and $hasTimeWindow(s_i,t_a,t_b)$.
+
+Semantic predicates describe the identity or role of entities. These may be derived from manual annotations, transcripts, prior domain knowledge, or perception outputs. For example, Layer 2 may produce $isA(o_1,Sleeve)$, $isA(o_2,Rod)$, or $isA(o_3,Screwdriver)$. When multiple interpretations are possible, competing semantic hypotheses may be retained with separate confidence values.
+
+When geometric evidence is available, Layer 2 may also derive qualitative spatial predicates. Oriented bounding boxes can be mapped to relations such as \textit{aligned}, \textit{inside}, and \textit{touching}, following a compact spatial abstraction based on oriented bounding boxes rather than full meshes \citep{Haesler_2025}. These predicates are optional evidence for reasoning and are not required for every step.
+
+All predicates include confidence and provenance information. Provenance records whether a predicate originated from operator speech, manual annotation, perception output, prior domain knowledge, or another preprocessing source. This allows later layers to distinguish explicitly stated facts from uncertain or automatically derived evidence.
+
+As illustrated later in \cref{sec:example-rule1}, Layer 2 may produce both step-level predicates and spatial predicates for the same step. For example, a candidate insertion step may include $hasAction(s_i,insert)$, $usesObject(s_i,o_1)$, $usesObject(s_i,o_2)$, and $isA(o_1,Peg)$, together with optional spatial evidence such as $aligned(o_1,o_2)$ and $inside(o_1,o_2)$. These predicates form the traceable input for Layer 3.
+
+If upstream geometry is unstable, Layer 2 could optionally be preceded by a representation or reconstruction stage that improves local geometric consistency before relation extraction, for example by reconstructing scenes from primitive-level elements \citep{Mazur_2024}. In the present thesis, this is treated as an optional extension rather than a core contribution.
+
+
+\section{Layer 3 methodology: rule-based procedural inference}
+\label{sec:layer3-method}
+
+Layer 3 performs rule-based inference over the predicate sets produced in Layer 2. For each step $s_i$, the layer consumes the local predicate set $\mathcal{P}_{s_i}$ and derives a set of inferred constraints $\mathcal{C}_{s_i}$. These constraints make implicit procedural knowledge explicit, including preconditions, expected effects, safety requirements, required tools, compatibility conditions, and implicit assembly conditions.
+
+\subsection{Conceptual design}
+
+The input to Layer 3 consists of symbolic predicates associated with a step. These predicates may describe the action performed in the step, the involved objects, their semantic types, and optional spatial relations. Layer 3 interprets these predicates using explicit domain rules.
+
+A rule is defined as a conjunction of unary and binary predicates. When the antecedents of a rule are satisfied, the system infers one or more higher-level constraints. Each inferred constraint is associated with a confidence value derived from the supporting predicates and with provenance information linking it to the rule and evidence that produced it.
+
+For a step $s_i$, let $\mathcal{P}_{s_i}$ denote the local predicate set available for reasoning. A rule $r$ maps a subset of supporting predicates $\mathbf{p}_r \subseteq \mathcal{P}_{s_i}$ to one or more inferred constraints:
+
+\[
+r : \mathbf{p}_r \rightarrow \mathbf{c}_r,
+\qquad
+\mathbf{c}_r \subseteq \mathcal{C}_{s_i}.
+\]
+
+The rule is activated when all supporting predicates satisfy the rule threshold:
+
+\[
+\min_{p \in \mathbf{p}_r} \text{conf}(p) \geq \tau.
+\]
+
+The confidence of each inferred constraint is computed using the same conservative aggregation policy:
+
+\[
+\text{conf}(c) = \min_{p \in \mathbf{p}_r} \text{conf}(p).
+\]
+
+The same threshold and minimum-confidence policy is used for all rule activations, while the inferred constraint type determines how the result is used during validation
+
+\paragraph{Rule types.}
+Layer 3 uses several types of rules. Inferred precondition rules derive conditions that should hold before a step can be considered valid. For example, placing sleeves on a rod requires the rod to have already been placed on its supports:
+
+\begin{align*}
+&isA(o_1,\text{Sleeve}) \wedge isA(o_2,\text{Rod}) \wedge isA(o_3,\text{Support}) \\
+&\wedge hasAction(s_i,\text{place}) \wedge usesObject(s_i,o_1) \wedge usesObject(s_i,o_2) \\
+&\Rightarrow requires(s_i, placed(o_2,o_3)) 
+\end{align*}
+
+Safety constraint rules derive safety-related conditions that may be omitted from the step description. For example, tightening components on a rod requires the rod to be secured on the workstation:
+
+\begin{align*}
+&isA(o_1,\text{Rod}) \wedge isA(o_2,\text{Workstation}) \\
+&\wedge hasAction(s_i,\text{tighten}) \wedge usesObject(s_i,o_1) \\
+&\Rightarrow requiresSafety(s_i, secured(o_1,o_2))
+\end{align*}
+
+Required tool rules infer tools needed for a step. For example, tightening a sleeve requires a screwdriver or equivalent tool:
+
+\begin{align*}
+&isA(o_1,\text{Sleeve}) \wedge hasAction(s_i,\text{tighten})  \\
+&\wedge usesObject(s_i,o_1)  \\
+&\Rightarrow requiresTool(s_i,\text{Screwdriver})
+\end{align*}
+
+Implicit assembly condition rules derive technical conditions required for an action to make sense. For example, a sleeve can only be tightened to a rod if their corresponding holes are aligned:
+
+\begin{align*}
+&isA(o_1,\text{Sleeve}) \wedge isA(o_2,\text{Rod})  \\
+&\wedge hasAction(s_i,\text{tighten}) \wedge usesObject(s_i,o_1) \wedge usesObject(s_i,o_2) \\
+&\Rightarrow requires(s_i, alignedHoles(o_1,o_2))
+\end{align*}
+
+Compatibility rules identify inadmissible action-object combinations. Unlike the previous rule types, they act as hard validity conditions during step validation. For example, if an action is not meaningful for a given pair of object types, the rule produces an incompatibility relation:
+
+\begin{align*}
+&isA(o_1,T_1) \wedge isA(o_2,T_2) \wedge hasAction(s_i,a) \\
+&\Rightarrow incompatibleAction(s_i,o_1,o_2,a).
+\end{align*}
+
+The resulting constraints are passed to Layer 4, where they are used to validate and enrich the corresponding step.
+
+\Cref{fig:layer3_diagram-1} illustrates the rule-based inference process, where spatial and semantic predicates are combined with compatibility rules to produce assembly constraints and action admissibility conditions, with uncertainty propagated through confidence aggregation.
+
+\begin{figure}[t]
+  \begin{center}
+    %\vspace*{1em}
+    \includegraphics[width=0.9\linewidth]{Figures/Layer_3_with3objects.png}
+    %\vspace*{1em}
+  \end{center}
+  \caption{Rule-based assembly inference in Layer 3. Spatial and semantic predicates are combined with
+semantic compatibility rules to infer higher-level assembly constraints and action admissibility
+conditions, with uncertainty propagated through confidence-based aggregation.}
+  \label{fig:layer3_diagram-1}
+\end{figure}
+
+
+\subsection{Design decisions and alternatives}
+\label{sub:layer3-method-design-decisions}
+
+\subsubsection{Rule-based inference versus learned inference.}
+An alternative would be to train a model to infer procedural constraints directly from step descriptions, annotations, or symbolic inputs. Such an approach could reduce the need for manually authored rules, but it would require task-specific training data and would make the reasoning process harder to inspect.
+
+The design used here is restricted to a rule-based approach because the objective is not only to infer constraints, but also to explain where they came from. Rules make domain assumptions explicit, allow inferred constraints to be traced back to supporting predicates, and provide deterministic behavior once the symbolic inputs and configuration are fixed. The consequence is that the quality of the reasoning depends on the coverage and correctness of the rule set.
+
+\subsubsection{Local step reasoning versus global procedure inference.}
+Another alternative would be to infer the complete procedural structure globally, including the order of steps, alternative paths, and long-range dependencies. This would allow richer process modeling, but would also require stronger assumptions about observation quality and procedure completeness.
+
+In this work, the order of step segments is provided as input. Reasoning is performed locally for each step, and graph-level dependencies are added when inferred effects support later preconditions. This keeps the method tractable and aligned with the available evidence. The trade-off is that the system does not infer a complete executable process model.
+
+\subsubsection{Constraint layer versus direct predicate validation.}
+A simpler design would validate steps directly against predicates from Layer 2. However, many relevant procedural conditions are not directly stated or observed. For example, the requirement that sleeve holes must be aligned before tightening is not merely a detected spatial relation, but an assembly condition inferred from the action and involved objects.
+
+For this reason, Layer 3 introduces an explicit constraint layer. Predicates provide evidence, while constraints represent inferred procedural knowledge. This separation makes it possible to distinguish what was stated, observed, or inferred.
+
+\subsubsection{Confidence aggregation.}
+A fully probabilistic approach could model dependencies between predicates and constraints more accurately. However, such models require assumptions and data that are outside the scope of this thesis, and they may reduce interpretability.
+
+This thesis represents uncertainty using scalar confidence values attached to predicates and constraints. Rule confidence is computed using minimum aggregation over the supporting predicates. This conservative policy is simple, reproducible, and easy to trace, although it does not capture complex dependencies between evidence sources.
+
+\subsubsection{Object-level versus site-level reasoning.}
+Some assembly conditions may require reasoning about specific sites, such as holes, edges, or contact regions. Site-level reasoning would allow more precise rules, for example when checking whether a sleeve hole is aligned with a rod hole. However, it requires more detailed geometric information and more complex annotations.
+
+The main representation in this thesis is object-level. Site-level predicates may be introduced when the required information is available, but they are treated as an extension rather than a core assumption.
+
+
+\subsection{Implementation scope and delimitation}
+
+The conceptual design supports several types of procedural inference, including preconditions, expected effects, safety requirements, tool requirements, compatibility constraints, and implicit assembly conditions. The implemented prototype focuses on the rule types needed to test whether predicates can be transformed into traceable requirements, effects, incompatibilities, and validation outcomes.
+
+Specifically, the implementation evaluates predefined rules over the predicate set $\mathcal{P}_{s_i}$ for each step $s_i$, generates inferred constraints in $\mathcal{C}_{s_i}$, propagates confidence values using a fixed aggregation policy, and records provenance links between inferred constraints and supporting predicates.
+
+The implementation does not attempt to learn rules automatically, infer step boundaries, perform full natural language understanding, or maintain a global hypothesis structure over the whole procedure. It also does not implement detailed site-level reasoning unless the required predicates are explicitly available.
+
+This delimitation keeps the implementation focused on the main contribution of the thesis: transforming symbolic step evidence into traceable procedural constraints that can support validation and graph construction.
+
+\subsection{Relation to assembly knowledge representation}
+
+Layer 3 follows the idea that assembly knowledge can be represented hierarchically, where lower-level relations support the inference of higher-level procedural conditions. In this thesis, predicates represent explicit or observed evidence, while constraints represent inferred procedural knowledge.
+
+This distinction is important because many relevant assembly conditions are not directly stated in the source descriptions. For example, the requirement that holes must be aligned before tightening is inferred from the action and involved objects, rather than simply copied from the annotation. This is consistent with assembly knowledge representations in which process constraints are derived from structural and semantic relations \citep{Zhu_2022}.
+
+
+\section{Layer 4 methodology: step validation and procedural graph construction}
+\label{sec:layer4-method}
+
+Layer 4 validates and enriches the step segments using the predicates from Layer 2 and the constraints inferred in Layer 3. For each step $s_i$, the layer consumes the predicate set $\mathcal{P}_{s_i}$ and the constraint set $\mathcal{C}_{s_i}$, and produces a validated step representation.
+
+\subsection{Conceptual design}
+
+Layer 4 evaluates whether the information associated with a step is sufficiently supported by the available evidence and inferred constraints. Although the step sequence is provided as input, the content of each step is not assumed to be complete or fully correct. A spoken or manually annotated step may omit preconditions, safety requirements, required tools, or expected effects.
+
+For each step $s_i$, the validation process considers:
+
+\begin{itemize}
+    \item the action described in the step,
+    \item the objects, materials, and tools associated with the step,
+    \item inferred preconditions and expected effects,
+    \item safety and compatibility constraints,
+    \item missing or conflicting evidence.
+\end{itemize}
+
+Let $S_p \subseteq \mathcal{P}_{s_i}$ denote the predicates relevant to the step, and let $S_c \subseteq \mathcal{C}_{s_i}$ denote the inferred constraints relevant to the step. The aggregated confidence of the validation evidence is computed as:
+
+\[
+\text{conf}(s_i) = \min_{x \in S_p \cup S_c} \text{conf}(x).
+\]
+
+A step is classified as accepted, uncertain, or rejected. A step is accepted when its action and required constraints are sufficiently supported and no incompatibility relation is present. A step is uncertain when partial support exists but some information is missing or below the acceptance threshold. A step is rejected when a hard incompatibility is present or when required support is absent.
+
+This classification is not intended to replace the input annotation. Instead, it records the degree to which the step is supported by the available symbolic evidence and domain rules.
+
+
+
+\begin{figure}[t]
+  \begin{center}
+    %\vspace*{1em}
+    \includegraphics[width=0.9\linewidth]{Figures/Layer_4_simple_admisability_check.png}
+    %\vspace*{1em}
+  \end{center}
+  \caption{Layer 4 procedural validation. Candidate step hypotheses are evaluated against observed
+predicates and constraints inferred in Layer 3, including incompatibility relations derived from semantic compatibility rules,
+producing explainable outcomes under uncertainty.}
+  \label{fig:layer4_diagram-1}
+\end{figure}
+
+
+
+
+\Cref{fig:layer4_diagram-1} illustrates this decision process, where candidate step hypotheses are evaluated against predicates and inferred constraints and classified according to the decision policy defined above.
+
+
+Each decision is accompanied by an explanation trace that explicitly links the outcome to the supporting predicates, inferred constraints, and any missing or conflicting evidence. This ensures that the reasoning process remains transparent and that the influence of uncertainty can be determined.
+
+\Cref{fig:layer4_diagram-2} illustrates the construction of the procedural graph, where accepted and uncertain step hypotheses are represented as nodes. Temporal edges preserve the input step order, while additional reasoning-derived edges represent dependency, support, and provenance relations.
+
+
+
+\begin{figure}
+  \begin{center}
+    %\vspace*{1em}
+    \includegraphics[width=0.9\linewidth]{Figures/Layer_4_procedural_graph_construction.png}
+    %\vspace*{1em}
+  \end{center}
+  \caption{Procedural graph construction from validated step hypotheses. Accepted and uncertain hypotheses are represented as step nodes, while rejected hypotheses may be excluded from the main procedural flow or retained for diagnostic inspection. Temporal edges preserve the input order, and additional edges represent dependencies, evidence, constraints, and provenance.}
+  \label{fig:layer4_diagram-2}
+\end{figure}
+
+
+
+\subsection{Step enrichment}
+
+In addition to validation, Layer 4 enriches each step with inferred procedural information. This includes preconditions, expected effects, safety requirements, required tools, and implicit assembly conditions produced by Layer 3.
+
+For example, a step describing the placement of copper sleeves on a rod may be enriched with the precondition that the rod must already be positioned on its supports. A later tightening step may be enriched with the condition that the sleeves must already be placed and that the sleeve holes must be aligned with the holes of the rod.
+
+The enriched step representation contains:
+
+\begin{itemize}
+    \item the original step identifier and time window,
+    \item the action and involved entities,
+    \item explicit information from the input sources,
+    \item inferred preconditions and effects,
+    \item inferred safety and tool requirements,
+    \item validation status and confidence,
+    \item an explanation trace.
+\end{itemize}
+
+\subsection{Procedural graph construction}
+
+After validation and enrichment, Layer 4 constructs a procedural graph $G = (V,E)$. Step nodes are created from the validated step representations. The temporal order of these nodes follows the input sequence. If $s_i$ directly precedes $s_{i+1}$, the graph includes a temporal edge:
+
+\[
+NEXT(s_i,s_{i+1}).
+\]
+
+The graph may also include dependency edges. A dependency edge is added when an inferred or explicit effect of one step supports a precondition of a later step. For example, if one step produces $placed(o_1,o_2)$ and a later step requires $placed(o_1,o_2)$, then the graph records this relation as a dependency between the corresponding step nodes.
+
+Additional nodes may represent objects, tools, preconditions, effects, safety requirements, constraints, and sources. These nodes are connected to step nodes through support and provenance relations. This makes the graph useful not only as a sequence of steps, but also as a traceable representation of how each step is supported and enriched.
+
+The graph does not define an executable controller or a real-time guidance policy. It is an intermediate procedural representation intended for inspection, validation, and later extension.
+
+
+
+%%%
+
+\begin{figure}
+  \begin{center}
+    %\vspace*{1em}
+    \includegraphics[width=0.9\linewidth]{Figures/graph_focus_on_step_1_light_mode.png}
+    %\vspace*{1em}
+  \end{center}
+  \caption{Extract of the procedural graph constructed from validated step records. The \texttt{NEXT} edges preserve the input sequence, while \texttt{DEPENDS\_ON} edges make explicit how requirements are satisfied by effects produced by earlier steps. Node status and attached evidence indicate whether each step is accepted, uncertain, or rejected.}
+  \label{fig:procedural_graph_focus_on_Step_1}
+\end{figure}
+
+
+
+
+%%%
+
+\subsection{Design decisions and alternatives}
+\label{sub:layer4-method-design-decisions}
+
+\subsubsection{Generation of candidate procedure steps}
+
+A key design decision concerns the role of Layer 4 with respect to step generation. One alternative would be to infer procedural steps directly within this layer by analyzing symbolic state transitions. While conceptually appealing, this approach introduces additional ambiguity and complexity, particularly under noisy or incomplete observations. In this work, the generation of candidate step hypotheses is treated externally as described in \cref{sec:layer2-method}, while Layer 4 focuses exclusively on their validation. By treating step generation as external input, Layer 4 can evaluate each provided step as a hypothesis rather than solving step segmentation and validation at the same time..
+
+\subsubsection{Representation of procedural knowledge}
+Alternatives such as behavior trees or finite state machines provide structured representations that integrate planning and execution, as seen in frameworks such as \citep{Zhao2025VideoToBT}. However, these approaches introduce control-oriented semantics that are not required in the present context. In this work, each step is represented in terms of its action, arguments, inferred preconditions, and expected effects. This representation focuses on the semantic interpretation of the step rather than its execution, and aligns naturally with the predicate-based reasoning established in Layers 2 and 3. This avoids the explicit modeling of execution strategies and control flows.
+
+\subsubsection{Handling of uncertainty}
+
+The reasoning process uses confidence values to avoid reducing uncertain evidence to purely binary decisions. At the same time, it does not implement a fully probabilistic model, since that would require explicit modeling of dependencies between predicates, constraints, and step hypotheses.
+
+Instead, uncertainty is handled locally at the step level. For each provided step segment, the system may evaluate one or more candidate interpretations supported by different subsets of predicates and constraints. These interpretations are assessed independently using the available evidence for that step and the effects produced by earlier non-rejected steps. The system does not maintain global hypothesis trajectories over time, as in inference-tree approaches such as \citet{WangEtAl2018}.
+
+Confidence values are propagated from supporting predicates to inferred constraints and validation outcomes. They are then used to classify each step hypothesis as accepted, uncertain, or rejected. This design preserves ambiguity where evidence is incomplete while keeping the reasoning process interpretable and computationally tractable.
+
+
+\subsubsection{Consistency-checking mechanism independent of the source}
+A further decision concerns the independence of the validation process from the source of candidate steps. Whether steps are produced by automated perception models or by manual annotation, they are treated uniformly as hypotheses that require validation. This ensures that the reasoning process is robust not only to model errors, but also to incomplete or inconsistent human descriptions.
+
+\subsubsection{Decoupling between perception and reasoning}
+In tightly integrated systems such as \citep{Zhao2025VideoToBT}, planning, perception, and execution are combined in a closed loop. In contrast, the present work adopts a layered architecture in which Layer 4 operates exclusively on symbolic inputs from Layers 2 and 3. Because Layer 4 receives only predicates and inferred constraints, its validation behavior can be tested independently of the perception method that produced the evidence. This choice limits real-time feedback applications within this layer.
+
+\subsubsection{Procedural graph construction vs execution-oriented representations}
+
+A design decision concerns how validated procedural knowledge should be represented after step-level reasoning.
+
+One alternative is to adopt execution-oriented representations such as behavior trees or finite state machines, as used in frameworks such as \citep{Zhao2025VideoToBT}. These representations provide explicit control flow, reactivity, and support for execution in robotic systems. However, they also introduce additional semantics related to scheduling, control, and recovery that are not required for the purposes of this work. Moreover, they typically assume a well-defined and consistent procedural structure, which may not hold under uncertain and partially observed conditions.
+
+In this work, a simplified procedural graph is adopted, in which nodes correspond to validated step hypotheses and edges capture relations added during validation, such as temporal adjacency, dependency support, and provenance. This representation is derived after step validation and is not intended to function as a complete executable process model. Instead, it provides an inspection and explanation layer that can support operator guidance by exposing the validation status of each step, the evidence on which this status is based, the dependencies on previously produced effects, and any missing or incompatible conditions identified during reasoning.
+
+The choice of a graph-based representation allows the system to preserve the given step order while representing validation status, uncertainty, dependencies, and alternative interpretations of step content. At the same time, it remains compatible with the local hypothesis evaluation approach adopted in this work, as it does not require maintaining or updating global hypothesis structures over time.
+
+The trade-off is that the resulting representation cannot be directly executed or used for control without further transformation. However, this limitation is consistent with the scope of the thesis, which focuses on reasoning, validation, and explainability rather than execution. The procedural graph may therefore be interpreted as an intermediate artifact that could, in future work, be compiled into execution-oriented representations such as behavior trees if required.
+
+\subsection{Implementation scope and delimitations}
+
+The implementation focuses on local validation and graph construction. It assumes that step segments and their temporal order are provided as input. It evaluates predefined rules, validates each step against relevant predicates and constraints, and exports a graph containing temporal, dependency, support, and provenance relations.
+
+The implementation does not perform automatic step segmentation, full action recognition, open-ended language understanding, or execution monitoring. It also does not revise the global step sequence. These aspects are outside the scope of the thesis and are left for future work.
+
+\subsection{Relation to assembly reasoning}
+
+In this framework, procedural reasoning is formulated as the validation of candidate step hypotheses against an evolving symbolic representation of the assembly. Layer 2 provides a perception-grounded description of objects and their relations, while Layer 3 infers assembly-relevant constraints from these observations. Layer 4 then evaluates whether the provided step descriptions are consistent with the available symbolic evidence, inferred constraints, and effects produced by earlier non-rejected steps.
+
+This perspective differs from approaches that rely on predefined procedural templates or explicit state machines \citep{Stanescu_2022,Stanescu_2023,Stanescu_2024}. Instead, procedural knowledge is treated as a set of validated hypotheses grounded in observed interactions and inferred constraints. As a result, the system can validate provided assembly step hypotheses even when parts of the procedure are uncertain or underspecified, while preserving traceability from decisions back to predicates, constraints, and prior effects.
+
+
+\section{Example Rule 1: sleeve placement and tightening}
+\label{sec:example-rule1}
+
+This example illustrates how the proposed methodology operates over step-aligned inputs. The example is based on a task in which a rod is placed on supports, copper sleeves are positioned on the rod, and the sleeves are then tightened.
+
+\subsection{Layer 1: step-aligned input}
+
+Assume that the input contains three step segments:
+
+\begin{itemize}
+    \item $s_1$: time window $[t_1,t_2]$, description: ''First I place the rod on the supports.''
+    \item $s_2$: time window $[t_2,t_3]$, description: ''Then I take eight copper sleeves and place them on the respective sections of the rod.''
+    \item $s_3$: time window $[t_3,t_4]$, description: ''I tighten each sleeve with a screwdriver.''
+\end{itemize}
+
+These descriptions may come from operator speech, manual annotations, or a combination of both. At this stage, they are treated as structured input evidence, not as fully validated procedural knowledge.
+
+\subsection{Layer 2: symbolic fact construction}
+
+Layer 2 converts each step segment into symbolic predicates. For the first step, the following predicates may be produced:
+
+\[
+hasAction(s_1,\text{place}) \wedge usesObject(s_1,o_1) \wedge usesObject(s_1,o_2)
+\]
+
+\[
+isA(o_1,\text{Rod}) \wedge isA(o_2,\text{Support})
+\]
+
+For the second step, Layer 2 may produce:
+
+\[
+hasAction(s_2,\text{place}) \wedge usesObject(s_2,o_3) \wedge usesObject(s_2,o_1)
+\]
+
+\[
+isA(o_3,\text{Sleeve}) \wedge isA(o_1,\text{Rod}) \wedge hasQuantity(o_3,8)
+\]
+
+For the third step, Layer 2 may produce:
+
+\[
+hasAction(s_3,\text{tighten}) \wedge usesObject(s_3,o_3) \wedge usesTool(s_3,o_4)
+\]
+
+\[
+isA(o_3,\text{Sleeve}) \wedge isA(o_4,\text{Screwdriver})
+\]
+
+If geometric evidence is available, additional spatial predicates may be added, for example:
+
+\[
+aligned(o_3,o_1), \qquad touching(o_3,o_1).
+\]
+
+These predicates form the local fact sets $\mathcal{P}_{s_1}$, $\mathcal{P}_{s_2}$, and $\mathcal{P}_{s_3}$.
+
+\subsection{Layer 3: rule-based inference}
+
+Layer 3 evaluates rules over the predicates associated with each step. For $s_1$, a rule may infer the expected effect of placing the rod on the supports:
+
+\[
+\begin{aligned}
+&hasAction(s_1,\text{place}) \wedge isA(o_1,\text{Rod}) \\
+&\wedge isA(o_2,\text{Support}) \\
+&\Rightarrow produces(s_1, placed(o_1,o_2)).
+\end{aligned}
+\]
+
+For $s_2$, a precondition rule may infer that sleeves can be placed only after the rod has been positioned on the supports:
+
+\[
+\begin{aligned}
+&hasAction(s_2,\text{place}) \wedge isA(o_3,\text{Sleeve}) \\
+&\wedge isA(o_1,\text{Rod}) \\
+&\Rightarrow requires(s_2, placed(o_1,o_2)).
+\end{aligned}
+\]
+
+
+The same step may also produce the effect that the sleeves are placed on the rod:
+
+\[
+\begin{aligned}
+&hasAction(s_2,\text{place}) \wedge isA(o_3,\text{Sleeve}) \\
+&\wedge isA(o_1,\text{Rod}) \\
+&\Rightarrow produces(s_2, placed(o_3,o_1)).
+\end{aligned}
+\]
+
+
+For $s_3$, Layer 3 may infer that tightening requires the sleeves to be already placed:
+\[
+\begin{aligned}
+&hasAction(s_3,\text{tighten}) \wedge isA(o_3,\text{Sleeve}) \\
+&\Rightarrow requires(s_3, placed(o_3,o_1)).
+\end{aligned}
+\]
+
+It may also infer an implicit assembly condition:
+\[
+\begin{aligned}
+&hasAction(s_3,\text{tighten}) \wedge isA(o_3,\text{Sleeve}) \\
+&\wedge isA(o_1,\text{Rod}) \\
+&\Rightarrow requires(s_3, alignedHoles(o_3,o_1)).
+\end{aligned}
+\]
+
+Finally, a safety rule may infer that the rod should be secured before tightening:
+\[
+\begin{aligned}
+&hasAction(s_3,\text{tighten}) \wedge isA(o_1,\text{Rod}) \\
+&\Rightarrow requiresSafety(s_3, secured(o_1,\text{Workstation})).
+\end{aligned}
+\]
+
+
+Each inferred constraint is assigned a confidence value derived from its supporting predicates and is linked to the rule that produced it.
+
+\subsection{Layer 4: validation and enrichment}
+
+Layer 4 validates each step using the predicates from Layer 2 and the constraints inferred in Layer 3.
+
+For $s_1$, the action and objects are explicitly supported by the input description. The step is enriched with the expected effect $placed(o_1,o_2)$, meaning that the rod is positioned on the supports.
+
+For $s_2$, the inferred precondition $placed(o_1,o_2)$ can be linked to the effect of $s_1$. The step is therefore supported by the previous step and enriched with the effect $placed(o_3,o_1)$, meaning that the sleeves are placed on the rod.
+
+For $s_3$, the inferred precondition $placed(o_3,o_1)$ can be linked to the effect of $s_2$. The step is also enriched with two inferred requirements. The first is the implicit assembly condition:
+\[
+alignedHoles(o_3,o_1).
+\]
+The second is the safety requirement:
+\[
+secured(o_1,\text{Workstation}).
+\]
+If these conditions are not explicitly stated in the source descriptions, they remain inferred constraints and may be marked as uncertain or requiring confirmation.
+
+\subsection{Graph representation and explanation trace}
+
+The resulting procedural graph preserves the input sequence:
+
+\[
+NEXT(s_1,s_2), \qquad NEXT(s_2,s_3).
+\]
+
+In addition, reasoning-derived dependency edges are added. Since $s_2$ requires an effect produced by $s_1$, the graph contains:
+
+\[
+DEPENDS\_ON(s_2,s_1).
+\]
+
+Similarly, since $s_3$ requires the sleeves to be placed on the rod, and this condition is produced by $s_2$, the graph contains:
+
+\[
+DEPENDS\_ON(s_3,s_2).
+\]
+
+The graph also connects each step to its objects, tools, preconditions, effects, safety requirements, and supporting sources. For example, $s_3$ is connected to the screwdriver as a tool, to the sleeves as the manipulated object, to $alignedHoles(o_3,o_1)$ as an implicit assembly condition, and to $secured(o_1,\text{Workstation})$ as a safety requirement.
+
+This example shows how the pipeline preserves the provided step order while adding reasoning-derived structure. The final graph is therefore more than a sequence of annotated steps: it records what each step requires, what it produces, and which parts of the representation were explicit, inferred, or uncertain.
+
+
+\section{Example Rule 2: connector placement and securing}
+\label{sec:example-rule2}
+
+This second example illustrates how the same reasoning mechanism can be applied to a different assembly context. Consider a transformer assembly task in which a connector is placed on a terminal and then secured.
+
+\subsection{Layer 1: step-aligned input}
+
+Assume that the input contains two step segments:
+
+\begin{itemize}
+    \item $s_4$: time window $[t_4,t_5]$, description: ''I place the connector on the terminal.''
+    \item $s_5$: time window $[t_5,t_6]$, description: ''I secure the connector with the fastening screw.''
+\end{itemize}
+
+The descriptions may be supported by manual annotations and optional perception-derived evidence.
+
+\subsection{Layer 2: symbolic fact construction}
+
+For the connector placement step $s_4$, Layer 2 may produce the following predicates with their respective confidence values:
+
+\[
+hasAction(s_4,\text{place}) \quad (0.90)
+\]
+
+\[
+usesObject(s_4,o_5) \quad (0.88), \qquad usesObject(s_4,o_6) \quad (0.86)
+\]
+
+\[
+isA(o_5,\text{Connector}) \quad (0.82), \qquad isA(o_6,\text{Terminal}) \quad (0.78)
+\]
+
+If geometric evidence is available, Layer 2 may also produce spatial predicates:
+
+\[
+aligned(o_5,o_6) \quad (0.75), \qquad touching(o_5,o_6) \quad (0.80).
+\]
+
+For the securing step $s_5$, the following predicates may be produced:
+
+\[
+hasAction(s_5,\text{secure}) \quad (0.87)
+\]
+
+\[
+usesObject(s_5,o_5) \quad (0.85), \qquad usesObject(s_5,o_7) \quad (0.83)
+\]
+
+\[
+isA(o_5,\text{Connector}) \quad (0.82), \qquad isA(o_7,\text{FasteningScrew}) \quad (0.79).
+\]
+
+These predicates form the local fact sets $\mathcal{P}_{s_4}$ and $\mathcal{P}_{s_5}$.
+
+\subsection{Layer 3: rule-based inference}
+
+For $s_4$, Layer 3 may apply a connector placement rule:
+
+\[
+\begin{aligned}
+&hasAction(s_4,\text{place}) \wedge isA(o_5,\text{Connector}) \\
+&\wedge isA(o_6,\text{Terminal}) \wedge aligned(o_5,o_6) \\
+&\wedge touching(o_5,o_6) \\
+&\Rightarrow produces(s_4, placed(o_5,o_6)).
+\end{aligned}
+\]
+
+Using minimum aggregation, the confidence of the inferred effect is:
+
+\[
+\text{conf}(placed(o_5,o_6)) =
+\min(0.90,0.82,0.78,0.75,0.80) = 0.75.
+\]
+
+Layer 3 may also infer an implicit assembly condition stating that contact must be maintained between the connector and the terminal:
+
+\[
+\begin{aligned}
+&hasAction(s_4,\text{place}) \wedge isA(o_5,\text{Connector}) \\
+&\wedge isA(o_6,\text{Terminal}) \wedge touching(o_5,o_6) \\
+&\Rightarrow requires(s_4, contactMaintained(o_5,o_6)).
+\end{aligned}
+\]
+
+
+The confidence of this inferred condition is:
+
+\[
+\text{conf}(contactMaintained(o_5,o_6)) =
+\min(0.90,0.82,0.78,0.80) = 0.78.
+\]
+
+For $s_5$, Layer 3 may infer that securing the connector requires the connector to have already been placed on the terminal:
+
+\[
+\begin{aligned}
+&hasAction(s_5,\text{secure}) \wedge isA(o_5,\text{Connector}) \\
+&\Rightarrow requires(s_5, placed(o_5,o_6)).
+\end{aligned}
+\]
+
+
+The confidence of this inferred precondition is:
+
+\[
+\text{conf}(requires(s_5, placed(o_5,o_6))) =
+\min(0.87,0.82) = 0.82.
+\]
+
+Layer 3 may also infer that a fastening screw is required for securing:
+
+\[
+\begin{aligned}
+&hasAction(s_5,\text{secure}) \wedge isA(o_5,\text{Connector}) \\
+&\Rightarrow requiresTool(s_5,\text{FasteningScrew}).
+\end{aligned}
+\]
+
+
+
+The confidence of this inferred tool requirement is:
+
+\[
+\text{conf}(requiresTool(s_5,\text{FasteningScrew})) =
+\min(0.87,0.82) = 0.82.
+\]
+
+Since $s_5$ explicitly uses $o_7$ and $isA(o_7,\text{FasteningScrew})$ holds with confidence $0.79$, the required tool is supported by the available predicates.
+
+\subsection{Layer 4: validation and enrichment}
+
+Layer 4 validates and enriches both steps. For $s_4$, the placement action is supported by the action predicate, semantic predicates, and spatial predicates. The inferred effect $placed(o_5,o_6)$ has confidence $0.75$. If the acceptance threshold is $\tau_{acc}=0.70$, then the placement step can be classified as accepted.
+
+For $s_5$, the inferred precondition $placed(o_5,o_6)$ can be linked to the effect produced by $s_4$. The required fastening screw is also supported by the predicates
+\[
+usesObject(s_5,o_7)
+\]
+and
+\[isA(o_7,\text{FasteningScrew})
+\]
+The weakest relevant confidence is $0.79$, from the semantic classification of the fastening screw. If $\tau_{acc}=0.70$, then $s_5$ can also be classified as accepted.
+
+If the spatial predicate $touching(o_5,o_6)$ were missing or had low confidence, $s_4$ could instead be classified as uncertain, because the placement effect would not be sufficiently supported. This illustrates how uncertainty in the evidence propagates into the validation decision without changing the rule structure.
+
+\subsection{Graph representation and explanation trace}
+
+The procedural graph preserves the input sequence:
+
+\[
+NEXT(s_4,s_5).
+\]
+
+A dependency edge is also added because $s_5$ requires the connector to be placed on the terminal, and this condition is produced by $s_4$:
+
+\[
+DEPENDS\_ON(s_5,s_4).
+\]
+
+The explanation trace for $s_5$ records the supporting evidence:
+
+\begin{itemize}
+    \item action evidence: $hasAction(s_5,\text{secure})$ with confidence $0.87$,
+    \item object evidence: $usesObject(s_5,o_5)$ with confidence $0.85$,
+    \item tool evidence: $usesObject(s_5,o_7)$ with confidence $0.83$,
+    \item semantic evidence: $isA(o_5,\text{Connector})$ with confidence $0.82$ and $isA(o_7,\text{FasteningScrew})$ with confidence $0.79$,
+    \item inferred precondition: $requires(s_5, placed(o_5,o_6))$ with confidence $0.82$,
+    \item dependency support: $produces(s_4, placed(o_5,o_6))$ with confidence $0.75$.
+\end{itemize}
+
+This example shows that the same rule-based mechanism can be applied beyond the sleeve-and-rod example. The domain changes, but the reasoning pattern remains the same: step-level evidence is converted into predicates, rules infer missing procedural conditions, confidence values are propagated, and the resulting graph records both temporal order and dependency relations.
+
+
+
+
+
+
+\chapter{Design}
+\label{cha:design}
+
+\section{Design overview}
+\label{sec:design-overview}
+
+The design instantiates the layered methodology as four processing stages: predicate construction, rule-based constraint inference, step validation, and procedural graph construction. Predicates encode the step-local evidence available to the reasoning layer. Constraints encode procedural conditions inferred from that evidence. Validation records store the resulting step status, while the procedural graph links steps, evidence, constraints, dependencies, and provenance.
+
+The procedural graph is treated as the final structured representation of the reasoning process, rather than merely as a visualization output. It preserves the accepted and uncertain step hypotheses, their evidence, their dependencies, and the rules or sources from which inferred constraints were derived.
+
+The design translates the layered methodology from \cref{cha:methodology} into an implementable architecture. The system operates over step-aligned symbolic records rather than raw video. Each input step $s_i \in \mathcal{S}$ is associated with a local predicate set $\mathcal{P}_{s_i}$ and, after rule evaluation, an inferred constraint set $\mathcal{C}_{s_i}$.
+
+The pipeline therefore reduces the design to three transformations. First, step-level evidence is represented as symbolic predicates. Second, rule-based inference derives procedural constraints from those predicates. Third, validated and enriched step records are organized into a procedural graph $G=(V,E)$.
+
+The design exchanges explicit records between layers, allowing predicates, constraints, validation records, and graph nodes to be inspected independently. Confidence values are kept with predicates and inferred constraints instead of being collapsed into a binary decision. The schema is also kept compact so that new sources, rules, or graph node types can be added without changing the validation logic.
+
+\section{System architecture}
+\label{sec:system-architecture}
+
+The system is decomposed into four layers corresponding to the main transformations defined in the methodology.
+
+Layer 1 stores the ordered step segments $\mathcal{S}$ together with their time windows, source descriptions, and optional perception references. Layer 2 converts each step segment into a local predicate set $\mathcal{P}_{s_i}$. Layer 3 evaluates domain rules over $\mathcal{P}_{s_i}$ and produces inferred constraints $\mathcal{C}_{s_i}$. Layer 4 uses $\mathcal{P}_{s_i}$ and $\mathcal{C}_{s_i}$ to validate, enrich, and connect the steps in the procedural graph.
+
+Each layer exchanges explicit records rather than implicit program state, which makes predicates, constraints, validations, and graph elements inspectable between stages. Once evidence has been mapped to the expected symbolic schema, the reasoning layers can operate over manual annotations, speech-derived descriptions, perception-derived predicates, or combinations of these sources.
+
+
+\section{Execution ontology and data schema}
+\label{sec:execution-ontology-schema}
+
+As introduced in \cref{subsec:method-definition-notation-reasoning}, the execution ontology defines the vocabulary used to represent steps, entities, predicates, constraints, and graph relations. It is not intended as a full ontology engineering framework. Its role is to define the fields used to exchange steps, entities, predicates, constraints, validation records, and graph relations between layers.
+
+A step segment is represented as:
+
+\[
+s_i = (id, index, t_{start}, t_{end}, D, source),
+\]
+
+where $id$ is the step identifier, $index$ is the position of the step in the input sequence, $t_{start}$ and $t_{end}$ define the time window, $D$ contains the available source descriptions, and $source$ records whether the information comes from speech, manual annotation, perception, or prior domain knowledge.
+
+Entities are represented as:
+
+\[
+o_j = (id, label, type, source),
+\]
+
+where $id$ is the entity identifier, $label$ is the textual name or description, $type$ is the semantic category when available, and $source$ records where the entity information originated.
+
+Predicates are represented as elements of $\mathcal{P}_{s_i}$:
+
+\[
+p = (name, args, conf, s_i, source),
+\]
+
+where $name$ identifies the predicate, $args$ contains the step or entity arguments, $conf \in [0,1]$ is the confidence value, $s_i$ links the predicate to a step segment, and $source$ records provenance.
+
+Constraints are represented as elements of $\mathcal{C}_{s_i}$:
+
+\[
+c = (name, args, conf, r, S),
+\]
+
+where $name$ identifies the inferred constraint, $args$ contains its arguments, $conf \in [0,1]$ is the inferred confidence, $r$ denotes the rule that produced the constraint, and $S \subseteq \mathcal{P}_{s_i}$ is the set of supporting predicates.
+
+Validation records are represented as:
+
+\[
+v_i = (s_i, status, conf, S_p, S_c, trace),
+\]
+
+where $status \in \{accepted, uncertain, rejected\}$, $conf$ is the aggregated validation confidence, $S_p$ is the set of supporting predicates, $S_c$ is the set of supporting or conflicting constraints, and $trace$ stores the explanation record.
+
+The procedural graph is represented as:
+
+\[
+G = (V,E),
+\]
+
+where $V$ contains step nodes, entity nodes, constraint nodes, source nodes, and evidence nodes. The edge set $E$ contains temporal, dependency, support, and provenance relations. For example, $NEXT(s_i,s_{i+1})$ represents temporal order, while $DEPENDS\_ON(s_j,s_i)$ indicates that a condition required by $s_j$ is produced or supported by $s_i$.
+
+The schema fixes the required fields exchanged between layers while leaving room for optional references, such as CAD identifiers or assembly documentation.
+
+
+\section{Rule representation and inference mechanism}
+\label{sec:rule-representation}
+
+Layer 3 uses two types of rules: inference rules and compatibility rules. Inference rules derive procedural constraints from symbolic predicates. Compatibility rules identify action-object combinations that are not admissible.
+
+An inference rule defines a mapping from antecedent predicate patterns to consequent constraint templates:
+
+\[
+r: A_r \rightarrow K_r.
+\]
+
+The rule does not store instantiated constraints; it stores templates that are instantiated when the antecedents match. Instead, $A_r$ defines the predicate patterns that must be matched, and $K_r$ defines the constraint templates that are instantiated when the rule is activated. In the implementation, each rule is represented as:
+
+\[
+r = (id, A_r, K_r, \tau, aggregation),
+\]
+
+where $id$ identifies the rule, $A_r$ is the set of antecedent predicate patterns, $K_r$ is the set of consequent constraint templates, $\tau$ is the activation threshold, and $aggregation$ defines how confidence values are combined.
+
+For each step $s_i$, the rule is evaluated over the local predicate set $\mathcal{P}_{s_i}$. If the antecedent patterns $A_r$ match an evidence set $E_r \subseteq \mathcal{P}_{s_i}$ and the aggregated confidence satisfies the rule threshold, the templates in $K_r$ are instantiated into concrete constraints and added to $\mathcal{C}_{s_i}$.
+
+ 
+
+The default aggregation function is minimum confidence:
+
+\[
+\text{conf}(c) = \min_{p \in E_r} \text{conf}(p).
+\]
+
+This assigns each inferred constraint a conservative confidence value, since its confidence cannot exceed the weakest supporting predicate. Each instantiated constraint also stores the rule identifier and the evidence set $E_r$, allowing the inference result to be traced back to the evidence that produced it.
+
+Layer 3 evaluates symbolic predicates against a rule set. Before rule matching, predicate names are normalized through an alias mapping so that equivalent names in the extracted predicates and rule definitions are treated consistently. The rule set contains both ordinary inference rules and compatibility rules. Ordinary inference rules produce constraints that enrich the symbolic state, while compatibility rules produce incompatibility constraints that can later reject a step hypothesis. The same matching procedure is therefore used for ordinary and compatibility rules, while their outputs are interpreted differently during validation, as presented in \cref{lst:alg_rule_evaluation}.
+
+
+
+%\subsection*{Algorithm 1: Rule evaluation in Layer 3}
+{\color{red}
+\begin{listing*}
+\begin{Code}
+Input: step s_i, predicate set P_{s_i}, rule set R, predicate aliases A
+Output: constraint set C_{s_i}
+
+Normalize predicate names in P_{s_i} using aliases A
+Normalize rule antecedents and consequents using aliases A
+
+C_{s_i} = empty set
+
+for each rule r in R:
+    matches = FindBindings(r.antecedents, P_{s_i})
+
+    for each match m in matches:
+        E_r = predicates supporting match m
+        conf = AggregateConfidence(E_r, r.aggregation)
+
+        if r is an inference rule and conf >= r.threshold:
+            instantiate consequent constraints using m
+            add inferred constraints to C_{s_i}
+            attach confidence, rule identifier, and evidence references
+
+        if r is a compatibility rule:
+            instantiate incompatibility constraints using m
+            add incompatibility constraints to C_{s_i}
+            attach confidence, rule identifier, and evidence references
+
+return C_{s_i}
+\end{Code}
+\caption{Algorithm for rule evaluation in Layer 3. Predicate aliases are used to normalize equivalent predicate names before rule matching. Inference rules produce ordinary constraints, while compatibility rules produce incompatibility constraints used during validation.}
+\label{lst:alg_rule_evaluation}
+\end{listing*}
+}
+
+
+
+\section{Step validation and enrichment}
+\label{sec:step-validation-enrichment}
+
+Layer 4 validates each step $s_i$ using the local predicate set $\mathcal{P}_{s_i}$ and the inferred constraint set $\mathcal{C}_{s_i}$. Layer 4 does not treat the input step as a binary annotation to keep or discard. It evaluates how well the step hypothesis is supported by predicates, constraints, dependencies, and incompatibilities, and determines which implicit conditions should be attached to it.
+
+For each step, validation considers four types of information:
+
+\begin{itemize}
+    \item predicates that describe the action, entities, tools, and materials associated with the step,
+    \item inferred constraints that describe preconditions, expected effects, safety requirements, and tool requirements,
+    \item incompatibility relations that indicate invalid action-object combinations,
+    \item dependency links to previous steps when a required condition is produced earlier in the sequence.
+\end{itemize}
+
+Let $E_p \subseteq \mathcal{P}_{s_i}$ denote the predicates relevant to the step, and let $E_c \subseteq \mathcal{C}_{s_i}$ denote the relevant inferred constraints. The validation confidence is computed as:
+
+\[
+\text{conf}(v_i) = \min_{x \in E_p \cup E_c} \text{conf}(x).
+\]
+
+
+Requirements are treated separately from ordinary constraints. In the implementation, requirements include constraints such as \texttt{requires}, \texttt{requiresSafety}, and \texttt{requiresTool}. A requirement is considered satisfied only if supporting evidence is found either in the same-step predicates or in the produced-effect history. Domain predicates that merely state that a requirement exists are not themselves treated as satisfaction evidence.
+
+
+The validation record is classified as accepted, uncertain, or rejected. A step is accepted when the required predicates and constraints are sufficiently supported and no incompatibility relation is present. A step is uncertain when partial support exists but some required evidence is missing or below the acceptance threshold. A step is rejected when an incompatibility relation is present or when required support is absent.
+
+In addition to the validation status, Layer 4 produces an enriched step record. This record combines the original step information with inferred preconditions, expected effects, safety requirements, required tools, missing evidence, and provenance links. The resulting enriched record is later used to construct the procedural graph. 
+
+The logic in \cref{lst:alg_step_validation} formalizes how Layer 4 validates each ordered step hypothesis using its associated predicates and constraints. The validator also maintains a produced-effect history $H$, which stores effects produced by previous non-rejected steps. This allows a later step to satisfy one of its requirements through evidence produced earlier in the procedure. Rejected steps, even if included in the graph representation, do not update $H$ and therefore cannot support later requirements.
+
+In addition to preserving produced effects for traceability, the validation design distinguishes between historical effects and active effects. Historical effects record what each step was inferred to produce, while active effects represent only those effects that remain available to support later requirements. This distinction allows later actions, such as removal actions, to invalidate previously active installed effects without deleting them from the explanation trace.
+
+
+
+%\subsection*{Algorithm 2: LAyer 4 - Step validation with compatibility enforcement}
+{\color{red}
+\begin{listing*}
+\begin{Code}
+Input: ordered step s_i, predicate set P_i, constraint set C_i,
+       produced-effect history H
+Output: validation record v_i
+
+E_p = predicate evidence from P_i
+E_c = constraint evidence from C_i
+Req = requirement constraints in C_i
+E_inc = incompatibility constraints in C_i
+
+supported_requirements = empty set
+missing_requirements = empty set
+dependency_support = empty set
+
+for each requirement q in Req:
+    key = ConditionKey(q)
+    support = FindSupport(q, P_i, H)
+
+    if support is null:
+        add q to missing_requirements
+    else:
+        add q and support to supported_requirements
+        if support comes from H:
+            add dependency evidence to dependency_support
+
+conf = minimum confidence over P_i union C_i
+
+if E_inc is not empty:
+    status = rejected
+else if missing_requirements is empty and conf >= tau_acc:
+    status = accepted
+else if partial evidence exists and conf >= tau_unc:
+    status = uncertain
+else:
+    status = rejected
+
+create validation record v_i with:
+    step metadata,
+    status and confidence,
+    supported and missing requirements,
+    dependency evidence,
+    incompatibilities,
+    predicate and constraint evidence,
+    produced effects,
+    explanation trace
+
+if status is not rejected:
+    add produced effects from C_i to H
+
+return v_i
+\end{Code}
+\caption{Algorithm for step validation in Layer 4. Each step is accepted, rejected, or marked uncertain by combining same-step evidence, incompatibility constraints, and requirements supported by previous produced effects.}
+\label{lst:alg_step_validation}
+\end{listing*}
+}
+
+
+
+\section{Explanation trace}
+\label{sec:explanation-trace}
+
+Each validation decision is stored together with an explanation trace. The purpose of the trace is to show how the validation status of a step was obtained from predicates, inferred constraints, dependency links, and possible incompatibility relations.
+
+For a step $s_i$, the explanation trace is represented as:
+
+\[
+trace_i = (s_i, E_p, E_c, E_{inc}, E_d, status, conf),
+\]
+
+where $E_p$ is the predicate evidence used during validation, $E_c$ is the inferred constraint evidence, $E_{inc}$ is the set of incompatibility relations, $E_d$ is the dependency evidence obtained from previous accepted or uncertain steps, $status$ is the validation outcome, and $conf$ is the aggregated confidence.
+
+The trace separates different types of support. Predicate evidence records what was stated, annotated, or observed. Constraint evidence records what was inferred by rules. Dependency evidence records whether a required condition is produced by an earlier step. Incompatibility evidence records hard violations that may reject a step.
+
+For example, if a tightening step requires $placed(o_3,o_1)$ and this condition is produced by the previous sleeve-placement step, the trace records both the required condition and the earlier step that supports it. If the same tightening step also requires $alignedHoles(o_3,o_1)$ but no explicit or spatial evidence supports it, the trace records this condition as inferred or missing, depending on the validation result.
+
+The trace makes the validation decision inspectable by separating predicate evidence, inferred constraints, dependency support, incompatibilities, status, and confidence. It allows the graph to show not only that a step was accepted, uncertain, or rejected, but also which sources contributed to that decision.
+
+
+\section{Procedural graph design}
+\label{sec:procedural-graph-design}
+
+After validation, Layer 4 constructs a procedural graph $G=(V,E)$ from the enriched validation records. The graph therefore represents the reasoning result, not the raw input annotations. Its purpose is to preserve the step sequence while making explicit the evidence, constraints, dependencies, and provenance associated with each step.
+
+The node set $V$ may contain several node types:
+
+\begin{itemize}
+    \item \texttt{Step} nodes represent validated step hypotheses.
+    \item \texttt{Predicate} nodes represent symbolic evidence associated with a step.
+    \item \texttt{Constraint} nodes represent inferred effects, requirements, safety requirements, tool requirements, supported requirements, missing requirements, and incompatibilities.
+    \item \texttt{Entity} nodes represent objects, tools, materials, fixtures, or other arguments appearing in predicates and constraints.
+    \item \texttt{Rule} nodes represent inference or compatibility rules that produced constraints.
+    \item \texttt{Source} nodes represent provenance information, such as perception outputs, annotations, transcripts, or other input sources.
+\end{itemize}
+
+The edge set $E$ contains relations between these nodes. The main edge types are:
+
+\begin{itemize}
+    \item \texttt{NEXT} connects consecutive included steps and preserves temporal order.
+    \item \texttt{DEPENDS\_ON} connects a step to an earlier step whose produced effect supports one of its requirements.
+    \item \texttt{HAS\_PREDICATE} connects a step to its predicate evidence.
+    \item \texttt{HAS\_CONSTRAINT} connects a step to constraints used or produced during validation.
+    \item \texttt{REQUIRES} connects a step to requirement constraints.
+    \item \texttt{PRODUCES} connects a step to produced-effect constraints.
+    \item \texttt{USES} connects a step directly to entities used as objects or tools.
+    \item \texttt{HAS\_ENTITY} connects predicates or constraints to their entity arguments.
+    \item \texttt{SUPPORTED\_BY} connects constraints to supporting predicates or supporting constraints.
+    \item \texttt{DERIVED\_FROM} connects predicates or constraints to their source or generating rule.
+\end{itemize}
+
+Temporal edges are created directly from the input sequence. If $s_i$ precedes $s_{i+1}$, the graph contains:
+
+\[
+NEXT(s_i,s_{i+1}).
+\]
+
+Dependency edges are created by comparing inferred effects and required conditions. If a step $s_j$ requires a condition that is produced or supported by an earlier step $s_i$, the graph contains:
+
+\[
+DEPENDS\_ON(s_j,s_i).
+\]
+
+Therefore, $NEXT$ only states that one step follows another in the recording, while $DEPENDS\_ON$ represents a reasoning-derived relation. Two consecutive steps may have a temporal relation without a dependency relation, and a later step may depend on a non-immediately preceding step. Furthermore, when dependency support originates from an uncertain step, the corresponding dependency relation may be marked as provisional in the implementation.
+
+The resulting graph can be inspected at the step, predicate, constraint, dependency, and provenance levels. The construction logic is summarized in \cref{lst:alg_graph_construction_design}.
+
+%\subsection*{Algorithm 3: Graph construction}
+\begin{listing*}
+\begin{Code}
+Input: validation records V
+Output: procedural graph G
+
+G = empty graph
+V_included = accepted and uncertain validation records
+
+for each validation record v_i in V_included:
+    add Step node for v_i
+
+    add Predicate nodes for evidence predicates
+    connect Step node to Predicate nodes
+
+    add Constraint nodes for evidence constraints,
+        produced effects, requirements, missing requirements,
+        supported requirements, and incompatibilities
+    connect Step node to Constraint nodes
+
+    add Entity nodes for predicate and constraint arguments
+    connect predicates and constraints to their entities
+
+    add Rule and Source nodes when provenance is available
+    connect predicates and constraints to their provenance
+
+for each dependency supported by a previous produced effect:
+    add DEPENDS_ON edge between the dependent step and the earlier step
+
+for each consecutive pair of included steps:
+    add NEXT edge
+
+return G
+\end{Code}
+\caption{Design-level construction of the procedural graph from validation records. Implementation-specific export properties are omitted here and described in \cref{cha:implementation}.}
+\label{lst:alg_graph_construction_design}
+\end{listing*}
+
+
+\chapter{Implementation}
+\label{cha:implementation}
+
+This chapter describes how the reasoning pipeline defined in \cref{cha:methodology} and specified in \cref{cha:design} is implemented as executable stages. The implementation executes the reasoning pipeline as separate stages that write step records, predicates, inferred constraints, validation records, explanation traces, and graph exports to disk. It is not intended to be a production-ready XR system or a complete operator guidance controller. Instead, it implements the adapter, Layers 3 and 4, and the graph export stages. Together, these transform step-aligned symbolic evidence into constraints, validation records, explanation traces, and a procedural reasoning graph.
+
+The implementation follows the scope boundary defined in the previous chapters. The reasoning layer does not perform perception, object detection, step segmentation, or procedural-order discovery. These inputs are taken from upstream event records and represented through the Layer 1 and Layer 2 artifacts used by the reasoning pipeline. The implemented contribution is the downstream reasoning process: upstream event and component records are adapted into symbolic predicates, Layer 3 rules infer constraints, Layer 4 validates ordered step hypotheses, and the final graph exposes the enriched procedure for inspection.
+
+
+
+\section{Implementation scope}
+\label{sec:implementation-scope}
+
+ The implemented system starts from existing graph exports produced by the upstream IndustReal pipeline and converts them into the intermediate records required by the reasoning layers. It converts the upstream observation-derived graph exports from the IE thesis into the step records and predicate records consumed by the symbolic reasoning model developed in this thesis.
+
+The implementation focuses on five functions:
+
+\begin{itemize}
+    \item adapting upstream event and component records into step records and symbolic predicates,
+    \item applying Layer 3 rules to infer requirements, effects, tool requirements, safety requirements, and incompatibilities,
+    \item validating each ordered step hypothesis using same-step evidence and effects produced by earlier non-rejected steps,
+    \item producing explanation traces that expose the evidence, constraints, missing requirements, incompatibilities, and dependency support behind each validation decision,
+    \item exporting a procedural reasoning graph that can be inspected in Neo4j.
+\end{itemize}
+
+Perception, XR interaction, natural language generation, user interface design, and live operator control remain outside the implementation scope. The implementation is deterministic given the same input files, rule configuration, domain configuration, thresholds, and aggregation policy.
+
+\section{Pipeline overview}
+\label{sec:implementation-pipeline-overview}
+
+The implementation is organized as a file-based pipeline in which each stage reads structured records from the previous stage and writes the records required by the next stage. This makes it possible to inspect predicates, inferred constraints, validation records, and graph exports before they are consumed by later stages.
+
+The data flow is summarized in \cref{tab:implementation-pipeline-artifacts}, and the dependencies between stages are shown in \Cref{fig:implemented-pipeline-flow-concept}. The structure keeps upstream evidence, symbolic predicates, inferred constraints, validation decisions, and graph representation as separate artifacts, which makes stage-level errors easier to locate.
+
+\begin{table}[htbp]
+\centering
+\caption{Implemented reasoning pipeline and main artifacts.}
+\label{tab:implementation-pipeline-artifacts}
+\begin{tabularx}{\textwidth}{p{0.18\textwidth} X X}
+\toprule
+Stage & Input artifacts & Output artifacts \\
+\midrule
+Layers 1 and 2 upstream artifacts
+& XR-derived event and component records exported as Neo4j-style CSV files
+& Existing graph CSV files in \path{results/neo4j/<run_id>/} \\
+Adapter
+& \path{nodes_events.csv}, \path{edges_event_component.csv}, \path{edges_event_next.csv}, \path{nodes_components.csv}
+& \path{step_records.jsonl}, \path{predicates.jsonl} \\
+Layer 3 reasoning
+& \path{step_records.jsonl}, \path{predicates.jsonl}, \path{thesis_rules.yaml}
+& \path{inferred_constraints.csv}, \path{rule_coverage_diagnostics.csv} \\
+Layer 4 validation
+& \path{step_records.jsonl}, \path{predicates.jsonl}, \path{inferred_constraints.csv}, \path{rule_coverage_diagnostics.csv}
+& \path{validation_records.jsonl}, \path{step_validations.csv}, \path{explanation_traces.json}, \path{effect_history_diagnostics.csv} \\
+Graph export
+& \path{validation_records.jsonl} and optional metadata inputs
+& \path{procedural_reasoning_graph.json}, \path{procedural_reasoning_graph_nodes.csv}, \path{procedural_reasoning_graph_edges.csv} \\
+Neo4j import
+& Procedural graph JSON or graph CSV files
+& Imported Neo4j graph for inspection and querying \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 14mm,
+  core/.style={draw,rounded corners,fill=gray!10,align=center,inner sep=5pt,font=\small},
+  concept/.style={draw,rounded corners,align=left,inner sep=4pt,text width=0.30\linewidth,font=\small},
+  dep/.style={-Latex,thick}
+]
+\node[core] (core) {Procedural reasoning\\pipeline};
+\node[concept,left=18mm of core] (inputs) {\textbf{Inputs}\\Existing graph CSVs};
+\node[concept,above right=8mm and 14mm of core] (adapter) {\textbf{Adapter}\\Existing graph CSVs $\rightarrow$ steps/predicates};
+\node[concept,right=18mm of core] (l3) {\textbf{Layer 3 reasoning}\\Rules inference + predicates $\rightarrow$ constraints};
+\node[concept,below right=8mm and 14mm of core] (l4c) {\textbf{Layer 4 validation}\\Steps/predicates + constraints $\rightarrow$ validation decisions + traces};
+\node[concept,below=of core] (export) {\textbf{Graph representation}\\Construct procedural reasoning graph\\Export JSON + node/edge CSVs};
+\node[concept,below=of export] (neo4j) {\textbf{Consumption}\\Import into Neo4j for querying/inspection};
+
+\draw[dep] (inputs) -- (adapter);
+\draw[dep] (adapter) -- (l3);
+\draw[dep] (l3) -- (l4c);
+\draw[dep] (l4c) -- (export);
+\draw[dep] (export) -- (neo4j);
+\end{tikzpicture}
+\caption{Concept/dependency view highlighting the major components and what each stage depends on and produces.}
+\label{fig:implemented-pipeline-flow-concept}
+\end{figure}
+
+
+
+\section{Implemented scripts and modules}
+\label{sec:implementation-scripts-modules}
+
+The implementation separates command-line scripts from reusable Python modules so that pipeline execution remains distinct from adapter, inference, validation, graph construction, and import logic. The scripts listed in \cref{tab:implementation-scripts} define the pipeline stages. The modules listed in \cref{tab:implementation-modules} implement the adapter, inference, validation, graph construction, and Neo4j import logic.
+
+\begin{table}[htbp]
+\centering
+\caption{Main implementation scripts, located in Scripts folder.}
+\label{tab:implementation-scripts}
+\begin{tabular}{p{0.42\textwidth} p{0.48\textwidth}}
+\toprule
+Script & Role \\
+\midrule
+\path{14_build_layer3_reasoning_adapter.py} & Builds step records and predicate records from upstream graph CSV files. \\
+\path{15_run_layer3_inference.py} & Applies Layer 3 rules and writes inferred constraints. \\
+\path{16_run_layer4_validation.py} & Validates ordered step hypotheses and writes validation records and explanation traces. \\
+\path{17_build_procedural_reasoning_graph.py} & Builds the procedural reasoning graph from validation records. \\
+\path{18_import_procedural_reasoning_graph_neo4j.py} & Imports the exported procedural reasoning graph into Neo4j. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Main implementation modules, located in src folder.}
+\label{tab:implementation-modules}
+\begin{tabular}{p{0.40\textwidth} p{0.50\textwidth}}
+\toprule
+Module & Role \\
+\midrule
+\path{layer3_reasoning_adapter.py} & Converts upstream graph records into step records and symbolic predicates. \\
+\path{layer3_inference.py} & Implements rule matching, confidence aggregation, constraint instantiation, and compatibility checking. \\
+\path{layer4_validation.py} & Implements ordered step validation, produced-effect history, requirement checking, and status assignment. \\
+\path{procedural_reasoning_graph.py} & Builds the graph representation from validation records and trace information. \\
+\path{procedural_neo4j_import.py} & Imports the procedural reasoning graph into Neo4j using semantic node labels and relationship types. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Adapter implementation}
+\label{sec:implementation-adapter}
+
+The adapter is the boundary between the existing upstream graph export and the reasoning layers implemented in this thesis. It does not replace the upstream assembly graph generation or Neo4j export. Instead, it reads the existing exported CSV files and produces the normalized records required by Layer 3 and Layer 4. Its runtime defaults are stored in \texttt{config/reasoning\_adapter.yaml}. This configuration defines the default run identifier, input CSV directory, output root, predicate and rule configuration path, domain configuration path, and the expected upstream CSV filenames consumed by the adapter.
+
+The adapter reads the following upstream files:
+
+\begin{Code}
+    nodes_events.csv
+    edges_event_component.csv
+    edges_event_next.csv
+    nodes_components.csv
+\end{Code}
+
+It writes two reasoning-layer inputs:
+
+\begin{Code}
+    step_records.jsonl
+    predicates.jsonl
+\end{Code}
+
+Each record in \texttt{step\_records.jsonl} corresponds to one normalized step record derived from a source assembly event. Each record in \texttt{predicates.jsonl} corresponds to a symbolic fact associated with a step, object, time window, component type, required condition, tool, or source field.
+
+The adapter generates predicates using a configurable vocabulary. The predicate configuration specifies which predicate names should be emitted, their argument structure, and whether they are enabled. The adapter still contains extraction logic for each predicate type because each predicate depends on specific upstream fields. For example, \texttt{hasAction} is derived from event fields, \texttt{usesObject} is derived from event-component edges, and \texttt{isA} is derived from component metadata and domain configuration.
+
+\section{Predicate and rule configuration}
+\label{sec:implementation-predicate-rule-config}
+
+Predicate names and rules are configured in \texttt{thesis\_rules.yaml}. This file defines the adapter predicate vocabulary, aliases, default thresholds, validation thresholds, rule categories, and concrete Layer 3 rules.
+
+The following excerpt illustrates the structure used to configure adapter predicates:
+
+\begin{Code}
+"adapter": {
+  "predicates": {
+    "event": {
+      "has_action": {
+        "name": "hasAction",
+        "description": "Associates a step with its normalized action label.",
+        "args": ["step_id", "action_name"],
+        "enabled": true
+      }
+    },
+    "object_interaction": {
+      "uses_object": {
+        "name": "usesObject",
+        "description": "Associates a step with a non-tool component it acts on.",
+        "args": ["step_id", "component_id"],
+        "enabled": true
+      }
+    }
+  }
+}
+\end{Code}
+
+The stable adapter key, such as \texttt{has\_action} or \texttt{uses\_object}, is used by the Python implementation to select the extraction path. The configured predicate name, such as \texttt{hasAction} or \texttt{usesObject}, is the symbolic name written to \texttt{predicates.jsonl} and later matched by Layer 3 rules.
+
+Predicate aliases are used to normalize equivalent predicate names before rule matching. For example, \texttt{stepHasAction}, \texttt{actsOn}, and \texttt{typeOf} can be mapped to the canonical names \texttt{hasAction}, \texttt{usesObject}, and \texttt{isA}. This keeps the rule layer stable even when upstream naming conventions change.
+
+The default rule threshold and aggregation policy are also stored in the rule configuration:
+
+\begin{Code}
+"defaults": {
+  "threshold": 0.7,
+  "aggregation": "min"
+},
+"validation": {
+  "tau_acc": 0.7,
+  "tau_unc": 0.35
+}
+\end{Code}
+
+The implemented rule categories correspond to the conceptual categories introduced in the methodology in \cref{sec:layer3-method}:
+
+\begin{Code}
+    inferred_precondition
+    expected_effect
+    safety_constraint
+    required_tool
+    implicit_assembly_condition
+    compatibility
+\end{Code}
+
+Non-compatibility rules derive ordinary constraints, such as requirements or expected effects. Compatibility rules are evaluated separately and emit incompatibility constraints that are later interpreted by Layer 4 as hard validity violations.
+
+\section{Domain configuration}
+\label{sec:implementation-domain-config}
+
+Component-specific assembly knowledge is stored in \path{domain_config.yaml}. This file keeps component names, expected targets, required tools, assembly conditions, and safety requirements outside the generic rule engine. The rule engine therefore does not hardcode specific IndustReal component names. Instead, object-specific knowledge is materialized into predicates by the adapter and then consumed by generic rules.
+
+The domain configuration defines component names, generic types, parent components, expected installation targets, required tools, required assembly conditions, and safety requirements. It also includes lightweight ontology-style metadata, such as a type hierarchy, type defaults, a condition vocabulary, and predicate aliases.
+
+The following excerpt illustrates how generic type information is represented:
+
+\begin{Code}
+"type_hierarchy": {
+  "Component": {
+    "parents": []
+  },
+  "Fastener": {
+    "parents": ["Component"]
+  },
+  "ChassisPin": {
+    "parents": ["Fastener", "Component"]
+  },
+  "Screw": {
+    "parents": ["Fastener", "Component"]
+  }
+}
+\end{Code}
+
+Type defaults allow common requirements to be defined once for all components of a given type. For example, screws require a screwdriver, while chassis pins require alignment with their installation target and a safety condition stating that the base is secured to the workspace:
+
+\begin{Code}
+"type_defaults": {
+  "Screw": {
+    "required_tool": "screwdriver"
+  },
+  "ChassisPin": {
+    "required_conditions": [
+      {
+        "name": "aligned",
+        "args": ["$self", "$installation_target"]
+      }
+    ],
+    "safety_requirements": [
+      {
+        "name": "secured",
+        "args": ["industreal_component::base", "Workspace"]
+      }
+    ]
+  }
+}
+\end{Code}
+
+The condition vocabulary defines which condition names are valid and how many arguments they require:
+
+\begin{Code}
+"condition_vocabulary": {
+  "installed": {
+    "arity": 2,
+    "description": "A component is installed on or into a target."
+  },
+  "aligned": {
+    "arity": 2,
+    "description": "Two entities are aligned for assembly."
+  },
+  "secured": {
+    "arity": 2,
+    "description": "An entity is secured to a support or workspace."
+  }
+}
+\end{Code}
+
+The component section maps source component identifiers to domain-level names and generic assembly roles. For example:
+
+\begin{Code}
+"industreal_component::front_bracket_screw": {
+  "name": "front_bracket_screw",
+  "generic_type": "Screw",
+  "parent_component": "industreal_component::front_bracket",
+  "installation_target": "industreal_component::front_bracket"
+}
+\end{Code}
+
+The adapter materializes the domain configuration into predicates such as:
+
+\begin{Code}
+    isA(front_bracket_screw, Screw)
+    isA(front_bracket_screw, Fastener)
+    isA(front_bracket_screw, Component)
+    hasInstallTarget(front_bracket_screw, front_bracket)
+    hasParentComponent(front_bracket_screw, front_bracket)
+    hasRequiredTool(front_bracket_screw, screwdriver)
+\end{Code}
+
+This separation allows a new assembly task to reuse the rule engine while changing the domain configuration and, when needed, the predicate extraction logic. In principle, parts of this configuration could be generated from CAD metadata, assembly documentation, or manufacturing process descriptions. In the current implementation, however, the file is manually authored from the exported IndustReal component list.
+
+\section{Layer 3 rule inference implementation}
+\label{sec:implementation-layer3}
+
+Layer 3 reads \path{step_records.jsonl}, \path{predicates.jsonl}, and \path{thesis_rules.yaml}. It writes \path{inferred_constraints.csv} and \path{rule_coverage_diagnostics.csv}. The rule evaluator first normalizes predicate names using the configured alias mapping. It then evaluates the antecedents of each rule against the available predicates, collects bindings, aggregates confidence values, compares the result with the rule threshold, and instantiates the configured constraints.
+
+The diagnostic output records, for each step, whether meaningful predicate evidence was present and whether any Layer 3 rule matched that evidence. This includes the action name, object and tool arguments, predicate count, matched rule count, produced constraint count, and coverage indicators such as \path{has_expected_effect}, \path{has_requirement}, \path{has_incompatibility}, and \path{has_rule_coverage}. If a step has predicate evidence but no rule produces constraints, the diagnostic row records \path{no_applicable_rule}. This is recorded as a coverage warning rather than interpreted as evidence that the step is invalid.
+
+
+The following rule illustrates how installation effects are inferred from a generic action, object use, component type, and installation target:
+
+\begin{Code}
+{
+  "id": "effect_install_component_on_target",
+  "type": "expected_effect",
+  "threshold": 0.7,
+  "antecedents": [
+    {"name": "hasAction", "args": ["?s", "install"]},
+    {"name": "usesObject", "args": ["?s", "?component"]},
+    {"name": "isA", "args": ["?component", "Component"]},
+    {"name": "hasInstallTarget", "args": ["?component", "?target"]}
+  ],
+  "constraints": [
+    {
+      "name": "produces",
+      "kind": "expected_effect",
+      "args": ["?s", "installed", "?component", "?target"]
+    }
+  ]
+}
+\end{Code}
+
+The rule does not mention a specific component such as \texttt{front\_bracket\_screw}. Specific components are supplied through predicates generated by the adapter. The same rule can therefore apply to different objects when the adapter emits the same symbolic predicate pattern.
+
+The following rule illustrates how implicit assembly conditions are inferred for chassis pins:
+
+\begin{Code}
+{
+  "id": "implicit_domain_required_condition",
+  "type": "implicit_assembly_condition",
+  "threshold": 0.7,
+  "antecedents": [
+    {"name": "hasAction", "args": ["?s", "install"]},
+    {"name": "usesObject", "args": ["?s", "?component"]},
+    {"name": "isA", "args": ["?component", "ChassisPin"]},
+    {"name": "hasRequiredCondition",
+     "args": ["?component", "?condition", "?arg1", "?arg2"]}
+  ],
+  "constraints": [
+    {
+      "name": "requires",
+      "kind": "implicit_assembly_condition",
+      "args": ["?s", "?condition", "?arg1", "?arg2"]
+    }
+  ]
+}
+\end{Code}
+
+Layer 3 also handles compatibility rules. These rules emit \texttt{incompatibleAction} constraints. Such constraints are not treated as ordinary evidence in Layer 4. Instead, they indicate that a step violates a hard validity condition. The full implementation-level pseudocode for rule evaluation is presented in \cref{lst:alg_rule_evaluation_impl}. 
+
+\section{Layer 4 step validation implementation}
+\label{sec:implementation-layer4}
+
+Layer 4 reads \path{step_records.jsonl}, \path{predicates.jsonl}, \path{inferred_constraints.csv}, and \path{rule_coverage_diagnostics.csv}. It produces the main validation file, \path{validation_records.jsonl}, two human-oriented views, \path{step_validations.csv} and \path{explanation_traces.json}, and an effect-history diagnostic file, \path{effect_history_diagnostics.csv}.
+
+The validator walks through the ordered step records. For each step, it collects predicate evidence, constraint evidence, incompatibilities, requirement constraints, and rule coverage diagnostics. Constraints named \texttt{requires}, \texttt{requiresSafety}, and \texttt{requiresTool} are treated as requirements. The validator checks whether each requirement is supported by either same-step predicates or by effects produced by earlier non-rejected steps.
+
+Layer 4 uses the produced-effect history to test whether requirements in later steps are supported by effects from earlier non-rejected steps. The validator maintains two views of produced effects. The historical view retains all produced effects for traceability. The active view contains only effects that are currently available to support later requirements. Accepted and uncertain steps may contribute active effects, while rejected steps do not. This distinction allows the explanation trace to preserve rejected or invalidated effects historically without allowing them to support later validation decisions.
+
+The implementation also supports remove-action semantics. A \texttt{remove} action over a configured component can produce a requirement that the component must already be installed and an expected \texttt{removed(component, target)} effect. When an accepted or uncertain step produces such a removed effect, Layer 4 invalidates the matching active \texttt{installed(component, target)} effect. The installed effect remains in the historical record, but it is removed from the active support set so that later requirements cannot use it as dependency support.
+
+The validator distinguishes between requirement declarations and requirement satisfaction. Predicates such as \path{hasRequiredCondition}, \path{hasSafetyRequirement}, \path{hasRequiredTool}, and \path{requiresInstalledBefore} state that a condition is required. They are not treated as evidence that the condition has already been satisfied. This distinction prevents a requirement from satisfying itself merely because it is declared in the domain configuration.
+
+A step is classified according to the validation thresholds in \texttt{thesis\_rules.yaml}. A step is accepted when no requirements are missing and its confidence is at least \texttt{tau\_acc}. A step with partial support and confidence above \texttt{tau\_unc} is marked as uncertain. Compatibility violations mark a step as rejected because they represent hard validity violations. A step with meaningful predicate evidence but no applicable Layer 3 rule is marked as uncertain rather than silently accepted, unless a separate hard incompatibility rejects it.
+
+Each produced effect is stored with lifecycle information. The field \texttt{effect\_lifecycle\_status} can take the values \texttt{active}, \texttt{invalidated}, or \texttt{inactive\_rejected}. An active effect remains available after the complete validation pass. An invalidated effect was removed from active support by a later remove action. An inactive rejected effect was produced by a rejected step and is therefore preserved for traceability but never used as active support. When an effect is invalidated, the validation record also stores \texttt{invalidated\_by\_constraint\_id}.
+
+Each validation record stores the information needed to reconstruct the decision. This includes the step identifier, sequence index, status, confidence, predicate evidence, constraint evidence, missing requirements, incompatibilities, produced effects, dependency support, rule coverage warnings, invalidated effects, produced-effect lifecycle records, and trace information. The implemented algorithm for step validation is presented in \cref{lst:alg_step_validation_impl}.
+
+\section{Procedural reasoning graph implementation}
+\label{sec:implementation-procedural-graph}
+
+The procedural reasoning graph is built after Layer 4 validation and kept separate from the upstream assembly graph so that source events are not confused with validated procedural reasoning artifacts. The upstream graph represents source events and component relations. The procedural reasoning graph represents validated steps, symbolic evidence, inferred constraints, rule provenance, dependency support, missing requirements, incompatibilities, and explanation traces.
+
+The graph builder primarily reads:
+
+\begin{Code}
+    validation_records.jsonl
+\end{Code}
+
+Optional inputs such as \path{step_records.jsonl}, \path{predicates.jsonl}, and \path{inferred_constraints.csv} are accepted by the graph builder. In the current implementation, \path{validation_records.jsonl} provides the validation status, predicate evidence, constraint evidence, produced effects, produced-effect lifecycle, dependency support, missing requirements, incompatibilities, and trace information used to build the graph. When \path{step_records.jsonl} is provided, Step nodes are additionally enriched with source metadata from the adapter records, including \texttt{clip\_result\_id}, \texttt{run\_id}, \texttt{mode}, \texttt{archive\_name}, and \texttt{clip}.
+
+The graph JSON has the following top-level structure:
+
+\begin{Code}
+{
+  "schema_version": "1.0",
+  "graph_name": "procedural_reasoning_graph",
+  "nodes": [],
+  "edges": []
+}
+\end{Code}
+
+The graph builder also writes two CSV files for graph import and inspection:
+
+\begin{Code}
+    procedural_reasoning_graph_nodes.csv
+    procedural_reasoning_graph_edges.csv
+\end{Code}
+
+The implemented graph uses the following node types:
+
+\begin{table}[htbp]
+\centering
+\caption{Procedural reasoning graph node types.}
+\label{tab:implementation-graph-nodes}
+\begin{tabular}{p{0.22\textwidth} p{0.68\textwidth}}
+\toprule
+Node type & Meaning \\
+\midrule
+\texttt{Step} & One node per validation record. Stores step index, status, confidence, action, and source identifiers. \\
+\texttt{Predicate} & Predicate evidence from the validation record or trace. \\
+\texttt{Constraint} & Inferred and validated constraints, including requirements, produced effects, and incompatibilities. \\
+\texttt{Rule} & Rule provenance for constraints derived by Layer 3. \\
+\texttt{Entity} & Object, tool, workspace, material, or other argument extracted from predicates and constraints. \\
+\texttt{Source} & Source file or field provenance for predicates and derived evidence. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All nodes include display-oriented properties to make Neo4j Aura visualizations readable such as \path{display_name}, \path{display_label}, and \path{short_id}.
+Step nodes also expose validation diagnostics when present such as \path{warnings}, \path{has_rule_coverage},  \path{produced_constraint_count}, \path{has_expected_effect}, \path{unsupported_action}, and \path{invalidated_effects}. Produced-effect constraint nodes expose lifecycle fields such as \path{effect_lifecycle_status} and \path{invalidated_by_constraint_id}. These fields make the effect history inspectable in Neo4j without changing the validation semantics.
+
+The implemented graph uses the following edge types:
+
+\begin{table}[htbp]
+\centering
+\caption{Procedural reasoning graph edge types.}
+\label{tab:implementation-graph-edges}
+\begin{tabular}{p{0.26\textwidth} p{0.64\textwidth}}
+\toprule
+Edge type & Meaning \\
+\midrule
+\texttt{NEXT} & Connects each step to the next step according to the input order. \\
+\texttt{HAS\_PREDICATE} & Connects a step to predicate evidence associated with that step. \\
+\texttt{HAS\_CONSTRAINT} & Connects a step to inferred or validated constraints. \\
+\texttt{USES} & Connects a step to an entity used by the step. \\
+\texttt{PRODUCES} & Connects a step to produced effects. \\
+\texttt{REQUIRES} & Connects a step to requirements, tool requirements, or safety requirements. \\
+\texttt{DEPENDS\_ON} & Connects a later step to an earlier step when a requirement is supported by an earlier produced effect. \\
+\texttt{SUPPORTED\_BY} & Connects a constraint to supporting predicates or constraints. \\
+\texttt{INVALIDATED\_BY} & Connects an invalidated produced-effect constraint to the later produced-effect constraint that invalidated it. \\
+\texttt{DERIVED\_FROM} & Connects a constraint to a rule or a predicate to its source. \\
+\texttt{HAS\_ENTITY} & Connects predicates or constraints to their entity arguments. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The \texttt{NEXT} relation preserves the input sequence. It is not inferred by the reasoning layer. In contrast, \texttt{DEPENDS\_ON} is reasoning-derived because it is added only when a later requirement is supported by a produced effect from an earlier non-rejected step. Rejected steps are not allowed to support later dependency edges. Uncertain steps may support later dependencies, but the corresponding \texttt{DEPENDS\_ON} edge is marked with \texttt{provisional=true} to preserve uncertainty in the graph.
+
+Accepted, uncertain, and rejected steps are included by default. The graph export can also be run with an option to exclude rejected records. Finally, the algorithm that implements the procedural graph and export is shown in \cref{lst:alg_graph_construction_impl}.
+
+
+\section{Neo4j import and inspection}
+\label{sec:implementation-neo4j}
+
+Neo4j is used as a persistence and inspection layer for the generated procedural reasoning graph. The reasoning itself is performed before graph export. Neo4j stores the resulting graph so that the procedure, dependencies, evidence, and explanation traces can be queried after validation.
+
+The Neo4j importer uses the semantic node type as the Neo4j label:
+
+\begin{Code}
+    Step
+    Predicate
+    Constraint
+    Rule
+    Entity
+    Source
+\end{Code}
+
+The importer does not add a generic graph-wide label such as \texttt{ProceduralReasoningGraph}. Instead, graph-level identity is stored using properties such as \texttt{graph\_name} and \texttt{schema\_version}. This avoids cluttering the visualization with extra labels while still allowing all imported nodes to be queried by graph name.
+
+For example, the following query retrieves the imported label distribution:
+
+\begin{Code}
+MATCH (n)
+WHERE n.graph_name = "procedural_reasoning_graph"
+RETURN labels(n) AS labels, count(*) AS count
+ORDER BY count DESC;
+\end{Code}
+
+The following query checks the display fields used for step visualization:
+
+\begin{Code}
+MATCH (s:Step)
+WHERE s.graph_name = "procedural_reasoning_graph"
+RETURN s.display_name, s.display_label, s.status, s.confidence
+ORDER BY s.index;
+\end{Code}
+
+Neo4j is used to inspect the graph at different levels of detail. A simplified view can show only the ordered step sequence, while a detailed view can expose predicates, constraints, rules, source fields, and dependency support. This supports the explainability objective of the thesis without making Neo4j part of the reasoning algorithm itself.
+
+\section{Output contract and traceability}
+\label{sec:implementation-output-contract}
+
+The implementation stores intermediate outputs as structured files so that each validation decision can be traced back to the predicate records, inferred constraints, rule diagnostics, and adapter sources that produced it.
+
+Predicate records include the following fields:
+
+\begin{Code}
+    schema_version
+    record_type
+    id
+    step_id
+    name
+    predicate_key
+    category
+    args
+    conf
+    source
+    notes
+\end{Code}
+
+The \texttt{name} field stores the configured predicate name used by Layer 3 rule matching. The \path{predicate_key} field stores the stable adapter key used to trace the predicate back to the adapter extraction path. The \texttt{category} field records the grouping from the adapter predicate configuration. The \texttt{source} field records which upstream CSV file and fields produced the predicate.
+
+The main reasoning-record contract follows the sequence of the pipeline seen in \Cref{fig:implemented-pipeline-flow-concept}:
+
+\begin{Code}
+Adapter:
+  step_records.jsonl
+  predicates.jsonl
+
+Layer 3:
+  inferred_constraints.csv
+  rule_coverage_diagnostics.csv
+
+Layer 4:
+  validation_records.jsonl
+  step_validations.csv
+  explanation_traces.json
+  effect_history_diagnostics.csv
+
+Graph export:
+  procedural_reasoning_graph.json
+  procedural_reasoning_graph_nodes.csv
+  procedural_reasoning_graph_edges.csv
+\end{Code}
+
+The output contract defines how traceability is preserved across files. A validation decision can be traced from a step status back to the constraints used during validation, from those constraints back to the rules that produced them, from the rules back to the predicates that matched their antecedents, and from the predicates back to the upstream CSV fields. Requirement support, missing requirements, dependency support, rule coverage warnings, invalidated effects, and produced-effect lifecycle records are preserved in the validation outputs and then materialized in the procedural graph.
+
+\section{Reproducibility and configuration}
+\label{sec:implementation-reproducibility}
+
+Each reasoning run depends only on the input records, rule configuration, domain configuration, validation thresholds, and aggregation policy. No hidden state or implicit learning is used. This supports controlled evaluation because changes to rules, thresholds, or domain knowledge can be tested by rerunning the same input records through the pipeline.
+
+The rule configuration controls the predicate vocabulary, aliases, thresholds, validation parameters, rule categories, and concrete rules. The domain configuration controls the object-specific assembly knowledge used to generate domain predicates. The adapter configuration controls the input directories, output directories, and default file names.
+
+This separation supports three kinds of modification:
+
+\begin{itemize}
+    \item renaming, disabling, or recategorizing existing predicates by editing \texttt{thesis\_rules.yaml},
+    \item changing component-specific assembly knowledge by editing \texttt{domain\_config.yaml},
+    \item adding new predicate types by extending the adapter implementation and adding corresponding predicate and rule definitions.
+\end{itemize}
+
+For example, adding a future predicate such as \texttt{isAfter(step\_a, step\_b)} would require explicit adapter logic to derive it from \texttt{edges\_event\_next.csv}. The configuration file can define the predicate name and arguments, but it cannot by itself create evidence that is not extracted from upstream data.
+
+\section{Implementation limitations}
+\label{sec:implementation-limitations}
+
+The implementation follows the thesis scope and therefore has several deliberate limitations.
+
+First, it does not implement automatic step segmentation. The ordered step sequence is taken from upstream event records and preserved by the \texttt{NEXT} edges in the procedural reasoning graph.
+
+Second, it does not implement full natural language understanding of arbitrary step descriptions. Step records and predicates are already structured when they enter the reasoning layers.
+
+Third, the current time-window construction is a downstream fallback. Since the upstream graph stores event instants, the adapter estimates end times from the next distinct event timestamp where possible. More precise temporal segmentation could be incorporated in future work.
+
+Fourth, the graph is not a complete executable process model. It can support an operator guidance system by exposing validation status, missing requirements, incompatibilities, evidence, and dependencies, but it does not by itself define all legal execution paths, recovery actions, branching logic, or runtime guidance policies.
+
+Finally, the current domain configuration is manually authored. Future work could derive parts of it from CAD metadata, assembly documentation, standard operating procedures, or manufacturing process descriptions. Such sources could add stronger execution semantics to the graph, including exact preconditions, allowed alternatives, tool constraints, tolerance information, and recovery rules.
+
+\section{Summary}
+\label{sec:implementation-summary}
+
+The implementation adapts Layers 1 and 2 upstream IndustReal graph exports into symbolic step and predicate records, applies configurable Layer 3 rules, validates ordered step hypotheses in Layer 4, and exports the resulting evidence, constraints, dependencies, and validation outcomes as a procedural reasoning graph for Neo4j inspection. The implementation preserves the central thesis boundary: the reasoning layer does not discover the procedural order, but validates and enriches an ordered sequence using symbolic evidence, inferred constraints, compatibility checks, dependency support, and explanation traces.
+

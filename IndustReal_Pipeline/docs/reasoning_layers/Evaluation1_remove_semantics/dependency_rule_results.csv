@@ -1,0 +1,11 @@
+dependent_step,support_step,support_status,edge_type,provisional,status,message
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected
+step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,accepted,DEPENDS_ON,false,PASS,dependency support is not rejected

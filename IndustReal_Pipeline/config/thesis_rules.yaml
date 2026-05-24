@@ -151,6 +151,34 @@
       ]
     },
     {
+      "id": "precondition_remove_requires_component_installed",
+      "type": "inferred_precondition",
+      "threshold": 0.70,
+      "antecedents": [
+        {"name": "hasAction", "args": ["?s", "remove"]},
+        {"name": "usesObject", "args": ["?s", "?component"]},
+        {"name": "isA", "args": ["?component", "Component"]},
+        {"name": "hasInstallTarget", "args": ["?component", "?target"]}
+      ],
+      "constraints": [
+        {"name": "requires", "kind": "inferred_precondition", "args": ["?s", "installed", "?component", "?target"]}
+      ]
+    },
+    {
+      "id": "effect_remove_component_from_target",
+      "type": "expected_effect",
+      "threshold": 0.70,
+      "antecedents": [
+        {"name": "hasAction", "args": ["?s", "remove"]},
+        {"name": "usesObject", "args": ["?s", "?component"]},
+        {"name": "isA", "args": ["?component", "Component"]},
+        {"name": "hasInstallTarget", "args": ["?component", "?target"]}
+      ],
+      "constraints": [
+        {"name": "produces", "kind": "expected_effect", "args": ["?s", "removed", "?component", "?target"]}
+      ]
+    },
+    {
       "id": "implicit_domain_required_condition",
       "type": "implicit_assembly_condition",
       "threshold": 0.70,

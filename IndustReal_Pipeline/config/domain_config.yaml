@@ -57,6 +57,10 @@
     "secured": {
       "arity": 2,
       "description": "An entity is secured to a support or workspace."
+    },
+    "removed": {
+      "arity": 2,
+      "description": "A component has been removed from a target."
     }
   },
   "predicate_aliases": {

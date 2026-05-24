@@ -1,0 +1,7 @@
+rejected_step_id,rejected_step_index,produced_effect_count,inactive_rejected_effect_count,used_as_later_support,offending_later_step_id,status,notes
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5,5,0,0,False,,PASS,rejected effects isolated
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13,13,1,1,False,,PASS,rejected effects isolated
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14,14,1,1,False,,PASS,rejected effects isolated
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21,21,1,1,False,,PASS,rejected effects isolated
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29,29,0,0,False,,PASS,rejected effects isolated
+step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33,33,1,1,False,,PASS,rejected effects isolated

@@ -8,13 +8,17 @@ from pathlib import Path
 from typing import Any
 
 
-COMMON_NODE_LABEL = "ProceduralReasoningGraphNode"
 GRAPH_NAME = "procedural_reasoning_graph"
 NODE_CSV = "procedural_reasoning_graph_nodes.csv"
 EDGE_CSV = "procedural_reasoning_graph_edges.csv"
 GRAPH_JSON = "procedural_reasoning_graph.json"
 
 _IDENTIFIER_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+STEP_STATUS_LABELS = {
+    "accepted": "StepAccepted",
+    "uncertain": "StepUncertain",
+    "rejected": "StepRejected",
+}
 
 
 def load_procedural_graph(path: Path) -> dict[str, Any]:
@@ -31,41 +35,55 @@ def load_procedural_graph(path: Path) -> dict[str, Any]:
 
 def normalize_graph(graph: dict[str, Any], graph_name: str | None = None) -> dict[str, list[dict[str, Any]]]:
     name = graph_name or str(graph.get("graph_name") or GRAPH_NAME)
+    schema_version = graph.get("schema_version")
     return {
-        "nodes": [_normalize_node(node, name) for node in list(graph.get("nodes", []) or [])],
+        "nodes": [_normalize_node(node, name, schema_version) for node in list(graph.get("nodes", []) or [])],
         "edges": [_normalize_edge(edge, name) for edge in list(graph.get("edges", []) or [])],
     }
 
 
 def constraint_cyphers(node_types: list[str]) -> list[str]:
-    cyphers = [
-        (
-            "CREATE CONSTRAINT prg_common_prg_id IF NOT EXISTS "
-            f"FOR (n:{COMMON_NODE_LABEL}) REQUIRE n.prg_id IS UNIQUE"
-        )
-    ]
+    cyphers = []
     for node_type in sorted(set(node_types)):
         label = neo4j_identifier(node_type)
         cyphers.append(
-            f"CREATE CONSTRAINT prg_{label.lower()}_prg_id IF NOT EXISTS "
-            f"FOR (n:{label}) REQUIRE n.prg_id IS UNIQUE"
+            f"CREATE CONSTRAINT prg_{label.lower()}_graph_prg_id IF NOT EXISTS "
+            f"FOR (n:{label}) REQUIRE (n.graph_name, n.prg_id) IS UNIQUE"
         )
+    return cyphers
+
+
+def legacy_constraint_drop_cyphers(node_types: list[str]) -> list[str]:
+    cyphers = []
+    for node_type in sorted(set(node_types)):
+        label = neo4j_identifier(node_type)
+        cyphers.append(f"DROP CONSTRAINT prg_{label.lower()}_prg_id IF EXISTS")
+    cyphers.append("DROP CONSTRAINT prg_common_prg_id IF EXISTS")
     return cyphers
 
 
 def clear_graph_cypher() -> str:
     return (
-        f"MATCH (n:{COMMON_NODE_LABEL} {{graph_name: $graph_name}}) "
+        "MATCH (n {graph_name: $graph_name}) "
         "DETACH DELETE n"
     )
 
 
 def node_import_cypher(node_type: str) -> str:
     label = neo4j_identifier(node_type)
+    status_label_setters = ""
+    if label == "Step":
+        status_label_setters = (
+            "REMOVE n:StepAccepted:StepUncertain:StepRejected "
+            "FOREACH (_ IN CASE WHEN r.props.status = 'accepted' THEN [1] ELSE [] END | SET n:StepAccepted) "
+            "FOREACH (_ IN CASE WHEN r.props.status = 'uncertain' THEN [1] ELSE [] END | SET n:StepUncertain) "
+            "FOREACH (_ IN CASE WHEN r.props.status = 'rejected' THEN [1] ELSE [] END | SET n:StepRejected) "
+        )
     return (
         f"UNWIND $rows AS r "
-        f"MERGE (n:{COMMON_NODE_LABEL}:{label} {{prg_id: r.id}}) "
-        "SET n += r.props"
+        f"MERGE (n:{label} {{graph_name: r.props.graph_name, prg_id: r.id}}) "
+        "SET n += r.props "
+        f"{status_label_setters}"
     )
 
 
@@ -73,8 +91,8 @@ def edge_import_cypher(edge_type: str) -> str:
     rel_type = neo4j_identifier(edge_type)
     return (
         "UNWIND $rows AS r "
-        f"MATCH (a:{COMMON_NODE_LABEL} {{prg_id: r.source}}) "
-        f"MATCH (b:{COMMON_NODE_LABEL} {{prg_id: r.target}}) "
+        "MATCH (a {graph_name: r.graph_name, prg_id: r.source}) "
+        "MATCH (b {graph_name: r.graph_name, prg_id: r.target}) "
         f"MERGE (a)-[rel:{rel_type} {{prg_edge_key: r.edge_key}}]->(b) "
         "SET rel += r.props"
     )
@@ -98,10 +116,12 @@ def neo4j_props(properties: dict[str, Any]) -> dict[str, Any]:
     return {key: _neo4j_value(value) for key, value in properties.items() if value is not None}
 
 
-def _normalize_node(node: dict[str, Any], graph_name: str) -> dict[str, Any]:
+def _normalize_node(node: dict[str, Any], graph_name: str, schema_version: Any = None) -> dict[str, Any]:
     node_id = str(node["id"])
     node_type = neo4j_identifier(str(node["type"]))
     props = dict(node.get("properties", {}) or {})
+    if schema_version is not None:
+        props.setdefault("schema_version", schema_version)
     props.update(
         {
             "prg_id": node_id,
@@ -109,7 +129,12 @@ def _normalize_node(node: dict[str, Any], graph_name: str) -> dict[str, Any]:
             "graph_name": graph_name,
         }
     )
-    return {"id": node_id, "type": node_type, "props": neo4j_props(props)}
+    return {
+        "id": node_id,
+        "type": node_type,
+        "props": neo4j_props(props),
+        "labels": _neo4j_labels_for_node(node_type, props),
+    }
 
 
 def _normalize_edge(edge: dict[str, Any], graph_name: str) -> dict[str, Any]:
@@ -129,9 +154,19 @@ def _normalize_edge(edge: dict[str, Any], graph_name: str) -> dict[str, Any]:
         "source": source,
         "target": target,
         "type": edge_type,
+        "graph_name": graph_name,
         "edge_key": edge_key,
         "props": neo4j_props(props),
     }
+
+
+def _neo4j_labels_for_node(node_type: str, props: dict[str, Any]) -> list[str]:
+    labels = [node_type]
+    if node_type == "Step":
+        status_label = STEP_STATUS_LABELS.get(str(props.get("status") or "").lower())
+        if status_label:
+            labels.append(status_label)
+    return labels
 
 
 def _edge_key(source: str, target: str, edge_type: str, properties: dict[str, Any]) -> str:

@@ -1,0 +1,10 @@
+check_id,check_name,category,status,severity,artifact,message,evidence_file
+E2.1,Evaluation inputs readable,inputs,PASS,critical,"step_records.jsonl,predicates.jsonl,inferred_constraints.csv",38 clip/result folders evaluated.,evidence/evaluation2_results.json
+E2.2,Requested clips available,inputs,PASS,warning,results/reasoning_layers,No requested clip/result folders were missing.,
+E2.3,All-available discovery,inputs,PASS,warning,results/reasoning_layers,No incomplete local folders were skipped.,
+E2.4,Constraint inference coverage computed,layer3,PASS,critical,inferred_constraints.csv,1673 inferred constraints summarized across 38 clip(s).,evaluation2_constraint_coverage.csv
+E2.5,Confidence values valid,layer3,PASS,critical,inferred_constraints.csv,"0 constraints have missing, non-numeric, or out-of-range confidence values.",confidence_validation_results.csv
+E2.6,Rule provenance present,layer3,PASS,warning,inferred_constraints.csv,1673 of 1673 constraints expose rule provenance fields.,constraint_provenance_results.csv
+E2.7,Rule coverage diagnostics summarized,diagnostics,PASS,warning,rule_coverage_diagnostics.csv,Rule coverage diagnostics were summarized where available.,rule_coverage_summary.csv
+E2.8,Remove-action semantics covered,layer3,PASS,warning,"inferred_constraints.csv,rule_coverage_diagnostics.csv","Remove semantics were detected for all observed remove steps, or no remove steps were present.",remove_semantics_coverage.csv
+E2.9,Natural incompatibility coverage reported,layer3,PASS,warning,inferred_constraints.csv,16 incompatibility constraints observed. Zero is acceptable for Evaluation 2 natural clips.,evaluation2_constraint_coverage.csv

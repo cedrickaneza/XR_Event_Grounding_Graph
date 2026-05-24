@@ -1,0 +1,152 @@
+{
+  "checks": [
+    {
+      "artifact": "step_records.jsonl",
+      "category": "adapter",
+      "check_id": "E1.1",
+      "check_name": "Step records produced",
+      "evidence_file": "evidence/step_record_coverage.json",
+      "message": "11 step records cover 11 input steps.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "predicates.jsonl",
+      "category": "adapter",
+      "check_id": "E1.2",
+      "check_name": "Predicate records produced",
+      "evidence_file": "evidence/predicate_validation_details.json",
+      "message": "106 predicates reference valid step records.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "inferred_constraints.csv",
+      "category": "layer3",
+      "check_id": "E1.3",
+      "check_name": "Layer 3 constraints produced",
+      "evidence_file": "evidence/constraint_summary.json",
+      "message": "28 constraints produced; names: {'produces': 11, 'requires': 13, 'requiresSafety': 3, 'requiresTool': 1}.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "validation_records.jsonl",
+      "category": "layer4",
+      "check_id": "E1.4",
+      "check_name": "Layer 4 validation records produced",
+      "evidence_file": "evidence/validation_record_details.json",
+      "message": "11 validation records include statuses.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "explanation_traces.json",
+      "category": "layer4",
+      "check_id": "E1.5",
+      "check_name": "Explanation traces produced",
+      "evidence_file": "evidence/trace_validation_details.json",
+      "message": "Validation decisions include trace information.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph.*",
+      "category": "graph",
+      "check_id": "E1.6",
+      "check_name": "Graph export produced",
+      "evidence_file": "evidence/graph_export_details.json",
+      "message": "Graph export contains 202 nodes and 526 edges.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv",
+      "category": "graph",
+      "check_id": "E1.7",
+      "check_name": "Input order preserved",
+      "evidence_file": "order_consistency_results.csv",
+      "message": "10 NEXT edges follow validation order.",
+      "severity": "critical",
+      "status": "PASS"
+    },
+    {
+      "artifact": "procedural_reasoning_graph_edges.csv",
+      "category": "graph",
+      "check_id": "E1.8",
+      "check_name": "Rejected-step dependency rule respected",
+      "evidence_file": "dependency_rule_results.csv",
+      "message": "10 DEPENDS_ON edges avoid rejected-step support.",
+      "severity": "critical",
+      "status": "PASS"
+    }
+  ],
+  "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+  "counts": {
+    "constraints": 28,
+    "events": 659,
+    "explanation_traces": 11,
+    "graph_edges": 526,
+    "graph_nodes": 202,
+    "predicates": 106,
+    "rule_coverage_diagnostics": 11,
+    "step_records": 11,
+    "validation_records": 11
+  },
+  "details": {
+    "constraints": {
+      "accepted_uncovered_steps": 0,
+      "rows": 28,
+      "rule_coverage_warnings": 0,
+      "summary_by_name": {
+        "produces": 11,
+        "requires": 13,
+        "requiresSafety": 3,
+        "requiresTool": 1
+      }
+    },
+    "graph": {
+      "dangling_edges": 0,
+      "step_nodes": 11,
+      "uncovered_steps_missing_graph_warnings": 0
+    },
+    "predicates": {
+      "dangling_predicate_step_references": 0,
+      "predicates": 106,
+      "schema_failures": 0,
+      "steps_without_predicates": []
+    },
+    "step_records": {
+      "expected_input_steps": 11,
+      "extra_source_event_ids": [],
+      "missing_source_event_ids": [],
+      "step_records": 11
+    },
+    "traces": {
+      "skipped_optional_fields": [],
+      "trace_records": 11,
+      "validation_decisions_without_trace": []
+    },
+    "validations": {
+      "extra_validation_step_ids": [],
+      "indices_ordered": true,
+      "invalid_statuses": [],
+      "missing_validation_step_ids": []
+    }
+  },
+  "evaluation": "Evaluation 1: Pipeline artifact correctness",
+  "paths": {
+    "constraints": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\inferred_constraints.csv",
+    "events": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\neo4j\\raw_cad_dataset__all_test_clips\\nodes_events.csv",
+    "graph_edges": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\procedural_reasoning_graph\\procedural_reasoning_graph_edges.csv",
+    "graph_json": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\procedural_reasoning_graph\\procedural_reasoning_graph.json",
+    "graph_nodes": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\procedural_reasoning_graph\\procedural_reasoning_graph_nodes.csv",
+    "predicates": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\predicates.jsonl",
+    "rule_coverage": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\rule_coverage_diagnostics.csv",
+    "steps": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\step_records.jsonl",
+    "traces": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\explanation_traces.json",
+    "validations": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation1_remove_semantics\\validation_records.jsonl"
+  },
+  "run_id": "raw_cad_dataset__all_test_clips",
+  "timestamp": "2026-05-18T09:50:41+00:00"
+}

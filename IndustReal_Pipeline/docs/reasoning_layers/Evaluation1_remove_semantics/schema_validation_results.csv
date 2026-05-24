@@ -1,0 +1,945 @@
+artifact,record_id,validation_type,field,status,message
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,index,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,record_type,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,source_event_id,PASS,present
+step_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,index,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,step_id,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,name,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,args,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,conf,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,required_field,source,PASS,present
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_70_9_118_7,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_0_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasLabel::base_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::isA::base_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::p::hasInstallTarget::base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_70_9_118_7,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_1_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::isA::rear_chassis_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_70_9_118_7,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_2_front_rear_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasLabel::front_rear_chassis_pin_front_rear_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_chassispin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_fastener,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::isA::front_rear_chassis_pin_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasParentComponent::front_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasInstallTarget::front_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::requiresInstalledBefore::front_rear_chassis_pin_rear_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasRequiredCondition::front_rear_chassis_pin_aligned_front_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::p::hasSafetyRequirement::front_rear_chassis_pin_secured_base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_118_7_178_8,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_3_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasLabel::front_chassis_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::isA::front_chassis_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::hasInstallTarget::front_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::p::requiresInstalledBefore::front_chassis_base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_118_7_178_8,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_4_front_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasLabel::front_chassis_pin_front_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_chassispin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_fastener,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::isA::front_chassis_pin_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasParentComponent::front_chassis_pin_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasInstallTarget::front_chassis_pin_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::requiresInstalledBefore::front_chassis_pin_front_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasRequiredCondition::front_chassis_pin_aligned_front_chassis_pin_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::p::hasSafetyRequirement::front_chassis_pin_secured_base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_178_8_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_5_rear_rear_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasLabel::rear_rear_chassis_pin_rear_rear_chassis_pin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_chassispin,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_fastener,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::isA::rear_rear_chassis_pin_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasParentComponent::rear_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasInstallTarget::rear_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::requiresInstalledBefore::rear_rear_chassis_pin_rear_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasRequiredCondition::rear_rear_chassis_pin_aligned_rear_rear_chassis_pin_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::p::hasSafetyRequirement::rear_rear_chassis_pin_secured_base_workspace,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_178_8_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_6_front_bracket,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasLabel::front_bracket_front_bracket,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_bracket,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::isA::front_bracket_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasParentComponent::front_bracket_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::hasInstallTarget::front_bracket_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::p::requiresInstalledBefore::front_bracket_front_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_178_8_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_7_front_bracket_screw,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasLabel::front_bracket_screw_front_bracket_screw,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_screw,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_fastener,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::isA::front_bracket_screw_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasParentComponent::front_bracket_screw_front_bracket,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasInstallTarget::front_bracket_screw_front_bracket,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::requiresInstalledBefore::front_bracket_screw_front_bracket_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::p::hasRequiredTool::front_bracket_screw_screwdriver,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_178_8_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_8_front_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasLabel::front_wheel_assy_front_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_wheelassembly,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::isA::front_wheel_assy_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasParentComponent::front_wheel_assy_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::hasInstallTarget::front_wheel_assy_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_remove,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_9_front_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasLabel::front_wheel_assy_front_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_wheelassembly,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::isA::front_wheel_assy_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasParentComponent::front_wheel_assy_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::hasInstallTarget::front_wheel_assy_front_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::p::requiresInstalledBefore::front_wheel_assy_front_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasAction::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_install,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_273_5,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::usesObject::step_raw_cad_dataset_all_test_clips_od_only_test_p1_03_assy_0_1_event_10_rear_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasLabel::rear_wheel_assy_rear_wheel_assy,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_wheelassembly,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::isA::rear_wheel_assy_component,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
+predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,header,required_column,args,PASS,present
+inferred_constraints.csv,header,required_column,constraint_id,PASS,present
+inferred_constraints.csv,header,required_column,step_id,PASS,present
+inferred_constraints.csv,header,required_column,name,PASS,present
+inferred_constraints.csv,header,required_column,conf,PASS,present
+inferred_constraints.csv,header,required_column,rule_id,PASS,present
+inferred_constraints.csv,header,required_column,status,PASS,present
+inferred_constraints.csv,header,required_column,kind,PASS,present
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_0_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_al,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_se,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_al,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_se,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_al,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_se,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_sc,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_re,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i,confidence_range,conf,PASS,"in [0, 1]"
+rule_coverage_diagnostics.csv,header,required_column,step_id,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,action_name,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,predicate_count,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,matched_rule_count,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,produced_constraint_count,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,has_rule_coverage,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,warning_code,PASS,present
+rule_coverage_diagnostics.csv,header,required_column,warning_message,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,step_id,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,required_field,status,PASS,present
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,confidence_range,confidence,PASS,"in [0, 1]"
+validation_records.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,confidence_range,confidence,PASS,"in [0, 1]"
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,trace_field,confidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,predicate_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,constraint_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,missing_requirements,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,incompatibility_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,dependency_evidence,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,status,PASS,present
+explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,confidence,PASS,present
+procedural_reasoning_graph.json,root,required_field,graph_name,PASS,present
+procedural_reasoning_graph.json,root,required_field,schema_version,PASS,present
+procedural_reasoning_graph.json,root,required_field,edges,PASS,present
+procedural_reasoning_graph.json,root,required_field,nodes,PASS,present

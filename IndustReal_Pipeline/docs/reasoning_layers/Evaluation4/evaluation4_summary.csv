@@ -1,0 +1,10 @@
+check_id,check_name,category,status,severity,artifact,message,evidence_file
+E4.1,Order preservation,graph_order,PASS,critical,procedural_reasoning_graph_edges.csv,33 NEXT edge checks; 0 failures.,order_preservation_results.csv
+E4.2,Dependency grounding,graph_dependencies,PASS,critical,"procedural_reasoning_graph_edges.csv,validation_records.jsonl",27 DEPENDS_ON edges checked; 0 failures.,dependency_grounding_results.csv
+E4.3,Requirement visibility,graph_constraints,PASS,critical,"procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",54 requirements checked; 0 failures.,requirement_visibility_results.csv
+E4.4,Missing requirement visibility,graph_constraints,PASS,warning,"validation_records.jsonl,procedural_reasoning_graph_nodes.csv",All 18 missing requirements are visible as graph constraints.,missing_requirement_visibility_results.csv
+E4.5,Evidence traceability,graph_evidence,PASS,critical,"procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",34 Step nodes checked; 0 failures.,evidence_traceability_results.csv
+E4.6,Rule provenance,graph_provenance,PASS,warning,"procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",79 rule-provenance constraints checked; 0 failures.,rule_provenance_results.csv
+E4.7,Rejected-step isolation,graph_dependencies,PASS,critical,"procedural_reasoning_graph_edges.csv,effect_history_diagnostics.csv",31 rejected-step graph checks; 0 failures.,rejected_step_isolation_graph_results.csv
+E4.8,Provisional dependency visibility,graph_dependencies,PASS,warning,procedural_reasoning_graph_edges.csv,3 uncertain-support dependencies checked; 0 failures.,provisional_dependency_results.csv
+E4.9,Effect invalidation visibility,graph_lifecycle,PASS,critical,"procedural_reasoning_graph_nodes.csv,procedural_reasoning_graph_edges.csv",8 invalidated effects checked; 0 failures.,effect_invalidation_graph_results.csv

@@ -18,6 +18,7 @@ def main() -> None:
     parser.add_argument("--step-records", type=Path, required=True)
     parser.add_argument("--predicates", type=Path, required=True)
     parser.add_argument("--constraints", type=Path, required=True)
+    parser.add_argument("--rule-coverage", type=Path, default=None)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
     args = parser.parse_args()
@@ -27,6 +28,7 @@ def main() -> None:
             step_records_path=args.step_records,
             predicates_path=args.predicates,
             constraints_path=args.constraints,
+            rule_coverage_path=args.rule_coverage,
             output_path=args.output,
             config_path=args.config,
         )

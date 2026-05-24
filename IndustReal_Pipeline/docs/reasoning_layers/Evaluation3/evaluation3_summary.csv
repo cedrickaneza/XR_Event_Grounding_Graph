@@ -1,0 +1,6 @@
+check_id,check_name,scenario,status,severity,artifact,message,evidence_file
+E3.1,Requirement support behavior,Requirement support,PASS,critical,validation_records.jsonl,45 requirements inspected; 0 inconsistent requirement-support records.,requirement_support_results.csv
+E3.2,Hard incompatibility rejection,Hard incompatibility,PASS,critical,"inferred_constraints.csv,validation_records.jsonl",2 incompatibility constraints inspected; 0 were not rejected with trace evidence.,incompatibility_results.csv
+E3.3,Rejected-step isolation,Rejected-step isolation,PASS,critical,"validation_records.jsonl,effect_history_diagnostics.csv",6 rejected steps inspected; 0 rejected-step isolation violations.,rejected_step_isolation_results.csv
+E3.4,Removal invalidation,Removal invalidation,PASS,critical,"inferred_constraints.csv,validation_records.jsonl,effect_history_diagnostics.csv",10 removal effects inspected; 0 invalidation inconsistencies.,removal_invalidation_results.csv
+E3.5,Reduced-confidence perturbation,Reduced confidence,PASS,critical,perturbations/reduced_confidence,accepted step became uncertain after confidence reduction,reduced_confidence_results.csv
