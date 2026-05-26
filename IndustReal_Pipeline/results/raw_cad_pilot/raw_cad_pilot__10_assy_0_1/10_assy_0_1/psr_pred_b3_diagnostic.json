@@ -1,0 +1,50 @@
+[
+  {
+    "frame": 332,
+    "id": 9,
+    "description": "Install rear chassis",
+    "conf": 1.0
+  },
+  {
+    "frame": 332,
+    "id": 15,
+    "description": "Install front rear chassis pin",
+    "conf": 1.0
+  },
+  {
+    "frame": 332,
+    "id": 18,
+    "description": "Install rear rear chassis pin",
+    "conf": 1.0
+  },
+  {
+    "frame": 650,
+    "id": 3,
+    "description": "Install front chassis",
+    "conf": 1.0
+  },
+  {
+    "frame": 650,
+    "id": 6,
+    "description": "Install front chassis pin",
+    "conf": 1.0
+  },
+  {
+    "frame": 1963,
+    "id": 21,
+    "description": "Install front bracket",
+    "conf": 1.0
+  },
+  {
+    "frame": 1963,
+    "id": 24,
+    "description": "Install front bracket screw",
+    "conf": 1.0
+  },
+  {
+    "frame": 2571,
+    "id": 30,
+    "description": "Install rear wheel assy",
+    "conf": 1.0
+  }
+]

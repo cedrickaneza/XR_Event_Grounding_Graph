@@ -12,6 +12,10 @@ __pycache__/
 results/*
 !results/neo4j/
 !results/neo4j/**
+!results/10_assy_0_1_results.json
+!results/raw_cad_pilot/
+!results/raw_cad_pilot/raw_cad_pilot__10_assy_0_1/
+!results/raw_cad_pilot/raw_cad_pilot__10_assy_0_1/**
 data/part_geometries.zip
 data/raw/
 data/slices/

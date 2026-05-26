@@ -1,0 +1,258 @@
+{
+  "components": [
+    {
+      "key": "base",
+      "display_name": "base",
+      "state_bit_index": 0,
+      "detector_group": "structures",
+      "prompts": [
+        "base",
+        "car base",
+        "vehicle base"
+      ],
+      "aliases": [
+        "base plate"
+      ],
+      "asset_family": "beams_braces",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf"
+    },
+    {
+      "key": "front_chassis",
+      "display_name": "front chassis",
+      "state_bit_index": 1,
+      "detector_group": "structures",
+      "prompts": [
+        "front chassis",
+        "front frame"
+      ],
+      "aliases": [
+        "front beam chassis"
+      ],
+      "asset_family": "beams_braces",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf"
+    },
+    {
+      "key": "front_chassis_pin",
+      "display_name": "front chassis pin",
+      "state_bit_index": 2,
+      "detector_group": "connectors",
+      "prompts": [
+        "front chassis pin",
+        "pin"
+      ],
+      "aliases": [
+        "short pin"
+      ],
+      "asset_family": "screws_pins",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Screws Pins.3mf"
+    },
+    {
+      "key": "rear_chassis",
+      "display_name": "rear chassis",
+      "state_bit_index": 3,
+      "detector_group": "structures",
+      "prompts": [
+        "rear chassis",
+        "rear frame"
+      ],
+      "aliases": [
+        "rear beam chassis"
+      ],
+      "asset_family": "beams_braces",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf"
+    },
+    {
+      "key": "short_rear_chassis",
+      "display_name": "short rear chassis",
+      "state_bit_index": 4,
+      "detector_group": "structures",
+      "prompts": [
+        "short rear chassis",
+        "short rear frame"
+      ],
+      "aliases": [
+        "short chassis"
+      ],
+      "asset_family": "beams_braces",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf"
+    },
+    {
+      "key": "front_rear_chassis_pin",
+      "display_name": "front rear chassis pin",
+      "state_bit_index": 5,
+      "detector_group": "connectors",
+      "prompts": [
+        "front rear chassis pin",
+        "front rear pin"
+      ],
+      "aliases": [
+        "rear pin front"
+      ],
+      "asset_family": "screws_pins",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Screws Pins.3mf"
+    },
+    {
+      "key": "rear_rear_chassis_pin",
+      "display_name": "rear rear chassis pin",
+      "state_bit_index": 6,
+      "detector_group": "connectors",
+      "prompts": [
+        "rear rear chassis pin",
+        "rear rear pin"
+      ],
+      "aliases": [
+        "rear pin back"
+      ],
+      "asset_family": "screws_pins",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Screws Pins.3mf"
+    },
+    {
+      "key": "front_bracket",
+      "display_name": "front bracket",
+      "state_bit_index": 7,
+      "detector_group": "structures",
+      "prompts": [
+        "front bracket",
+        "bracket"
+      ],
+      "aliases": [
+        "small bracket"
+      ],
+      "asset_family": "beams_braces",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf"
+    },
+    {
+      "key": "front_bracket_screw",
+      "display_name": "front bracket screw",
+      "state_bit_index": 8,
+      "detector_group": "connectors",
+      "prompts": [
+        "front bracket screw",
+        "screw"
+      ],
+      "aliases": [
+        "bracket screw"
+      ],
+      "asset_family": "screws_pins",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Screws Pins.3mf"
+    },
+    {
+      "key": "front_wheel_assy",
+      "display_name": "front wheel assy",
+      "state_bit_index": 9,
+      "detector_group": "assemblies",
+      "prompts": [
+        "front wheel assembly",
+        "front wheel"
+      ],
+      "aliases": [
+        "front wheel assy"
+      ],
+      "asset_family": "wheels",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Wheels.3mf"
+    },
+    {
+      "key": "rear_wheel_assy",
+      "display_name": "rear wheel assy",
+      "state_bit_index": 10,
+      "detector_group": "assemblies",
+      "prompts": [
+        "rear wheel assembly",
+        "rear wheel"
+      ],
+      "aliases": [
+        "rear wheel assy"
+      ],
+      "asset_family": "wheels",
+      "asset_member": "part_geometries/SPS-000001 - Rubber-band-driven car - Wheels.3mf"
+    }
+  ],
+  "context_components": [
+    {
+      "key": "hand",
+      "display_name": "hand",
+      "detector_group": "hands",
+      "prompts": [
+        "hand"
+      ],
+      "aliases": []
+    }
+  ],
+  "detector_vocabulary": {
+    "structures": [
+      "base",
+      "car base",
+      "vehicle base",
+      "front chassis",
+      "front frame",
+      "rear chassis",
+      "rear frame",
+      "short rear chassis",
+      "short rear frame",
+      "front bracket",
+      "bracket"
+    ],
+    "connectors": [
+      "front chassis pin",
+      "pin",
+      "front rear chassis pin",
+      "front rear pin",
+      "rear rear chassis pin",
+      "rear rear pin",
+      "front bracket screw",
+      "screw"
+    ],
+    "assemblies": [
+      "front wheel assembly",
+      "front wheel",
+      "rear wheel assembly",
+      "rear wheel"
+    ],
+    "hands": [
+      "hand"
+    ]
+  },
+  "asset_families": {
+    "beams_braces": {
+      "member": "part_geometries/SPS-000001 - Rubber-band-driven car - Beams Braces.3mf",
+      "present": true
+    },
+    "screws_pins": {
+      "member": "part_geometries/SPS-000001 - Rubber-band-driven car - Screws Pins.3mf",
+      "present": true
+    },
+    "sign_nuts_washers_pulley": {
+      "member": "part_geometries/SPS-000001 - Rubber-band-driven car - Sign Nuts Washers Pulley.3mf",
+      "present": true
+    },
+    "wheels": {
+      "member": "part_geometries/SPS-000001 - Rubber-band-driven car - Wheels.3mf",
+      "present": true
+    }
+  },
+  "available_state_assets": [
+    "part_geometries/state1.fbx",
+    "part_geometries/state10.fbx",
+    "part_geometries/state11.fbx",
+    "part_geometries/state12.fbx",
+    "part_geometries/state13.fbx",
+    "part_geometries/state14.fbx",
+    "part_geometries/state15.fbx",
+    "part_geometries/state16.fbx",
+    "part_geometries/state17.fbx",
+    "part_geometries/state18.fbx",
+    "part_geometries/state19.fbx",
+    "part_geometries/state2.fbx",
+    "part_geometries/state20.fbx",
+    "part_geometries/state21.fbx",
+    "part_geometries/state22.fbx",
+    "part_geometries/state3.fbx",
+    "part_geometries/state4.fbx",
+    "part_geometries/state5.fbx",
+    "part_geometries/state6.fbx",
+    "part_geometries/state7.fbx",
+    "part_geometries/state8.fbx",
+    "part_geometries/state9.fbx"
+  ],
+  "overview_pdf": "part_geometries/Overview of states.pdf"
+}
