@@ -2,7 +2,7 @@
 
 - Evaluated clip/result ID: `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1`
 - Mode: `od_plus_psr_error_hints`
-- Timestamp: `2026-05-20T09:01:30+00:00`
+- Timestamp: `2026-05-28T09:31:05+00:00`
 - Reasoning directory: `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1`
 - Graph directory: `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\procedural_reasoning_graph\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1`
 

@@ -1,0 +1,2219 @@
+{
+  "clip_result_id": "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1",
+  "records": [
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [],
+      "index": 0,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "installed",
+            "base",
+            "workspace"
+          ],
+          "condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 1,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 2,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+            "aligned",
+            "front_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "implicit_assembly_condition",
+          "name": "requires",
+          "rule_id": "implicit_domain_required_condition",
+          "support": null
+        },
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+            "secured",
+            "base",
+            "workspace"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "safety_constraint",
+          "name": "requiresSafety",
+          "rule_id": "safety_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+            "installed",
+            "front_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 3,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+            "aligned",
+            "rear_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "implicit_assembly_condition",
+          "name": "requires",
+          "rule_id": "implicit_domain_required_condition",
+          "support": null
+        },
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+            "secured",
+            "base",
+            "workspace"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "safety_constraint",
+          "name": "requiresSafety",
+          "rule_id": "safety_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+            "installed",
+            "rear_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 4,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5",
+            "front_rear_chassis_pin",
+            "error"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "compatibility",
+          "name": "incompatibleAction",
+          "rule_id": "compat_error_action_marks_incompatibility",
+          "support": {
+            "notes": "Constraint observed in the step.",
+            "type": "same_step_constraint"
+          }
+        }
+      ],
+      "index": 5,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_5"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 6,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "installed",
+            "front_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 7,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+            "aligned",
+            "front_chassis_pin",
+            "front_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "implicit_assembly_condition",
+          "name": "requires",
+          "rule_id": "implicit_domain_required_condition",
+          "support": null
+        },
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+            "secured",
+            "base",
+            "workspace"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "safety_constraint",
+          "name": "requiresSafety",
+          "rule_id": "safety_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+            "installed",
+            "front_chassis_pin",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_chassis_pin",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_4",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 8,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+            "removed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_8"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 9,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+            "installed",
+            "short_rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "short_rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 10,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+            "installed",
+            "front_bracket",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+              "installed",
+              "front_bracket",
+              "front_chassis"
+            ],
+            "condition": {
+              "args": [
+                "front_bracket",
+                "front_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 11,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+            "screwdriver"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "required_tool",
+          "name": "requiresTool",
+          "rule_id": "tool_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+            "installed",
+            "front_bracket_screw",
+            "front_bracket"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket_screw",
+              "front_bracket"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 12,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+            "installed",
+            "front_wheel_assy",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [],
+      "index": 13,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "inferred_precondition",
+          "name": "requires",
+          "rule_id": "precondition_install_requires_target_installed",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+            "installed",
+            "rear_wheel_assy",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_wheel_assy",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "inactive_rejected",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "rejected",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_13"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [],
+      "index": 14,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "inferred_precondition",
+          "name": "requires",
+          "rule_id": "precondition_remove_requires_component_installed",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+            "removed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "inactive_rejected",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "rejected",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_14"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 15,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "invalidated",
+          "invalidated_by_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "short_rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+              "installed",
+              "short_rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "short_rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_9",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 16,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+            "removed",
+            "short_rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "short_rear_chassis",
+              "base"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_16"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+              "installed",
+              "front_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "condition": {
+              "args": [
+                "front_rear_chassis_pin",
+                "rear_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "uncertain",
+            "provisional": true,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_2",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 17,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+            "removed",
+            "front_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_17"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+              "installed",
+              "front_bracket",
+              "front_chassis"
+            ],
+            "condition": {
+              "args": [
+                "front_bracket",
+                "front_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 18,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+            "removed",
+            "front_bracket",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_18"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_bracket_screw",
+              "front_bracket"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+              "installed",
+              "front_bracket_screw",
+              "front_bracket"
+            ],
+            "condition": {
+              "args": [
+                "front_bracket_screw",
+                "front_bracket"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "uncertain",
+            "provisional": true,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_11",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 19,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+            "screwdriver"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "required_tool",
+          "name": "requiresTool",
+          "rule_id": "tool_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+            "removed",
+            "front_bracket_screw",
+            "front_bracket"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket_screw",
+              "front_bracket"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_19"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+              "installed",
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "condition": {
+              "args": [
+                "front_wheel_assy",
+                "front_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 20,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+            "removed",
+            "front_wheel_assy",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_20"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [],
+      "index": 21,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+            "installed",
+            "rear_wheel_assy",
+            "rear_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "inferred_precondition",
+          "name": "requires",
+          "rule_id": "precondition_remove_requires_component_installed",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+            "removed",
+            "rear_wheel_assy",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_wheel_assy",
+              "rear_chassis"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "inactive_rejected",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "rejected",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_21"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 22,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+            "aligned",
+            "front_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "implicit_assembly_condition",
+          "name": "requires",
+          "rule_id": "implicit_domain_required_condition",
+          "support": null
+        },
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+            "secured",
+            "base",
+            "workspace"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "safety_constraint",
+          "name": "requiresSafety",
+          "rule_id": "safety_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+            "installed",
+            "front_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_22"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+              "installed",
+              "rear_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "condition": {
+              "args": [
+                "rear_rear_chassis_pin",
+                "rear_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "uncertain",
+            "provisional": true,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_3",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 23,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+            "removed",
+            "rear_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_23"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 24,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+            "aligned",
+            "rear_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "implicit_assembly_condition",
+          "name": "requires",
+          "rule_id": "implicit_domain_required_condition",
+          "support": null
+        },
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+            "secured",
+            "base",
+            "workspace"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "safety_constraint",
+          "name": "requiresSafety",
+          "rule_id": "safety_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+            "installed",
+            "rear_rear_chassis_pin",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_rear_chassis_pin",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_24"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 25,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+            "installed",
+            "front_bracket",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+              "installed",
+              "front_bracket",
+              "front_chassis"
+            ],
+            "condition": {
+              "args": [
+                "front_bracket",
+                "front_chassis"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 26,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+            "screwdriver"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "required_tool",
+          "name": "requiresTool",
+          "rule_id": "tool_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+            "installed",
+            "front_bracket_screw",
+            "front_bracket"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket_screw",
+              "front_bracket"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "uncertain",
+          "provisional": true,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "uncertain",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_26"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 27,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+            "installed",
+            "front_wheel_assy",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 28,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+            "installed",
+            "front_bracket",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_bracket",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+            "front_bracket_screw",
+            "error"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::compat_error_action_marks_incompatibility::0_0::incompatibleaction::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "compatibility",
+          "name": "incompatibleAction",
+          "rule_id": "compat_error_action_marks_incompatibility",
+          "support": {
+            "notes": "Constraint observed in the step.",
+            "type": "same_step_constraint"
+          }
+        }
+      ],
+      "index": 29,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29",
+            "screwdriver"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "required_tool",
+          "name": "requiresTool",
+          "rule_id": "tool_domain_requirement",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_29"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "front_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+              "installed",
+              "front_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "front_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 30,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+            "installed",
+            "front_wheel_assy",
+            "front_chassis"
+          ],
+          "condition": {
+            "args": [
+              "front_wheel_assy",
+              "front_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+              "installed",
+              "rear_chassis",
+              "base"
+            ],
+            "condition": {
+              "args": [
+                "rear_chassis",
+                "base"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_15",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 31,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+            "removed",
+            "rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "rear_chassis",
+              "base"
+            ],
+            "name": "removed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_31"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [
+        {
+          "required_condition": {
+            "args": [
+              "base",
+              "workspace"
+            ],
+            "name": "installed"
+          },
+          "supporting_effect": {
+            "args": [
+              "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+              "installed",
+              "base",
+              "workspace"
+            ],
+            "condition": {
+              "args": [
+                "base",
+                "workspace"
+              ],
+              "name": "installed"
+            },
+            "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+            "producer_status": "accepted",
+            "provisional": false,
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+            "type": "previous_produced_effect"
+          }
+        }
+      ],
+      "incompatibilities": [],
+      "index": 32,
+      "missing_requirements": [],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+            "installed",
+            "short_rear_chassis",
+            "base"
+          ],
+          "condition": {
+            "args": [
+              "short_rear_chassis",
+              "base"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "active",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "accepted",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "accepted",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_32"
+    },
+    {
+      "confidence": 1.0,
+      "dependency_support": [],
+      "incompatibilities": [],
+      "index": 33,
+      "missing_requirements": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+            "installed",
+            "rear_chassis",
+            "base"
+          ],
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "kind": "inferred_precondition",
+          "name": "requires",
+          "rule_id": "precondition_install_requires_target_installed",
+          "support": null
+        }
+      ],
+      "produced_effect_lifecycle": [
+        {
+          "args": [
+            "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+            "installed",
+            "rear_wheel_assy",
+            "rear_chassis"
+          ],
+          "condition": {
+            "args": [
+              "rear_wheel_assy",
+              "rear_chassis"
+            ],
+            "name": "installed"
+          },
+          "conf": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+          "effect_lifecycle_status": "inactive_rejected",
+          "invalidated_by_constraint_id": null,
+          "producer_status": "rejected",
+          "provisional": false,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33",
+          "type": "previous_produced_effect"
+        }
+      ],
+      "status": "rejected",
+      "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_33"
+    }
+  ],
+  "status_distribution": {
+    "accepted": 18,
+    "rejected": 6,
+    "uncertain": 10
+  }
+}

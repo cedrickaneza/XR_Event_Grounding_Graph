@@ -1,0 +1,13 @@
+{
+  "baseline_dependent_step_ids": [
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30"
+  ],
+  "producer_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+  "removed_effect_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy"
+}

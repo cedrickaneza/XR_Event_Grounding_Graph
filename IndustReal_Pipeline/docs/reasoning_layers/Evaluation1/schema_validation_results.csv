@@ -785,14 +785,14 @@ predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_ass
 predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasParentComponent::rear_wheel_assy_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
 predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::hasInstallTarget::rear_wheel_assy_rear_chassis,confidence_range,conf,PASS,"in [0, 1]"
 predicates.jsonl,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::p::requiresInstalledBefore::rear_wheel_assy_rear_chassis_base,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,header,required_column,args,PASS,present
 inferred_constraints.csv,header,required_column,kind,PASS,present
 inferred_constraints.csv,header,required_column,step_id,PASS,present
 inferred_constraints.csv,header,required_column,status,PASS,present
-inferred_constraints.csv,header,required_column,constraint_id,PASS,present
-inferred_constraints.csv,header,required_column,args,PASS,present
 inferred_constraints.csv,header,required_column,rule_id,PASS,present
-inferred_constraints.csv,header,required_column,name,PASS,present
+inferred_constraints.csv,header,required_column,constraint_id,PASS,present
 inferred_constraints.csv,header,required_column,conf,PASS,present
+inferred_constraints.csv,header,required_column,name,PASS,present
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_0_in,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in,confidence_range,conf,PASS,"in [0, 1]"
@@ -817,6 +817,8 @@ inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_sc,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_in,confidence_range,conf,PASS,"in [0, 1]"
+inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_re,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i,confidence_range,conf,PASS,"in [0, 1]"
 inferred_constraints.csv,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i,confidence_range,conf,PASS,"in [0, 1]"
 rule_coverage_diagnostics.csv,header,required_column,step_id,PASS,present
@@ -937,7 +939,7 @@ explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1:
 explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,dependency_evidence,PASS,present
 explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,status,PASS,present
 explanation_traces.json,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10,trace_field,confidence,PASS,present
+procedural_reasoning_graph.json,root,required_field,graph_name,PASS,present
 procedural_reasoning_graph.json,root,required_field,nodes,PASS,present
 procedural_reasoning_graph.json,root,required_field,edges,PASS,present
 procedural_reasoning_graph.json,root,required_field,schema_version,PASS,present
-procedural_reasoning_graph.json,root,required_field,graph_name,PASS,present

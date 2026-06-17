@@ -1,9 +1,9 @@
 # Evaluation 2 Report: Constraint Inference Coverage
 
-- Timestamp: `2026-05-19T08:57:40+00:00`
+- Timestamp: `2026-05-28T09:31:00+00:00`
 - Results root: `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers`
 - Output directory: `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\docs\reasoning_layers\Evaluation2`
-- Evaluated clips: 38
+- Evaluated clips: 39
 
 ## Evaluated Inputs
 
@@ -45,6 +45,7 @@
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__19_assy_3_5` from `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__19_assy_3_5`
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_0_1` from `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_0_1`
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2` from `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2`
+- `raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1` from `D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1`
 
 ## Per-Clip Coverage
 
@@ -88,19 +89,20 @@
 | 19_assy_3_5 | 170 | 20 | 16 | 1 | 5 | 1 | 3 | 3 | 0 |
 | 23_assy_0_1 | 136 | 17 | 13 | 1 | 5 | 0 | 2 | 2 | 0 |
 | 23_assy_1_2 | 170 | 20 | 16 | 1 | 5 | 1 | 3 | 3 | 0 |
+| 03_assy_0_1 | 106 | 13 | 11 | 1 | 3 | 0 | 1 | 1 | 0 |
 
 ## Aggregate Summary
 
-- Predicate records: 6568
-- Step records: 659
-- Inferred constraints: 1673
-- Constraint type counts: {'incompatibleaction': 16, 'produces': 643, 'requires': 776, 'requiressafety': 171, 'requirestool': 67}
+- Predicate records: 6674
+- Step records: 670
+- Inferred constraints: 1701
+- Constraint type counts: {'incompatibleaction': 16, 'produces': 654, 'requires': 789, 'requiressafety': 174, 'requirestool': 68}
 
 ## Remove-Semantics Summary
 
-- Remove steps: 149
-- Remove steps with `requires(... installed ...)`: 149
-- Remove steps with `produces(... removed ...)`: 149
+- Remove steps: 150
+- Remove steps with `requires(... installed ...)`: 150
+- Remove steps with `produces(... removed ...)`: 150
 - Remove steps reported as `no_applicable_rule`: 0
 
 ## Rule Coverage Summary
@@ -143,6 +145,7 @@
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__19_assy_3_5`: covered=17, uncovered=0, warnings={}, matched distribution={'1': 2, '2': 9, '4': 5, '3': 1}, produced distribution={'1': 2, '2': 9, '4': 5, '3': 1}
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_0_1`: covered=13, uncovered=0, warnings={}, matched distribution={'1': 1, '2': 6, '4': 5, '3': 1}, produced distribution={'1': 1, '2': 6, '4': 5, '3': 1}
 - `raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2`: covered=17, uncovered=0, warnings={}, matched distribution={'1': 2, '2': 9, '4': 5, '3': 1}, produced distribution={'1': 2, '2': 9, '4': 5, '3': 1}
+- `raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1`: covered=11, uncovered=0, warnings={}, matched distribution={'1': 1, '2': 6, '4': 3, '3': 1}, produced distribution={'1': 1, '2': 6, '4': 3, '3': 1}
 
 ## Confidence Summary
 
@@ -161,12 +164,12 @@ Evaluation 2 reports coverage observed in natural local clips. A clip that lacks
 
 | Check | Status | Message |
 | --- | --- | --- |
-| Evaluation inputs readable | PASS | 38 clip/result folders evaluated. |
+| Evaluation inputs readable | PASS | 39 clip/result folders evaluated. |
 | Requested clips available | PASS | No requested clip/result folders were missing. |
 | All-available discovery | PASS | No incomplete local folders were skipped. |
-| Constraint inference coverage computed | PASS | 1673 inferred constraints summarized across 38 clip(s). |
+| Constraint inference coverage computed | PASS | 1701 inferred constraints summarized across 39 clip(s). |
 | Confidence values valid | PASS | 0 constraints have missing, non-numeric, or out-of-range confidence values. |
-| Rule provenance present | PASS | 1673 of 1673 constraints expose rule provenance fields. |
+| Rule provenance present | PASS | 1701 of 1701 constraints expose rule provenance fields. |
 | Rule coverage diagnostics summarized | PASS | Rule coverage diagnostics were summarized where available. |
 | Remove-action semantics covered | PASS | Remove semantics were detected for all observed remove steps, or no remove steps were present. |
 | Natural incompatibility coverage reported | PASS | 16 incompatibility constraints observed. Zero is acceptable for Evaluation 2 natural clips. |

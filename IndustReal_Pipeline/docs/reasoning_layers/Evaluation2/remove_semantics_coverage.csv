@@ -148,3 +148,4 @@ raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_0_1,s
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p3::23_assy_1_2::event_6,6,remove,"[""front_rear_chassis_pin""]",True,True,2,True,,
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p3::23_assy_1_2::event_8,8,remove,"[""rear_rear_chassis_pin""]",True,True,2,True,,
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p3::23_assy_1_2::event_11,11,remove,"[""rear_chassis""]",True,True,2,True,,
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9,9,remove,"[""front_wheel_assy""]",True,True,2,True,,

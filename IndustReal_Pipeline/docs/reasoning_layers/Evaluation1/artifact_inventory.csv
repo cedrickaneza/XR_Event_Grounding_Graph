@@ -1,9 +1,9 @@
 artifact_name,path,type,role_in_pipeline,exists,size_bytes,record_count,notes
-nodes_events.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\neo4j\raw_cad_dataset__all_test_clips\nodes_events.csv,csv,upstream input steps,True,242525,659,
+nodes_events.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\neo4j\raw_cad_dataset__all_test_clips\nodes_events.csv,csv,upstream input steps,True,138282,374,
 step_records.jsonl,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\step_records.jsonl,jsonl,adapter step records,True,22647,11,
 predicates.jsonl,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\predicates.jsonl,jsonl,adapter symbolic evidence,True,74795,106,
-inferred_constraints.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\inferred_constraints.csv,csv,Layer 3 constraints,True,30382,26,
-rule_coverage_diagnostics.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\rule_coverage_diagnostics.csv,csv,Layer 3 rule coverage diagnostics,True,9380,11,
+inferred_constraints.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\inferred_constraints.csv,csv,Layer 3 constraints,True,32728,28,
+rule_coverage_diagnostics.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\rule_coverage_diagnostics.csv,csv,Layer 3 rule coverage diagnostics,True,9206,11,
 validation_records.jsonl,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\validation_records.jsonl,jsonl,Layer 4 validation records,True,239100,11,
 step_validations.csv,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\step_validations.csv,csv,Layer 4 tabular validation view,True,102955,11,
 explanation_traces.json,D:\Code\XR_Event_Grounding_Graph\IndustReal_Pipeline\results\reasoning_layers\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\explanation_traces.json,json,Layer 4 explanations,True,138224,11,
