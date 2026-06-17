@@ -1,6 +1,9 @@
 {
-  "expected_input_steps": 11,
-  "extra_source_event_ids": [],
+  "expected_input_steps": 9,
+  "extra_source_event_ids": [
+    "raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10",
+    "raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9"
+  ],
   "missing_source_event_ids": [],
   "step_records": 11
 }

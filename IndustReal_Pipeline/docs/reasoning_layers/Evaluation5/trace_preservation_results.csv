@@ -1,0 +1,6 @@
+check_id,perturbation_name,affected_step_id,trace_preserved,diagnostic_visible,status,message
+E5.1,Lower predicate confidence below threshold,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1,True,True,PASS,Accepted step degraded after its predicate confidence fell below tau_unc.
+E5.2,Remove a required support predicate,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1,True,True,PASS,Required produced-effect support was removed and the requirement became missing.
+E5.3,Replace an object type with an incompatible type,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0,True,True,PASS,Corrupted object evidence produced a conservative decision with inspectable input evidence.
+E5.4,Inject an explicit error action or incompatibility,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0,True,True,PASS,Injected hard incompatibility rejected the step and its effects no longer support later dependencies.
+E5.5,Remove a produced effect used by later steps,step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10,True,True,PASS,Removed produced effect downgraded 7 later dependencies.

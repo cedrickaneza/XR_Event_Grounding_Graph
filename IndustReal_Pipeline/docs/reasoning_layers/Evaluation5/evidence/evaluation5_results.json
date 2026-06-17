@@ -1,0 +1,504 @@
+{
+  "accepted_remained_accepted_after_direct_degradation": false,
+  "baseline_status_distribution": {
+    "accepted": 18,
+    "rejected": 6,
+    "uncertain": 10
+  },
+  "checks": [
+    {
+      "affected_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+      "artifact": "predicates.jsonl",
+      "baseline_status": "accepted",
+      "baseline_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+      "category": "confidence",
+      "check_id": "E5.1",
+      "conservative_transition": true,
+      "details": {
+        "changed_predicate_ids": [
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_install",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_61_8_130",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_rear_cha",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::isA::rear_chassis_chassis",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::isA::rear_chassis_component",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base",
+          "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace"
+        ],
+        "diagnostic_visible": true,
+        "new_confidence": 0.175,
+        "perturbed_status_distribution": {
+          "accepted": 17,
+          "rejected": 10,
+          "uncertain": 7
+        },
+        "run": {
+          "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_inputs\\confidence_degradation",
+          "layer3": {
+            "constraints": 77,
+            "constraints_by_kind": {
+              "compatibility": 2,
+              "expected_effect": 31,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 30,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "constraints_by_rule": {
+              "compat_error_action_marks_incompatibility": 2,
+              "effect_install_component_on_target": 21,
+              "effect_remove_component_from_target": 10,
+              "implicit_domain_required_condition": 5,
+              "precondition_install_requires_target_installed": 20,
+              "precondition_remove_requires_component_installed": 10,
+              "safety_domain_requirement": 5,
+              "tool_domain_requirement": 4
+            },
+            "constraints_by_rule_type": {
+              "compatibility": 2,
+              "expected_effect": 31,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 30,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\inferred_constraints.csv",
+            "predicates": 326,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\rule_coverage_diagnostics.csv",
+            "rule_coverage_warnings": 1,
+            "rules": 8,
+            "step_records": 34
+          },
+          "layer4": {
+            "active_effects": 14,
+            "constraints": 77,
+            "effect_history_diagnostics_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\effect_history_diagnostics.csv",
+            "explanation_traces_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\explanation_traces.json",
+            "historical_effects": 31,
+            "invalidated_effects": 6,
+            "missing_requirements": 22,
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\validation_records.jsonl",
+            "predicates": 326,
+            "produced_effect_lifecycle": 31,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\rule_coverage_diagnostics.csv",
+            "status_counts": {
+              "accepted": 17,
+              "rejected": 10,
+              "uncertain": 7
+            },
+            "step_records": 34,
+            "step_validations_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation\\step_validations.csv",
+            "supported_requirements": 22,
+            "tau_acc": 0.7,
+            "tau_unc": 0.35,
+            "validation_config_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\config\\thesis_rules.yaml",
+            "validation_records": 34,
+            "warnings": 1
+          },
+          "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\confidence_degradation"
+        },
+        "trace_preserved": true
+      },
+      "evidence_file": "confidence_degradation_results.csv",
+      "message": "Accepted step degraded after its predicate confidence fell below tau_unc.",
+      "perturbation_name": "Lower predicate confidence below threshold",
+      "perturbed_status": "uncertain",
+      "scenario_key": "confidence_degradation",
+      "severity": "critical",
+      "status": "PASS",
+      "status_transition": "accepted->uncertain"
+    },
+    {
+      "affected_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+      "artifact": "inferred_constraints.csv",
+      "baseline_status": "accepted",
+      "baseline_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1",
+      "category": "missing_evidence",
+      "check_id": "E5.2",
+      "conservative_transition": true,
+      "details": {
+        "dependency_support_removed": true,
+        "missing_requirement_count": 1,
+        "perturbed_status_distribution": {
+          "accepted": 1,
+          "rejected": 33
+        },
+        "removed_support_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "removed_support_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+        "required_condition": {
+          "args": [
+            "base",
+            "workspace"
+          ],
+          "name": "installed"
+        },
+        "run": {
+          "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_inputs\\missing_support_predicate",
+          "layer3": {
+            "rerun": false
+          },
+          "layer4": {
+            "active_effects": 0,
+            "constraints": 78,
+            "effect_history_diagnostics_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate\\effect_history_diagnostics.csv",
+            "explanation_traces_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate\\explanation_traces.json",
+            "historical_effects": 31,
+            "invalidated_effects": 0,
+            "missing_requirements": 45,
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate\\validation_records.jsonl",
+            "predicates": 326,
+            "produced_effect_lifecycle": 31,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate\\rule_coverage_diagnostics.csv",
+            "status_counts": {
+              "accepted": 1,
+              "rejected": 33
+            },
+            "step_records": 34,
+            "step_validations_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate\\step_validations.csv",
+            "supported_requirements": 0,
+            "tau_acc": 0.7,
+            "tau_unc": 0.35,
+            "validation_config_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\config\\thesis_rules.yaml",
+            "validation_records": 34,
+            "warnings": 0
+          },
+          "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\missing_support_predicate"
+        },
+        "trace_exposes_missing_requirement": true,
+        "trace_preserved": true
+      },
+      "evidence_file": "missing_support_predicate_results.csv",
+      "message": "Required produced-effect support was removed and the requirement became missing.",
+      "perturbation_name": "Remove a required support predicate",
+      "perturbed_status": "rejected",
+      "scenario_key": "missing_support_predicate",
+      "severity": "critical",
+      "status": "PASS",
+      "status_transition": "accepted->rejected"
+    },
+    {
+      "affected_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+      "artifact": "predicates.jsonl",
+      "baseline_status": "accepted",
+      "baseline_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+      "category": "semantic_corruption",
+      "check_id": "E5.3",
+      "conservative_transition": true,
+      "details": {
+        "corrupted_input_visible_in_trace": true,
+        "missing_requirement_count": 0,
+        "original_object": "base",
+        "perturbed_status_distribution": {
+          "rejected": 33,
+          "uncertain": 1
+        },
+        "predicate_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_0_base",
+        "replacement_object": "front_bracket",
+        "run": {
+          "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_inputs\\incompatible_object_type",
+          "layer3": {
+            "constraints": 78,
+            "constraints_by_kind": {
+              "compatibility": 2,
+              "expected_effect": 31,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 31,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "constraints_by_rule": {
+              "compat_error_action_marks_incompatibility": 2,
+              "effect_install_component_on_target": 21,
+              "effect_remove_component_from_target": 10,
+              "implicit_domain_required_condition": 5,
+              "precondition_install_requires_target_installed": 21,
+              "precondition_remove_requires_component_installed": 10,
+              "safety_domain_requirement": 5,
+              "tool_domain_requirement": 4
+            },
+            "constraints_by_rule_type": {
+              "compatibility": 2,
+              "expected_effect": 31,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 31,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\inferred_constraints.csv",
+            "predicates": 326,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\rule_coverage_diagnostics.csv",
+            "rule_coverage_warnings": 1,
+            "rules": 8,
+            "step_records": 34
+          },
+          "layer4": {
+            "active_effects": 0,
+            "constraints": 78,
+            "effect_history_diagnostics_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\effect_history_diagnostics.csv",
+            "explanation_traces_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\explanation_traces.json",
+            "historical_effects": 31,
+            "invalidated_effects": 0,
+            "missing_requirements": 45,
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\validation_records.jsonl",
+            "predicates": 326,
+            "produced_effect_lifecycle": 31,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\rule_coverage_diagnostics.csv",
+            "status_counts": {
+              "rejected": 33,
+              "uncertain": 1
+            },
+            "step_records": 34,
+            "step_validations_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type\\step_validations.csv",
+            "supported_requirements": 0,
+            "tau_acc": 0.7,
+            "tau_unc": 0.35,
+            "validation_config_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\config\\thesis_rules.yaml",
+            "validation_records": 34,
+            "warnings": 1
+          },
+          "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\incompatible_object_type"
+        },
+        "trace_preserved": true,
+        "warning_count": 1
+      },
+      "evidence_file": "incompatible_object_type_results.csv",
+      "message": "Corrupted object evidence produced a conservative decision with inspectable input evidence.",
+      "perturbation_name": "Replace an object type with an incompatible type",
+      "perturbed_status": "uncertain",
+      "scenario_key": "incompatible_object_type",
+      "severity": "critical",
+      "status": "PASS",
+      "status_transition": "accepted->uncertain"
+    },
+    {
+      "affected_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+      "artifact": "predicates.jsonl",
+      "baseline_status": "accepted",
+      "baseline_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0",
+      "category": "contradictory_evidence",
+      "check_id": "E5.4",
+      "conservative_transition": true,
+      "details": {
+        "incompatibility_visible": true,
+        "injected_predicate_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::evaluation5::injected_error",
+        "later_supported_step_ids": [],
+        "perturbed_status_distribution": {
+          "rejected": 34
+        },
+        "rejected_support_violations": [],
+        "run": {
+          "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_inputs\\injected_error_action",
+          "layer3": {
+            "constraints": 80,
+            "constraints_by_kind": {
+              "compatibility": 3,
+              "expected_effect": 32,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 31,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "constraints_by_rule": {
+              "compat_error_action_marks_incompatibility": 3,
+              "effect_install_component_on_target": 22,
+              "effect_remove_component_from_target": 10,
+              "implicit_domain_required_condition": 5,
+              "precondition_install_requires_target_installed": 21,
+              "precondition_remove_requires_component_installed": 10,
+              "safety_domain_requirement": 5,
+              "tool_domain_requirement": 4
+            },
+            "constraints_by_rule_type": {
+              "compatibility": 3,
+              "expected_effect": 32,
+              "implicit_assembly_condition": 5,
+              "inferred_precondition": 31,
+              "required_tool": 4,
+              "safety_constraint": 5
+            },
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\inferred_constraints.csv",
+            "predicates": 327,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\rule_coverage_diagnostics.csv",
+            "rule_coverage_warnings": 0,
+            "rules": 8,
+            "step_records": 34
+          },
+          "layer4": {
+            "active_effects": 0,
+            "constraints": 80,
+            "effect_history_diagnostics_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\effect_history_diagnostics.csv",
+            "explanation_traces_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\explanation_traces.json",
+            "historical_effects": 32,
+            "invalidated_effects": 0,
+            "missing_requirements": 45,
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\validation_records.jsonl",
+            "predicates": 327,
+            "produced_effect_lifecycle": 32,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\rule_coverage_diagnostics.csv",
+            "status_counts": {
+              "rejected": 34
+            },
+            "step_records": 34,
+            "step_validations_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action\\step_validations.csv",
+            "supported_requirements": 0,
+            "tau_acc": 0.7,
+            "tau_unc": 0.35,
+            "validation_config_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\config\\thesis_rules.yaml",
+            "validation_records": 34,
+            "warnings": 0
+          },
+          "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\injected_error_action"
+        },
+        "trace_preserved": true
+      },
+      "evidence_file": "injected_error_action_results.csv",
+      "message": "Injected hard incompatibility rejected the step and its effects no longer support later dependencies.",
+      "perturbation_name": "Inject an explicit error action or incompatibility",
+      "perturbed_status": "rejected",
+      "scenario_key": "injected_error_action",
+      "severity": "critical",
+      "status": "PASS",
+      "status_transition": "accepted->rejected"
+    },
+    {
+      "affected_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+      "artifact": "inferred_constraints.csv",
+      "baseline_status": "accepted",
+      "baseline_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+      "category": "dependency_lifecycle",
+      "check_id": "E5.5",
+      "conservative_transition": true,
+      "details": {
+        "affected_steps": [
+          {
+            "baseline_status": "uncertain",
+            "conservative_transition": true,
+            "missing_requirement_count": 3,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_7",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_10",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_12",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_25",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_27",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_28",
+            "support_removed": true
+          },
+          {
+            "baseline_status": "accepted",
+            "conservative_transition": true,
+            "missing_requirement_count": 1,
+            "perturbed_status": "rejected",
+            "step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_30",
+            "support_removed": true
+          }
+        ],
+        "baseline_dependent_count": 7,
+        "perturbed_status_distribution": {
+          "accepted": 10,
+          "rejected": 18,
+          "uncertain": 6
+        },
+        "producer_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6",
+        "rejected_support_violations": [],
+        "removed_effect_constraint_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy",
+        "run": {
+          "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_inputs\\removed_produced_effect",
+          "layer3": {
+            "rerun": false
+          },
+          "layer4": {
+            "active_effects": 8,
+            "constraints": 78,
+            "effect_history_diagnostics_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect\\effect_history_diagnostics.csv",
+            "explanation_traces_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect\\explanation_traces.json",
+            "historical_effects": 31,
+            "invalidated_effects": 5,
+            "missing_requirements": 30,
+            "output_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect\\validation_records.jsonl",
+            "predicates": 326,
+            "produced_effect_lifecycle": 31,
+            "rule_coverage_diagnostics_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect\\rule_coverage_diagnostics.csv",
+            "status_counts": {
+              "accepted": 10,
+              "rejected": 18,
+              "uncertain": 6
+            },
+            "step_records": 34,
+            "step_validations_csv": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect\\step_validations.csv",
+            "supported_requirements": 15,
+            "tau_acc": 0.7,
+            "tau_unc": 0.35,
+            "validation_config_path": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\config\\thesis_rules.yaml",
+            "validation_records": 34,
+            "warnings": 0
+          },
+          "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5\\evidence\\perturbation_outputs\\removed_produced_effect"
+        },
+        "trace_preserved": true
+      },
+      "evidence_file": "removed_produced_effect_results.csv",
+      "message": "Removed produced effect downgraded 7 later dependencies.",
+      "perturbation_name": "Remove a produced effect used by later steps",
+      "perturbed_status": "rejected",
+      "scenario_key": "removed_produced_effect",
+      "severity": "critical",
+      "status": "PASS",
+      "status_transition": "accepted->rejected"
+    }
+  ],
+  "clip_result_id": "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1",
+  "evaluation": "Evaluation 5: Symbolic input degradation",
+  "input_directories": {
+    "reasoning_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\reasoning_layers\\raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p1__08_assy_0_1"
+  },
+  "output_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\docs\\reasoning_layers\\Evaluation5",
+  "rejected_support_violation_count": 0,
+  "status_counts": {
+    "PASS": 5
+  },
+  "status_transition_matrix": {
+    "accepted->rejected": 3,
+    "accepted->uncertain": 2
+  },
+  "thresholds": {
+    "tau_acc": 0.7,
+    "tau_unc": 0.35
+  },
+  "timestamp": "2026-06-15T12:32:41+00:00",
+  "trace_preserved_count": 5
+}

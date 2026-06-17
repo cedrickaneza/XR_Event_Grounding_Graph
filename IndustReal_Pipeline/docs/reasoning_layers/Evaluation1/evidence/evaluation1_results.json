@@ -6,9 +6,9 @@
       "check_id": "E1.1",
       "check_name": "Step records produced",
       "evidence_file": "evidence/step_record_coverage.json",
-      "message": "11 step records cover 11 input steps.",
-      "severity": "critical",
-      "status": "PASS"
+      "message": "All input steps are represented; 2 extra step records were found.",
+      "severity": "warning",
+      "status": "WARNING"
     },
     {
       "artifact": "predicates.jsonl",
@@ -26,7 +26,7 @@
       "check_id": "E1.3",
       "check_name": "Layer 3 constraints produced",
       "evidence_file": "evidence/constraint_summary.json",
-      "message": "26 constraints produced; names: {'produces': 10, 'requires': 12, 'requiresSafety': 3, 'requiresTool': 1}; 1 no-applicable-rule diagnostics recorded.",
+      "message": "28 constraints produced; names: {'produces': 11, 'requires': 13, 'requiresSafety': 3, 'requiresTool': 1}.",
       "severity": "critical",
       "status": "PASS"
     },
@@ -79,22 +79,12 @@
       "message": "9 DEPENDS_ON edges avoid rejected-step support.",
       "severity": "critical",
       "status": "PASS"
-    },
-    {
-      "artifact": "rule_coverage_diagnostics.csv",
-      "category": "diagnostics",
-      "check_id": "E1.9",
-      "check_name": "Rule coverage diagnostics",
-      "evidence_file": "rule_coverage_diagnostics.csv",
-      "message": "One unsupported removal action was detected and reported with a rule-coverage warning.",
-      "severity": "warning",
-      "status": "WARNING"
     }
   ],
   "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
   "counts": {
-    "constraints": 26,
-    "events": 659,
+    "constraints": 28,
+    "events": 374,
     "explanation_traces": 11,
     "graph_edges": 513,
     "graph_nodes": 198,
@@ -106,11 +96,11 @@
   "details": {
     "constraints": {
       "accepted_uncovered_steps": 0,
-      "rows": 26,
-      "rule_coverage_warnings": 1,
+      "rows": 28,
+      "rule_coverage_warnings": 0,
       "summary_by_name": {
-        "produces": 10,
-        "requires": 12,
+        "produces": 11,
+        "requires": 13,
         "requiresSafety": 3,
         "requiresTool": 1
       }
@@ -127,8 +117,11 @@
       "steps_without_predicates": []
     },
     "step_records": {
-      "expected_input_steps": 11,
-      "extra_source_event_ids": [],
+      "expected_input_steps": 9,
+      "extra_source_event_ids": [
+        "raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10",
+        "raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9"
+      ],
       "missing_source_event_ids": [],
       "step_records": 11
     },
@@ -158,5 +151,5 @@
     "validations": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\reasoning_layers\\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1\\validation_records.jsonl"
   },
   "run_id": "raw_cad_dataset__all_test_clips",
-  "timestamp": "2026-05-17T16:37:02+00:00"
+  "timestamp": "2026-05-28T09:30:56+00:00"
 }

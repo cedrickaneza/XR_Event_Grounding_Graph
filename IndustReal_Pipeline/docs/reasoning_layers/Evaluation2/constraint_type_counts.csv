@@ -200,3 +200,8 @@ raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,r
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,requires,inferred_precondition,15,1.0,1.0,1.0
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,requiresSafety,safety_constraint,5,1.0,1.0,1.0
 raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2,requiresTool,required_tool,1,1.0,1.0,1.0
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,produces,expected_effect,11,1.0,1.0,1.0
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,requires,implicit_assembly_condition,3,1.0,1.0,1.0
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,requires,inferred_precondition,10,1.0,1.0,1.0
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,requiresSafety,safety_constraint,3,1.0,1.0,1.0
+raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1,requiresTool,required_tool,1,1.0,1.0,1.0

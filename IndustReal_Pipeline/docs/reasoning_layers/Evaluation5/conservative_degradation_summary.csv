@@ -1,0 +1,6 @@
+check_id,perturbation_name,status,status_transition,conservative_transition,accepted_remained_accepted,message
+E5.1,Lower predicate confidence below threshold,PASS,accepted->uncertain,True,False,Accepted step degraded after its predicate confidence fell below tau_unc.
+E5.2,Remove a required support predicate,PASS,accepted->rejected,True,False,Required produced-effect support was removed and the requirement became missing.
+E5.3,Replace an object type with an incompatible type,PASS,accepted->uncertain,True,False,Corrupted object evidence produced a conservative decision with inspectable input evidence.
+E5.4,Inject an explicit error action or incompatibility,PASS,accepted->rejected,True,False,Injected hard incompatibility rejected the step and its effects no longer support later dependencies.
+E5.5,Remove a produced effect used by later steps,PASS,accepted->rejected,True,False,Removed produced effect downgraded 7 later dependencies.

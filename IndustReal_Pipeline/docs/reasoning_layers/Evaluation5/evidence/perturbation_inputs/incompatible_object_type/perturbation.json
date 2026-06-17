@@ -1,0 +1,6 @@
+{
+  "original_object": "base",
+  "predicate_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::p::usesObject::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_0_base",
+  "replacement_object": "front_bracket",
+  "target_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+}

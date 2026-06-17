@@ -1,0 +1,5 @@
+{
+  "action": "error",
+  "injected_predicate_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0::evaluation5::injected_error",
+  "target_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_0"
+}

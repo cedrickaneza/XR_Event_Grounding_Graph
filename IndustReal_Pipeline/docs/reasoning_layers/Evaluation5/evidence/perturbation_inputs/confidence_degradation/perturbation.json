@@ -1,0 +1,14 @@
+{
+  "changed_predicate_ids": [
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasAction::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_install",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasTimeWindow::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_61_8_130",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::usesObject::step_raw_cad_dataset_all_test_clips_od_plus_psr_error_hints_test_p1_08_assy_0_1_event_1_rear_cha",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasLabel::rear_chassis_rear_chassis",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::isA::rear_chassis_chassis",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::isA::rear_chassis_component",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::hasInstallTarget::rear_chassis_base",
+    "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1::p::requiresInstalledBefore::rear_chassis_base_workspace"
+  ],
+  "new_confidence": 0.175,
+  "target_step_id": "step::raw_cad_dataset__all_test_clips::od_plus_psr_error_hints::test_p1::08_assy_0_1::event_1"
+}

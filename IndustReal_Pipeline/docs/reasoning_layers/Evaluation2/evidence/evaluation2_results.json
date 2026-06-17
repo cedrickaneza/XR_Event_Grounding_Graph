@@ -6,7 +6,7 @@
       "check_id": "E2.1",
       "check_name": "Evaluation inputs readable",
       "evidence_file": "evidence/evaluation2_results.json",
-      "message": "38 clip/result folders evaluated.",
+      "message": "39 clip/result folders evaluated.",
       "severity": "critical",
       "status": "PASS"
     },
@@ -36,7 +36,7 @@
       "check_id": "E2.4",
       "check_name": "Constraint inference coverage computed",
       "evidence_file": "evaluation2_constraint_coverage.csv",
-      "message": "1673 inferred constraints summarized across 38 clip(s).",
+      "message": "1701 inferred constraints summarized across 39 clip(s).",
       "severity": "critical",
       "status": "PASS"
     },
@@ -56,7 +56,7 @@
       "check_id": "E2.6",
       "check_name": "Rule provenance present",
       "evidence_file": "constraint_provenance_results.csv",
-      "message": "1673 of 1673 constraints expose rule provenance fields.",
+      "message": "1701 of 1701 constraints expose rule provenance fields.",
       "severity": "warning",
       "status": "PASS"
     },
@@ -46633,9 +46633,822 @@
           "warning_codes": ""
         }
       ]
+    },
+    {
+      "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+      "confidence_rows": [
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_0_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_sc",
+          "constraint_kind": "required_tool",
+          "constraint_name": "requiresTool",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_re",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence": 1.0,
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "in_range": true,
+          "is_numeric": true,
+          "message": "confidence is numeric and in [0, 1]",
+          "status": "PASS"
+        }
+      ],
+      "constraint_type_rows": [
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence_max": 1.0,
+          "confidence_mean": 1.0,
+          "confidence_min": 1.0,
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "count": 11
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence_max": 1.0,
+          "confidence_mean": 1.0,
+          "confidence_min": 1.0,
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "count": 3
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence_max": 1.0,
+          "confidence_mean": 1.0,
+          "confidence_min": 1.0,
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "count": 10
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence_max": 1.0,
+          "confidence_mean": 1.0,
+          "confidence_min": 1.0,
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "count": 3
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "confidence_max": 1.0,
+          "confidence_mean": 1.0,
+          "confidence_min": 1.0,
+          "constraint_kind": "required_tool",
+          "constraint_name": "requiresTool",
+          "count": 1
+        }
+      ],
+      "counts": {
+        "constraint_names": {
+          "produces": 11,
+          "requires": 13,
+          "requiressafety": 3,
+          "requirestool": 1
+        },
+        "constraints": 28,
+        "constraints_with_rule_provenance": 28,
+        "invalid_confidence_count": 0,
+        "predicates": 106,
+        "remove_semantics": {
+          "contradictory_remove_rule_coverage_count": 0,
+          "remove_missing_expected_constraint_count": 0,
+          "remove_no_applicable_rule_count": 0,
+          "remove_produces_removed_count": 1,
+          "remove_requires_installed_count": 1,
+          "remove_step_count": 1
+        },
+        "rule_coverage": {
+          "covered_step_count": 11,
+          "matched_rule_count_distribution": {
+            "1": 1,
+            "2": 6,
+            "3": 1,
+            "4": 3
+          },
+          "produced_constraint_count_distribution": {
+            "1": 1,
+            "2": 6,
+            "3": 1,
+            "4": 3
+          },
+          "uncovered_step_count": 0,
+          "unsupported_actions": [],
+          "warning_counts": {}
+        },
+        "steps": 11,
+        "steps_with_meaningful_action_object_evidence": 11,
+        "steps_with_predicate_evidence": 11
+      },
+      "coverage_row": {
+        "archive_name": "test_p1",
+        "clip": "03_assy_0_1",
+        "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+        "incompatibility_count": 0,
+        "mode": "od_only",
+        "predicate_count": 106,
+        "produces_count": 11,
+        "remove_produces_removed_count": 1,
+        "remove_requires_installed_count": 1,
+        "remove_step_count": 1,
+        "requires_count": 13,
+        "requires_safety_count": 3,
+        "requires_tool_count": 1,
+        "rule_coverage_warning_count": 0,
+        "rule_coverage_warnings": "{}",
+        "run_id": "raw_cad_dataset__all_test_clips",
+        "step_count": 11,
+        "steps_with_meaningful_action_object_evidence": 11,
+        "steps_with_predicate_evidence": 11,
+        "unsupported_action_count": 0,
+        "unsupported_actions": ""
+      },
+      "input_dir": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\reasoning_layers\\raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+      "issues": {
+        "contradictory_remove_rule_coverage": false,
+        "invalid_confidence": false,
+        "missing_rule_coverage_diagnostics": false,
+        "remove_missing_expected_constraint": false
+      },
+      "metadata": {
+        "archive_name": "test_p1",
+        "clip": "03_assy_0_1",
+        "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+        "mode": "od_only",
+        "run_id": "raw_cad_dataset__all_test_clips"
+      },
+      "provenance_rows": [
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_0::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_0_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_1::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_1_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "implicit_domain_required_condition",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_2::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_2_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "safety_domain_requirement",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_3::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_3_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "implicit_domain_required_condition",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_4::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_4_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "safety_domain_requirement",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::implicit_domain_required_condition::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_al",
+          "constraint_kind": "implicit_assembly_condition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "implicit_domain_required_condition",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_5::c::safety_domain_requirement::0_0::requiressafety::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_5_se",
+          "constraint_kind": "safety_constraint",
+          "constraint_name": "requiresSafety",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "safety_domain_requirement",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_6::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_6_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_7::c::tool_domain_requirement::0_0::requirestool::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_7_sc",
+          "constraint_kind": "required_tool",
+          "constraint_name": "requiresTool",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "tool_domain_requirement",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_8::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_8_in",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::precondition_remove_requires_component_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_in",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_remove_requires_component_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9::c::effect_remove_component_from_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_9_re",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_remove_component_from_target",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::precondition_install_requires_target_installed::0_0::requires::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i",
+          "constraint_kind": "inferred_precondition",
+          "constraint_name": "requires",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "precondition_install_requires_target_installed",
+          "rule_source": "",
+          "status": "PASS"
+        },
+        {
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "constraint_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_10::c::effect_install_component_on_target::0_0::produces::step__raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1__event_10_i",
+          "constraint_kind": "expected_effect",
+          "constraint_name": "produces",
+          "has_rule_provenance": true,
+          "message": "constraint links to rule provenance",
+          "provenance_fields": "rule_id, rule_type",
+          "rule_id": "effect_install_component_on_target",
+          "rule_source": "",
+          "status": "PASS"
+        }
+      ],
+      "remove_rows": [
+        {
+          "action_name": "remove",
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "has_produces_removed": true,
+          "has_requires_installed": true,
+          "has_rule_coverage": true,
+          "notes": "",
+          "object_args": "[\"front_wheel_assy\"]",
+          "produced_constraint_count": 2,
+          "step_id": "step::raw_cad_dataset__all_test_clips::od_only::test_p1::03_assy_0_1::event_9",
+          "step_index": 9,
+          "warning_code": ""
+        }
+      ],
+      "rule_coverage_rows": [
+        {
+          "action_name": "install",
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "covered_step_count": 10,
+          "matched_rule_count_sum": 26,
+          "produced_constraint_count_sum": 26,
+          "step_count": 10,
+          "uncovered_step_count": 0,
+          "warning_codes": ""
+        },
+        {
+          "action_name": "remove",
+          "clip_result_id": "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1",
+          "covered_step_count": 1,
+          "matched_rule_count_sum": 2,
+          "produced_constraint_count_sum": 2,
+          "step_count": 1,
+          "uncovered_step_count": 0,
+          "warning_codes": ""
+        }
+      ]
     }
   ],
-  "evaluated_clip_count": 38,
+  "evaluated_clip_count": 39,
   "evaluated_clips": [
     "raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_0_1",
     "raw_cad_dataset__all_test_clips__od_only__test_p1__03_assy_1_3",
@@ -46674,7 +47487,8 @@
     "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__19_assy_0_1",
     "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__19_assy_3_5",
     "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_0_1",
-    "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2"
+    "raw_cad_dataset__all_test_clips__od_plus_psr_error_hints__test_p3__23_assy_1_2",
+    "raw_cad_dataset__all_test_clips__sample_test_p1_03_assy_0_1"
   ],
   "evaluation": "Evaluation 2: Constraint inference coverage",
   "missing": [],
@@ -46682,5 +47496,5 @@
   "restore_download_notes": [],
   "results_root": "D:\\Code\\XR_Event_Grounding_Graph\\IndustReal_Pipeline\\results\\reasoning_layers",
   "skipped": [],
-  "timestamp": "2026-05-19T08:57:40+00:00"
+  "timestamp": "2026-05-28T09:31:00+00:00"
 }
