@@ -1,4 +1,4 @@
-# XR_EGG Pipeline
+# Grounded Assembly Reasoning — XR Sensor Pipeline
 
 A sensor-log-first pipeline that turns **Meta Quest 3 RGB-D + pose captures** into a queryable **Event-Grounded Graph (EGG)** — tracking what objects appeared, moved, and were interacted with across a recording session. Results are exported to Neo4j for graph queries.
 

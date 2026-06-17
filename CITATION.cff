@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "Grounded Assembly Reasoning"
+message: >-
+  If you use this repository, please cite it, and please also cite the upstream
+  works listed under references.
+type: software
+authors:
+  - name: "The Grounded Assembly Reasoning project"
+date-released: "2026-06-17"
+license: Apache-2.0
+repository-code: "https://github.com/cedrickaneza/grounded-assembly-reasoning"
+references:
+  - type: conference-paper
+    title: >-
+      IndustReal: A Dataset for Procedure Step Recognition Handling Execution
+      Errors in Egocentric Videos in an Industrial-Like Setting
+    authors:
+      - family-names: Schoonbeek
+        given-names: "Tim J."
+      - family-names: Houben
+        given-names: Tim
+      - family-names: Onvlee
+        given-names: Hans
+      - family-names: "van der Sommen"
+        given-names: Fons
+    collection-title: >-
+      Proceedings of the IEEE/CVF Winter Conference on Applications of Computer
+      Vision (WACV)
+    year: 2024
+    start: 4365
+    end: 4374
+  - type: article
+    title: >-
+      Event-Grounding Graph: Unified Spatio-Temporal Scene Graph from Robotic
+      Observations
+    authors:
+      - family-names: Nguyen
+        given-names: P.
+      - family-names: Verdoja
+        given-names: F.
+      - family-names: Kyrki
+        given-names: V.
+    year: 2026
+    url: "https://arxiv.org/abs/2510.18697"
+    notes: "arXiv:2510.18697"

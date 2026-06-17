@@ -14,7 +14,7 @@ For each recording:
   6. Print rich summary.
 
 Usage:
-    cd /workspaces/XR_EGG-Claude/IndustReal_Pipeline
+    cd /workspaces/grounded-assembly-reasoning/IndustReal_Pipeline
     python scripts/01_run_demo.py
 """
 from __future__ import annotations

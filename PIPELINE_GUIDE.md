@@ -1,4 +1,4 @@
-# Pipeline Guide
+# Pipeline Guide — Grounded Assembly Reasoning
 
 This guide explains the core pipelines in this repository for readers who need to understand, run, maintain, or extend the project.
 

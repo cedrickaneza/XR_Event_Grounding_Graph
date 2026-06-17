@@ -1,0 +1,38 @@
+Grounded Assembly Reasoning
+Copyright 2026 The Grounded Assembly Reasoning project
+
+This product is licensed under the Apache License, Version 2.0 (the "License").
+A copy of the License is provided in the LICENSE file at the root of this
+repository. The Apache-2.0 license covers the first-party source code and
+original content authored as part of this project.
+
+--------------------------------------------------------------------------------
+Upstream and third-party material
+--------------------------------------------------------------------------------
+
+This repository adapts concepts, data structures, and/or code from the
+IndustReal project:
+
+    IndustReal - https://github.com/TimSchoonbeek/IndustReal
+    Schoonbeek, T. J., Houben, T., Onvlee, H., van der Sommen, F., et al.
+    "IndustReal: A Dataset for Procedure Step Recognition Handling Execution
+    Errors in Egocentric Videos in an Industrial-Like Setting."
+    IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2024.
+
+IndustReal SOURCE CODE is distributed by its authors under the Apache License,
+Version 2.0. Where IndustReal code or code-derived structures are reused here,
+that attribution is preserved under the same license.
+
+IndustReal DATASET material redistributed in this repository - including RGB
+frames, labels, results, and CAD/part geometries - is NOT relicensed under this
+repository's Apache-2.0 license. It remains subject to the upstream IndustReal
+dataset terms (published via 4TU.ResearchData) and, for the part geometries, to
+the terms of the STEMFIE project (https://stemfie.org). See DATASETS.md.
+
+This project also builds on ideas from the Event-Grounding Graph:
+
+    Nguyen, P., Verdoja, F., Kyrki, V.
+    "Event-Grounding Graph: Unified Spatio-Temporal Scene Graph from Robotic
+    Observations." arXiv:2510.18697, 2026.
+
+Third-party software dependencies retain their respective licenses.

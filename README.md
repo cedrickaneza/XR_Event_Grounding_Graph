@@ -1,6 +1,6 @@
-# XR_Event-Grounding Graph
+# Grounded Assembly Reasoning
 
-A sensor-log-first pipeline that turns **Meta Quest 3 RGB-D + pose captures** into a queryable **Event-Grounded Graph (EGG)** — tracking what objects appeared, moved, and were interacted with across a recording session. An **assembly reasoning layer** then infers industrial operation steps, workflow phases, and symbolic assembly state from the same data. Results are exported to Neo4j for graph queries.
+Turning multimodal assembly evidence — **Meta Quest 3 RGB-D + pose captures** and **IndustReal CAD/label data** — into traceable, queryable reasoning over assembly procedures. Sensor captures are grounded into an **Event-Grounding Graph (EGG)**; an **assembly reasoning layer** then infers industrial operation steps, workflow phases, and symbolic assembly state. Results are exported to Neo4j for graph queries.
 
 ```
 Quest 3 capture → object detection → 3D tracks → events → EGG graph
@@ -26,6 +26,7 @@ Quest 3 capture → object detection → 3D tracks → events → EGG graph
 - [IndustReal Pipeline](#industreal-pipeline)
 - [Project Structure](#project-structure)
 - [Running Tests](#running-tests)
+- [License](#license)
 
 ---
 
@@ -73,7 +74,7 @@ Key packages: `transformers`, `torch`, `pandas`, `numpy`, `networkx`, `neo4j`, `
 
 ```bash
 git clone <repo-url>
-cd XR_EGG-Claude
+cd grounded-assembly-reasoning
 
 pip install -r XR_Pipeline/requirements.txt
 
@@ -563,7 +564,7 @@ The `AssemblyGraph` produced here uses the same event taxonomy as the XR Pipelin
 ## Project Structure
 
 ```
-XR_EGG-Claude/
+grounded-assembly-reasoning/
 ├── Quest_Capture/                 # raw Quest 3 captures (gitignored)
 │   └── session_003/
 │       └── quest_capture/
@@ -659,3 +660,21 @@ XR_EGG-Claude/
 cd XR_Pipeline
 python -m pytest tests/ -v
 ```
+
+---
+
+## License
+
+This repository's first-party code and original content are licensed under the
+**Apache License 2.0** — see [LICENSE](LICENSE).
+
+- Attribution and upstream notices: [NOTICE](NOTICE)
+- Data and artifact provenance: [DATASETS.md](DATASETS.md)
+- To cite this work: [CITATION.cff](CITATION.cff)
+
+This project adapts code from the Apache-2.0–licensed
+[IndustReal](https://github.com/TimSchoonbeek/IndustReal) project (Schoonbeek et
+al., WACV 2024). **IndustReal dataset material redistributed here — including RGB
+frames, labels, and the STEMFIE-derived part geometries — is _not_ relicensed
+under Apache-2.0** and remains subject to its upstream terms. See
+[DATASETS.md](DATASETS.md) for details.
