@@ -565,7 +565,7 @@ The `AssemblyGraph` produced here uses the same event taxonomy as the XR Pipelin
 
 ```
 grounded-assembly-reasoning/
-├── Quest_Capture/                 # raw Quest 3 captures (gitignored)
+├── Quest_Capture/                 # sample Quest 3 capture (session_003, tracked)
 │   └── session_003/
 │       └── quest_capture/
 ├── XR_Pipeline/
@@ -646,7 +646,7 @@ grounded-assembly-reasoning/
 │   │   ├── data_loader.py         # IndustReal clip + procedure loader
 │   │   ├── psr.py                 # PSR algorithms B1, B2, B3
 │   │   └── egg_builder.py         # StateEvent + AssemblyGraph builder
-│   ├── data/                      # IndustReal dataset clips (gitignored)
+│   ├── data/                      # IndustReal labels/results/geometries (tracked; raw clips gitignored) — see DATASETS.md
 │   ├── results/
 │   └── requirements.txt
 └── README.md
